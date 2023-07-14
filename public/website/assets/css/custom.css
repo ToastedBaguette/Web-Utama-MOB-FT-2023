@@ -1,0 +1,474 @@
+.terbang {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+  }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        left: -100px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color: transparent; */
+
+        background-color: rgba(0, 0, 0, 0.141);
+        /* box-shadow: 0px 0px 20px #70e8c675; */
+        backdrop-filter: blur(2px);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #c6f6e8;
+    }
+  
+  .scroll-down {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    bottom: 60px;
+    height: 50px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    z-index: 2;
+    }
+    .scroll-down::before {
+    animation: scrollDownAnimation 2s infinite;
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 6px;
+    }
+  
+    @-moz-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+    }
+    @-webkit-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+    }
+    @-o-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+    }
+    @keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+    }
+  
+    .transparent-card {
+        border-radius: 1rem; 
+        background-color: rgba(255, 255, 255, .15); 
+        box-shadow:0px 0px 200px #70e8c675; 
+        backdrop-filter: blur(2px);
+    }
+  
+    .text-glow {
+        color: #4fda91; 
+        text-shadow: 2px 0px 20px #70E8C6;
+    }
+  
+    .text-glow2 {
+      color: #ffffff; 
+      text-shadow: 2px 0px 20px #70E8C6;
+  }
+  
+  .text-glow4 {
+      color: #ffffff; 
+      font-weight: bold;
+      text-shadow: 1px 0px 10px #0000005d;
+  }
+  
+  
+  .glow {
+      background-color: #33334D;
+      border-radius: 100px;
+      height: 50%;
+      width: 50%;
+      border: 10px solid #33334D;
+
+      box-shadow: 2px 0px 20px #70E8C6;
+  }
+    .bg {
+      background-image: url('./img/bg4.png');
+      background-repeat: repeat-y;
+    }
+  .alert-login{
+    padding: 1rem;
+    background-color: #ff6961;
+    color: #fff;
+    border-radius:0.5rem;
+  }
+
+    @media (max-width: 991px) { 
+        #jam { display:none; } 
+        #titleHome {
+          margin-left: 20px;
+          font-size: 1.4em;
+      }
+  }
+  
+    @media (max-width: 1248px) { 
+        #bawah {display:none; }
+        #titleHome {
+          margin-left: 30px;
+          font-size: 0.9em;
+        }
+  
+  }
+  
+  @media (max-width: 1920px) { 
+      #titleHome {
+        margin-left: 30px;
+        font-size: 1.05em;
+      }
+      #text-glow4{ 
+          margin-top: 40px;
+          font-size: 7em;
+      }
+  }
+          
+    @media (max-width: 1198px) {
+        #divLogin {
+            margin: 0;
+        }
+        #aLogin {
+            margin-left: 0;
+        }
+  
+        #text-glow4{ 
+          margin-top: 35px;
+          font-size: 5em;
+      }
+  
+    }
+  
+    @media (max-width:770px) and (min-width:500px) {
+   
+      #downloadButton{
+          margin-left: 20px;
+        }
+     
+  }
+
+  @media (max-width:953px) and (min-width:500px) {
+   .glow {
+      background-color: #33334D;
+      border-radius: 100px;
+      height: 50%;
+      width: 50%;
+      border: 10px solid #33334D;
+
+      box-shadow: 2px 0px 20px #70E8C6;
+  }
+}
+  
+  @media (max-width:800px) and (min-width:500px) {
+   
+      #downloadButton{
+          margin-left: 20px;
+        }
+  }
+  
+  @media (max-width:800px) {
+   
+      #gambarTerbang {
+          margin-left: 20px;
+          margin-right: 20px;
+          width: 90%;
+          height: 90%;
+      }
+  
+      #tulisan {
+          margin-left: 20px;
+          margin-right: 20px;
+          font-size: 11pt;
+      }
+  
+      #faqBox {
+          margin-left: 25px;
+          margin-right: 25px;
+          font-size: 11pt;
+      }
+  
+      #faqInner {
+          padding-top: 10px;
+          padding-bottom: 10px;
+      }
+  
+      .textFaq {
+          margin-left: 25px;
+          font-size: 11pt;
+      }
+  
+      .textFaq2 {
+          margin-left: 25px;
+          margin-right: 25px;
+          font-size: 11pt;
+      }
+      
+  }
+  
+    @media (min-width: 1199px) {
+      #divLogin {
+          margin: auto;
+      }
+      #aLogin {
+          margin-left: 30px;
+      }
+    }
+     
+  
+  @media (min-width: 800px) {
+      #downloadButton{
+          margin-left: 20px;
+        }
+  }
+
+  @media (max-width: 600px) {
+      .titleRC {
+          font-size: 12px;
+      }
+  
+      #judulAtas {
+          font-size: 17px;
+      }
+
+      .teknik{
+        margin-left: 80px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+      .buttonLogin {
+          margin-left: 530px;
+      }
+  }
+  
+  @media (max-width: 768px){
+      #tableRCdanProfile {
+          margin: 30px;
+      }
+  
+      #tabelRC2{
+          margin-left: 25px;
+          margin-right: 25px;
+          /* font-size: 0.1em; */
+      }
+      #textRC{
+          font-size: 1.4em;
+      }
+  
+      #textRC2{
+          font-size: 1em;
+      }
+
+      .teknik{
+        margin-left: 120px;
+    }
+  
+  }
+
+  
+@media (max-width: 550px) {
+  
+    .teknik{
+        margin-left: 60px;
+    }
+}
+
+  @media (max-width: 680px){
+  
+    #text-glow4{ 
+        margin-top: 10px;
+        font-size: 4em;
+    }
+
+    #hilang{
+        display: none;
+    }
+   
+    .teknik{
+        margin-left: 90px;
+    }
+
+}
+  
+  @media (max-width: 991px){
+    #fotoPetuah {
+        max-width: 360px;
+    }
+
+    #caborDesktop{ 
+        display: none;
+    }
+    #caborResponsif{ 
+        display: block;
+    }
+    
+    #tabelCabor {
+        padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: 991px) {
+  
+    #caborDesktop{ 
+        display: inline-flex;
+    }
+    #caborResponsif{ 
+        display: none;
+    }
+}
+ 
+  @media (max-width: 500px) {
+    #titleHome {
+        margin-left: 20px;
+        font-size: 0.8em;
+    }
+
+    #text-glow4{ 
+        margin-top: 20px;
+        font-size:3em;
+    }
+
+    .teknik{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    #seeButton{
+        margin-left: auto;
+    }
+
+    #text-glow4{ 
+      margin-top: 0px;
+      font-size: 3em;
+  }
+    /* #textCabang{
+      font-size: 1.7em;
+    } */
+
+    .teknik{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+  
+    #text-glow4{ 
+        margin-top: 10px;
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 375px) {
+  
+    .teknik{
+        margin-left: 5px;
+    }
+}
+
+
+@media (max-width: 320px) {
+  
+    .teknik{
+        margin-left: -10px;
+    }
+}
+
+
+.box {
+    background-color: #333;
+    color: #fff;
+    font-size: 150%;
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    justify-content: center;
+}
+
+@media only screen and (max-width: 576px){
+    .wrapper {
+        grid-template-columns: repeat(5, 64px);
+    }
+    .box {
+        width: 64px;
+        height: 64px;
+    }
+}
+

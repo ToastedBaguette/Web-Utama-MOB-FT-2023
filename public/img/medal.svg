@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="7.87402in" height="9.84252in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 7874.02 9842.52"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#70E8C6}
+   ]]>
+  </style>
+    <clipPath id="id0">
+     <path d="M1481.44 2860.48l4904.31 0 0 7110.49 -4904.31 0 0 -7110.49z"/>
+    </clipPath>
+    <clipPath id="id1">
+     <rect x="441.41" y="2011.35" width="6984.38" height="5542.89"/>
+    </clipPath>
+     <clipPath id="id2">
+      <rect x="-1803.17" y="2028.36" width="5019.25" height="6245.38"/>
+     </clipPath>
+     <clipPath id="id3">
+      <rect x="4587.25" y="2028.28" width="5086.93" height="6245.38"/>
+     </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2554733041056">
+   <g>
+    <path class="fil0" d="M-1652.27 4568.69l3529.71 0c83.11,0 150.89,67.78 150.89,150.9l0 5251.39 -3831.5 0 0 -5251.39c0,-83.11 67.78,-150.9 150.89,-150.9z"/>
+    <path class="fil0" d="M5994.74 4567.62l3529.71 0c76.78,0 140.48,57.85 149.73,132.2l0 5271.15 -3830.33 0 0 -5252.46c0,-83.11 67.78,-150.9 150.89,-150.9z"/>
+   </g>
+   <g style="clip-path:url(#id0)">
+    <image x="1481.44" y="2860.48" width="4904.31" height="7110.49" xlink:href="medal_Images\medal_ImgID1.png"/>
+   </g>
+   <path class="fil0" d="M2168.75 3384.12l3529.71 0c83.11,0 150.89,67.78 150.89,150.89l0 6429.91c0,2.03 -0.05,4.04 -0.13,6.06l-3831.24 0c-0.08,-2.01 -0.13,-4.03 -0.13,-6.06l0 -6429.91c0,-83.11 67.78,-150.89 150.89,-150.89z"/>
+   <g style="clip-path:url(#id1)">
+    <image x="441.41" y="2011.35" width="6984.38" height="5542.89" xlink:href="medal_Images\medal_ImgID2.png"/>
+   </g>
+   <g>
+    <g style="clip-path:url(#id2)">
+     <image x="-1803.17" y="2028.37" width="5019.25" height="6245.38" xlink:href="medal_Images\medal_ImgID3.png"/>
+    </g>
+    <g style="clip-path:url(#id3)">
+     <image x="4587.25" y="2028.28" width="5086.93" height="6245.38" xlink:href="medal_Images\medal_ImgID4.png"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
