@@ -7,12 +7,13 @@
   <meta name="description" content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
   <meta name="keywords" content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
   <meta name="author" content="elemis">
-  <title>MOB FT 2022</title>
+  <title>MOB FT 2023</title>
   <link rel="shortcut icon" href="{{ url('./img/mob.png') }}">
   <link rel="stylesheet" href="{{ url('./assets/css/plugins.css') }}">
   <link rel="stylesheet" href="{{ url('./assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ url('./assets/css/colors/sky.css') }}">
   <link rel="preload" href="{{ url('./assets/css/fonts/urbanist.css') }}" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{asset('admin/css/custom.css')}}">
   <style>
     .bg-mob {
       background-size: cover; 
@@ -35,14 +36,14 @@
 					<div class="container flex-lg-row flex-nowrap align-items-center">
 						<div class="navbar-brand w-100">
 							<a href="{{ url('/')}}">
-								<img src="{{ url('./assets/mob-assets/MOB FT 2022.svg') }}" srcset="{{ url('./assets/img/MOB FT 2022.svg') }} 2x" alt="" />
+                <a class="main-font" style="font-size: 30px">MOB FT 2023</a>
 							</a>
 						</div>
 						<div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
 								<div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
 									<ul class="navbar-nav">
 										<li class="nav-item">
-											<a class="nav-link" href="{{route('welcome')}}">Halaman awal</a>
+											<a class="nav-link secondary-font" href="{{route('welcome')}}">Halaman Awal</a>
 										</li>
 									</ul>
 									<!-- /.navbar-nav -->
@@ -64,7 +65,6 @@
 								</div>
 								<!-- /.offcanvas-body -->
 						</div>
-
 						<!-- /.navbar-other -->
 					</div>
 					<!-- /.container -->
@@ -80,7 +80,7 @@
               <div class="col-lg-6 me-auto">
                 <form class="contact-form" method="post" action="{{ route('login') }}">
                 @csrf
-                <h2 class="ms-2">Login</h2>
+                <h2 class="ms-2 secondary-font">Login</h2>
                   <div class="row gx-4">
                     <div class="col-md-12">
                       <div class="form-floating mb-4">

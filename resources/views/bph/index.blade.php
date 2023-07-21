@@ -131,7 +131,8 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai BPH, {{Auth::user()->name}}</h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3 secondary-font">Hai BPH,
+                        {{Auth::user()->name}}</h2>
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
@@ -148,88 +149,81 @@
             <!--begin::Row-->
             <div class="row">
                 <div class="col-xxl-6 order-2 order-xxl-1 text-center">
-                <!--begin::List Widget 9-->
-                <div class="card card-custom bg-gray-100 card-stretch gutter-b">
-                <!--begin::Header-->
-                <div class="card-header align-items-center border-0 mt-4">
+                    <!--begin::List Widget 9-->
+                    <div class="card card-custom bg-gray-100 card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header align-items-center border-0 mt-4">
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="font-weight-bolder text-dark">Total Absen Awal</span>
-                                <span class="text-muted mt-3 font-weight-bold font-size-sm">yang sudah absen di hari ini</span>
+                                <span class="text-muted mt-3 font-weight-bold font-size-sm">yang sudah absen di hari
+                                    ini</span>
                             </h3>
                         </div>
-                <!--end::Header-->
-                <!--begin::Body-->
-                <div class="card-body pt-4">
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
 
                             <h1>{{$allawalyes[0]->jumAllAwal}} / {{$allmaharu[0]->jumAll}}</h1>
                         </div>
-                <!--end: Card Body-->
-                </div>
-                <!--end: List Widget 9-->
+                        <!--end: Card Body-->
+                    </div>
+                    <!--end: List Widget 9-->
                 </div>
 
                 <div class="col-xxl-6 order-2 order-xxl-1 text-center">
-                <!--begin::List Widget 9-->
-                <div class="card card-custom bg-gray-100 card-stretch gutter-b">
-                <!--begin::Header-->
-                <div class="card-header align-items-center border-0 mt-4">
+                    <!--begin::List Widget 9-->
+                    <div class="card card-custom bg-gray-100 card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header align-items-center border-0 mt-4">
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="font-weight-bolder text-dark">Total Absen Akhir</span>
-                                <span class="text-muted mt-3 font-weight-bold font-size-sm">yang sudah absen di hari ini</span>
+                                <span class="text-muted mt-3 font-weight-bold font-size-sm">yang sudah absen di hari
+                                    ini</span>
                             </h3>
                         </div>
-                <!--end::Header-->
-                <!--begin::Body-->
-                <div class="card-body pt-4">
-                    <h1>{{$allakhiryes[0]->jumAllAkhir}} / {{$allmaharu[0]->jumAll}}</h1>
-                </div>
-                <!--end: Card Body-->
-                </div>
-                <!--end: List Widget 9-->
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <h1>{{$allakhiryes[0]->jumAllAkhir}} / {{$allmaharu[0]->jumAll}}</h1>
+                        </div>
+                        <!--end: Card Body-->
+                    </div>
+                    <!--end: List Widget 9-->
                 </div>
 
-                </div>
+            </div>
             <div class="row">
                 <div class="col-xxl-12 order-2 order-xxl-1 text-center">
-                <!--begin::List Widget 9-->
-                <div class="card card-custom bg-gray-100 card-stretch gutter-b">
-                <!--begin::Header-->
-                <div class="card-header align-items-center border-0 mt-4">
+                    <!--begin::List Widget 9-->
+                    <div class="card card-custom bg-gray-100 card-stretch gutter-b">
+                        <!--begin::Header-->
+                        <div class="card-header align-items-center border-0 mt-4">
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="font-weight-bolder text-dark">Total Pelanggaran</span>
-                                <span class="text-muted mt-3 font-weight-bold font-size-sm">yang pelanggaran di hari ini</span>
+                                <span class="text-muted mt-3 font-weight-bold font-size-sm">yang pelanggaran di hari
+                                    ini</span>
 
                             </h3>
                         </div>
-                <!--end::Header-->
-                <!--begin::Body-->
-                <div class="card-body pt-4">
-                           <h1 id="hasil1">{{ $pelanggaran[0]->jumlahPelanggaran }}</h1>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <h1 id="hasil1">{{ $pelanggaran[0]->jumlahPelanggaran }}</h1>
                         </div>
-                <!--end: Card Body-->
-                </div>
-                <!--end: List Widget 9-->
+                        <!--end: Card Body-->
+                    </div>
+                    <!--end: List Widget 9-->
                 </div>
 
             </div>
 
-            <!-- <div class="row">
-                <div class="col text-center">
-                    <a target="_blank" href="{{-- route('ad.index') --}}" class="btn btn-success btn-lg">Lihat Rekap Presensi</a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" href="{{-- url('/rekap') --}}" class="btn btn-success btn-lg">Lihat Rekap Pelanggaran</a>
-                </div>
-                <div class="col text-center">
-                    <a target="_blank" href="{{-- url('/kontingen') --}}" class="btn btn-success btn-lg">Lihat Rekap Rector Cup</a>
-                </div>
-            </div> -->
-
             <div class="row pl-3 pr-3">
                 <div class="col-xxl-12 order-2 order-xxl-1 text-center">
                     <!--begin::List Widget 9-->
-                    <a target="_blank" href="{{route('ad.index')}}" class="btn btn-success btn-lg btn-block">Lihat Rekap Presensi</a>
-                    <a target="_blank" href="{{url('/rekap')}}" class="btn btn-primary btn-lg btn-block">Lihat Rekap Pelanggaran</a>
+                    <a target="_blank" href="{{route('ad.index')}}" class="btn btn-success btn-lg btn-block">Lihat Rekap
+                        Presensi</a>
+                    <a target="_blank" href="{{url('/rekap')}}" class="btn btn-primary btn-lg btn-block">Lihat Rekap
+                        Pelanggaran</a>
                     <!--end: List Widget 9-->
                 </div>
             </div>
@@ -278,7 +272,6 @@
                             $('#kelompok').append('<option value="' + listkelompok + '">' + listkelompok + '</option>');
                         })
                     }
-
                 }
             })
         });

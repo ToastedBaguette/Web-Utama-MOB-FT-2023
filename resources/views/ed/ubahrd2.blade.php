@@ -73,7 +73,8 @@
             <!-- begin: sweetalert -->
             <div class="">
                 @if (session('status'))
-                <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+                <div class="alert alert-custom alert-light-success fade show mb-5" role="alert"
+                    style="width:100%; Max-height:5em;">
                     <div class="alert-icon"><i class="flaticon2-check-mark"></i></div>
                     <div class="alert-text" style="font-size:125%;">{{session('status')}}</div>
                     <div class="alert-close">
@@ -83,7 +84,8 @@
                     </div>
                 </div>
                 @elseif (session('error'))
-                <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+                <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert"
+                    style="width:100%; Max-height:5em;">
                     <div class="alert-icon"><i class="flaticon2-warning "></i></div>
                     <div class="alert-text" style="font-size:125%;">{{session('error')}}</div>
                     <div class="alert-close">
@@ -108,7 +110,8 @@
                     <form method="POST" action="{{url('ed/'.$rundown[0]->idrundown)}}" id="formhapus">
                         @csrf
                         @method("DELETE")
-                        <button type="button" class="btn btn-danger" style="float:right;margin-top:7.5%;" id="btnhapus" value="{{$rundown[0]->idrundown}}">Hapus Acara</button>
+                        <button type="button" class="btn btn-danger" style="float:right;margin-top:7.5%;" id="btnhapus"
+                            value="{{$rundown[0]->idrundown}}">Hapus Acara</button>
                     </form>
                 </div>
                 <div class="card-body">
@@ -116,26 +119,33 @@
                         @csrf
                         @method("PUT")
                         <label for="">Tanggal</label>
-                        <input type="date" class="form-control bg-gray-100" id="date" name="date" value="{{$rundown[0]->tanggal}}" required>
+                        <input type="date" class="form-control bg-gray-100" id="date" name="date"
+                            value="{{$rundown[0]->tanggal}}" required>
                         <br>
                         <div style="display:grid; grid-template-columns: auto auto;grid-column-gap:20px;">
                             <div>
                                 <label>Waktu Awal</label>
-                                <input type="time" class="form-control" id="waktu_awal" name="waktu_awal" value="{{ \Carbon\Carbon::createFromFormat('H:i:s', $rundown[0]->waktu_awal)->format('h:i') }}" required>
+                                <input type="time" class="form-control" id="waktu_awal" name="waktu_awal"
+                                    value="{{ \Carbon\Carbon::createFromFormat('H:i:s', $rundown[0]->waktu_awal)->format('h:i') }}"
+                                    required>
                             </div>
                             <div>
                                 <label>Waktu Akhir</label>
-                                <input type="time" class="form-control" id="waktu_akhir" name="waktu_akhir" value="{{ \Carbon\Carbon::createFromFormat('H:i:s', $rundown[0]->waktu_akhir)->format('h:i') }}" required>
+                                <input type="time" class="form-control" id="waktu_akhir" name="waktu_akhir"
+                                    value="{{ \Carbon\Carbon::createFromFormat('H:i:s', $rundown[0]->waktu_akhir)->format('h:i') }}"
+                                    required>
                             </div>
                         </div>
                         <br>
                         <label>Kegiatan</label>
-                        <input type="text" class="form-control" id="kegiatan" name="kegiatan" value="{{$rundown[0]->kegiatan}}" required>
+                        <input type="text" class="form-control" id="kegiatan" name="kegiatan"
+                            value="{{$rundown[0]->kegiatan}}" required>
 
                         <br>
 
                         <label>Konten</label>
-                        <input type="text" class="form-control" id="content" name="content" value="{{$rundown[0]->content}}">
+                        <input type="text" class="form-control" id="content" name="content"
+                            value="{{$rundown[0]->content}}">
                         <br>
 
                         <button type="submit" class="btn btn-success mt-4" style="width: 100%;">Ubah</button>

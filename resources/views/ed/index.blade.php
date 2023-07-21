@@ -71,7 +71,8 @@
             <!-- begin: sweetalert -->
 
             @if (session('status'))
-            <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+            <div class="alert alert-custom alert-light-success fade show mb-5" role="alert"
+                style="width:100%; Max-height:5em;">
                 <div class="alert-icon"><i class="flaticon2-check-mark icon-lg"></i></div>
                 <div class="alert-text" style="font-size:120%;"><label for="">{{session('status')}}</label></div>
                 <div class="alert-close">
@@ -81,7 +82,8 @@
                 </div>
             </div>
             @elseif (session('error'))
-            <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+            <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert"
+                style="width:100%; Max-height:5em;">
                 <div class="alert-icon"><i class="flaticon2-warning "></i></div>
                 <div class="alert-text">{{session('error')}}</div>
                 <div class="alert-close">
@@ -102,7 +104,8 @@
                         <h3 class="card-label">Rundown</h3>
                     </div>
                     <a href='#modalAdd' data-toggle='modal'>
-                        <button type="button" class="btn btn-success" style="float:right;margin-top:10%;">Tambah Acara</button>
+                        <button type="button" class="btn btn-success" style="float:right;margin-top:10%;">Tambah
+                            Acara</button>
                     </a>
                 </div>
                 <div class="card-body">
@@ -136,7 +139,8 @@
                                 <td>{{$r->kegiatan}}</td>
                                 <td>{{$r->content}}</td>
                                 <td>{{$r->media}}</td>
-                                <td style="text-align:center;"><a href="{{ url('ed/'.$r->idrundown.'/edit')}}" class="btn btn-warning">Ubah</a></td>
+                                <td style="text-align:center;"><a href="{{ url('ed/'.$r->idrundown.'/edit')}}"
+                                        class="btn btn-warning">Ubah</a></td>
                             </tr>
                             @endforeach
                         </tbody>

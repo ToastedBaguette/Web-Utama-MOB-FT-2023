@@ -71,7 +71,8 @@
             <!-- begin: sweetalert -->
 
             @if (session('status'))
-            <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+            <div class="alert alert-custom alert-light-success fade show mb-5" role="alert"
+                style="width:100%; Max-height:5em;">
                 <div class="alert-icon"><i class="flaticon2-check-mark icon-lg"></i></div>
                 <div class="alert-text" style="font-size:120%;"><label for="">{{session('status')}}</label></div>
                 <div class="alert-close">
@@ -81,7 +82,8 @@
                 </div>
             </div>
             @elseif (session('error'))
-            <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+            <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert"
+                style="width:100%; Max-height:5em;">
                 <div class="alert-icon"><i class="flaticon2-warning "></i></div>
                 <div class="alert-text">{{session('error')}}</div>
                 <div class="alert-close">
@@ -104,14 +106,16 @@
                         <h3 class="card-label">Daftar Pengumuman</h3>
                     </div>
                     <a href="/pengumuman/buat">
-                        <button type="button" class="btn btn-success" style="float:right;margin-top:10%;">Tambah Pengumuman</button>
+                        <button type="button" class="btn btn-success" style="float:right;margin-top:10%;">Tambah
+                            Pengumuman</button>
                     </a>
                 </div>
                 <div class="card-body">
                     <!--begin: Datatable-->
 
                     @if(count($listp) > 0)
-                    <table class="table table-separate table-head-custom table-checkable" id="kt_datatable" style="text-align:center;">
+                    <table class="table table-separate table-head-custom table-checkable" id="kt_datatable"
+                        style="text-align:center;">
                         <thead style="text-align:center;">
                             <th>Id</th>
                             <th>Isi Pengumuman</th>
@@ -124,7 +128,8 @@
                                 <td>{{$r->idpengumuman}}</td>
                                 <td>{{$r->isi}}</td>
                                 <td style="text-align:center;">
-                                    <a href="{{url('deletePengumuman/'.$r->idpengumuman)}}" class="btn btn-danger">Hapus</a>
+                                    <a href="{{url('deletePengumuman/'.$r->idpengumuman)}}"
+                                        class="btn btn-danger">Hapus</a>
 
                                 </td>
                             </tr>

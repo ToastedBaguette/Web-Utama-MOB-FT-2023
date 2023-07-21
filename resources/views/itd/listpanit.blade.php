@@ -55,7 +55,8 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Heyo anak ITD, {{Auth::user()->name}}</h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Heyo anak ITD,
+                        {{Auth::user()->name}}</h2>
 
                     <!--end::Page Title-->
                 </div>
@@ -76,7 +77,8 @@
             <!-- begin: sweetalert -->
             <div class="">
                 @if (session('status'))
-                <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:4em;">
+                <div class="alert alert-custom alert-light-success fade show mb-5" role="alert"
+                    style="width:100%; Max-height:4em;">
                     <div class="alert-icon"><i class="flaticon2-check-mark icon-lg"></i></div>
                     <div class="alert-text" style="font-size:120%;"><label for="">{{session('status')}}</label></div>
                     <div class="alert-close">
@@ -86,7 +88,8 @@
                     </div>
                 </div>
                 @elseif (session('error'))
-                <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+                <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert"
+                    style="width:100%; Max-height:5em;">
                     <div class="alert-icon"><i class="flaticon2-warning "></i></div>
                     <div class="alert-text">{{session('error')}}</div>
                     <div class="alert-close">
@@ -128,7 +131,8 @@
                                     <!-- <a href='#modalChange_{{$mhr->nrp}}' data-toggle='modal'>
                                         <button type="button" class="btn btn-success" style="min-width:100px">{{$mhr->nrp}}</button>
                                     </a> -->
-                                    <div class="modal fade" id="modalChange_{{$mhr->nrp}}" tabindex="-1" role="basic" aria-hidden="true">
+                                    <div class="modal fade" id="modalChange_{{$mhr->nrp}}" tabindex="-1" role="basic"
+                                        aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -137,15 +141,20 @@
                                                 <div class="modal-body ml-3">
                                                     <form action="{{ route('ubahdata') }}" method="post"></form>
                                                     <label for="" class="text-primary">Nama Lengkap</label><br>
-                                                    <input type="text" class="form-control" value="{{$mhr->name}}" name="namalengkap"><br>
+                                                    <input type="text" class="form-control" value="{{$mhr->name}}"
+                                                        name="namalengkap"><br>
                                                     <label for="" class="text-primary">No Telp.</label><br>
-                                                    <input type="text" class="form-control" value="{{$mhr->no_hp}}" name="no_hp"><br>
+                                                    <input type="text" class="form-control" value="{{$mhr->no_hp}}"
+                                                        name="no_hp"><br>
                                                     <label for="" class="text-primary">ID Line</label><br>
-                                                    <input type="text" class="form-control" value="{{$mhr->id_line}}" name="id_line"><br>
+                                                    <input type="text" class="form-control" value="{{$mhr->id_line}}"
+                                                        name="id_line"><br>
                                                     <label for="" class="text-primary">Email</label><br>
-                                                    <input type="text" class="form-control" value="{{$mhr->email}}" name="email"><br>
+                                                    <input type="text" class="form-control" value="{{$mhr->email}}"
+                                                        name="email"><br>
                                                     <label for="" class="text-primary">Instagram</label><br>
-                                                    <input type="text" class="form-control" value="{{$mhr->instagram}}" name="instagram"><br>
+                                                    <input type="text" class="form-control" value="{{$mhr->instagram}}"
+                                                        name="instagram"><br>
                                                     <button type="submit" class="btn btn-success mt-4">Ubah</button>
                                                 </div>
                                             </div>

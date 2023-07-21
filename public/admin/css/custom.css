@@ -1,0 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/broken-console');
+@import url('https://fonts.cdnfonts.com/css/04b30');
+
+* {
+    color: #40128B;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #f6faff;
+}
+
+.main-font {
+    color: #40128B;
+    font-family: '04b', sans-serif;
+}
+
+.secondary-font{
+    color: #40128B;
+    font-family: "Broken Console", sans-serif;
+}
+
+.bg-footer{
+    background-color: #40128B;
+}

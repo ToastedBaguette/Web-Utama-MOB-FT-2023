@@ -102,7 +102,7 @@ class HomeController extends Controller
         if(Auth::user()->status == 'panitia'){
             return redirect('/homeadmin');
         }
-        return view('home2022',compact('nama', 'presensi', 'pelanggaran'));
+        return view('dashboardmaharu2023',compact('nama', 'presensi', 'pelanggaran'));
     }
 
     public function start(){

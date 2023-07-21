@@ -5,25 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website utama MOB FT 2022 untuk membantu mahasiswa baru mengetahui beberapa informasi mengenai MOB FT 2022.">
-  <title>MOB FT 2022</title>
-  <link rel="shortcut icon" href="{{ url('./img/mob.png') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/plugins.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/colors/sky.css') }}">
-  <link rel="preload" href="{{ url('./assets/css/fonts/urbanist.css') }}" as="style" onload="this.rel='stylesheet'">
+  <title>MOB FT 2023</title>
+  <link rel="shortcut icon" href="<?php echo e(url('./img/mob.png')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/plugins.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/style.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/colors/sky.css')); ?>">
+  <link rel="preload" href="<?php echo e(url('./assets/css/fonts/urbanist.css')); ?>" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="<?php echo e(asset('admin/css/custom.css')); ?>">
   <style>
     .bg-mob {
       background-size: cover; 
-      background-image: url({{asset('assets/mob-assets/background1.jpg')}});
+      background-image: url(<?php echo e(asset('assets/mob-assets/background1.jpg')); ?>);
     }
     
     .kastil {
       width: 50%;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media  only screen and (max-width: 768px) {
       .bg-mob {
-        background-image: url({{asset('./assets/mob-assets/bgmobile2.jpg')}});
+        background-image: url(<?php echo e(asset('./assets/mob-assets/bgmobile2.jpg')); ?>);
       }
       .kastil {
         width: auto;
@@ -35,13 +36,13 @@
 <body>
   <div class="content-wrapper">
 
-    {{-- NAVBAR  --}}
+    
     <header class="wrapper bg-light">
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-50">
             <a href="#beranda">
-              <img src="{{ url('./assets/mob-assets/MOB FT 2022.svg') }}" srcset="{{ url('./assets/mob-assets/MOB FT 2022.svg') }} 2x" alt="" />
+              <img src="<?php echo e(url('./assets/mob-assets/MOB FT 2022.svg')); ?>" srcset="<?php echo e(url('./assets/mob-assets/MOB FT 2022.svg')); ?> 2x" alt="" />
             </a>
           </div>
           <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -65,10 +66,10 @@
                   </li>
                 </ul>
                 
-                {{-- OFFCANVAS (FOR MOBILE SCREEN) --}}
+                
                 <div class="offcanvas-footer d-lg-none">
                   <div>
-                    <a class="link-inverse">© Information Technology Department MOB FT 2022. </a>
+                    <a class="link-inverse">© Information Technology Department MOB FT 2023. </a>
                     <nav class="nav social social-white mt-4">
                       <a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
                       <a href="https://www.instagram.com/mobftubaya/" target="_blank"><i class="uil uil-instagram"></i></a>
@@ -84,11 +85,11 @@
           <div class="navbar-other ms-lg-4">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-md-block">
-                @if(!$login)
-                  <a href="{{route('login')}}" class="btn btn-sm btn-success rounded-pill" style="background-color: #45C4A0; border-color: #45C4A0">Login</a>
-                @else
+                <?php if(!$login): ?>
+                  <a href="<?php echo e(route('login')); ?>" class="btn btn-sm btn-success rounded-pill" style="background-color: #45C4A0; border-color: #45C4A0">Login</a>
+                <?php else: ?>
                   <a href="/dashboard" class="btn btn-sm btn-primary rounded-pill">Home</a>
-                @endif
+                <?php endif; ?>
               </li>
               <li class="nav-item d-lg-none">
                 <button class="hamburger offcanvas-nav-btn"><span></span></button>
@@ -103,25 +104,25 @@
       <!-- /.navbar -->
     </header>
     
-    {{-- SELAMAT DATANG DI MOB FT 2022 --}}
+    
     <section id="beranda" class="wrapper bg-light bg-mob">
       <div class="container pt-10 pt-md-14 pb-md-16 text-center">
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-xl-0 mb-14 align-items-center">
           <div class="col-lg-7 order-lg-2" >
-            <figure><img class="img-auto" src="{{ url('./assets/mob-assets/logo.png') }}" srcset="{{ url('./assets/mob-assets/logo.png') }} 2x" alt="" style="max-height: 70vh; max-width: 70vh;" /></figure>
-            @if(!$login)
-              <a href="{{route('login')}}" class="mt-8 btn btn-lg btn-success rounded-pill d-lg-none">Login</a>
-            @else
+            <figure><img class="img-auto" src="<?php echo e(url('./img/logo.png')); ?>" srcset="<?php echo e(url('./assets/mob-assets/logo.png')); ?> 2x" alt="" style="max-height: 70vh; max-width: 70vh;" /></figure>
+            <?php if(!$login): ?>
+              <a href="<?php echo e(route('login')); ?>" class="mt-8 btn btn-lg btn-success rounded-pill d-lg-none">Login</a>
+            <?php else: ?>
               <a href="/dashboard" class="mt-8 btn btn-lg btn-primary rounded-pill d-lg-none">Home</a>
-            @endif
+            <?php endif; ?>
           </div>
           <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start">
-            <h1 class="display-1 fs-54 mb-5 mx-md-n5 mx-lg-0 mt-7">Selamat Datang di <br class="d-md-none"><span class="text-primary">MOB FT 2022</span></h1>
+            <h1 class="display-1 fs-54 mb-5 mx-md-n5 mx-lg-0 mt-7 main-font">Selamat Datang di <br class="d-md-none"><span class="text-primary main-font" >MOB FT 2023</span></h1>
             <div>
-                <h2 class="fs-30 text-primary" style="font-family: DM Serif Display">In Omnia Paratus</h2>
-                <p class="lead fs-lg mb-7 text-primary fst-italic">"Be Ready for Your Journey Ahead"</p>
+                <h2 class="fs-30 text-primary secondary-font">Virtus Adaptionis Magna Est</h2>
+                <p class="lead fs-lg mb-7 text-primary fst-italic secondary-font">"The Power Of Adaptation is Extraordinary"</p>
             </div>   
-            {{-- BUTTON UNDUH MODUL --}}
+            
             <a href="https://drive.google.com/drive/folders/17mJxXajLYIMQSxfWazQveW6gbvDTy-I0" target="_blank" class="btn btn-lg btn-outline-primary rounded-pill">Unduh Modul</a> 
           </div>
         </div>
@@ -135,14 +136,14 @@
       </div>
     </section>
 
-    {{-- STORYLINE --}}
+    
     <section id="storyline" class="wrapper bg-gradient-primary">
       <div class="container pt-14 py-md-16">
 
         <div class="row gx-lg-8 gx-xl-12 gy-12 align-items-center">
           <div class="col-lg-6 position-relative">
             <figure>
-              <img class="img-fluid floating" src="{{ url('./assets/mob-assets/mascot floating.png') }}" srcset="{{ url('./assets/mob-assets/mascot floating.png') }} 2x" alt="" style="margin-left: 0"/>
+              <img class="img-fluid floating" src="<?php echo e(url('./assets/mob-assets/mascot floating.png')); ?>" srcset="<?php echo e(url('./assets/mob-assets/mascot floating.png')); ?> 2x" alt="" style="margin-left: 0"/>
             </figure>
           </div>
 
@@ -179,12 +180,12 @@
       <!-- /.container -->
     </section>
 
-    {{-- JADWAL --}}
+    
     <section id="jadwal" class="wrapper bg-light">
       <div class="container pt-14 py-md-16">
         <div class="row text-center">
           <div class="col-xl-10 mx-auto">
-            <h3 class="display-4 mb-10 px-xxl-15">Jadwal MOB FT 2022</h3>
+            <h3 class="display-4 mb-10 px-xxl-15 secondary-font">Jadwal MOB FT 2023</h3>
           </div>
           <!-- /column -->
         </div>
@@ -197,8 +198,8 @@
                   <span class="avatar bg-purple text-white w-11 h-11 fs-20 me-4">22</span>
                 </div>
                 <div>
-                  <span class="badge bg-pale-purple text-purple rounded py-1 mb-2">Agustus 2022</span>
-                  <h4 class="mb-1">MOB FT Hari Pertama</h4>
+                  <span class="badge bg-pale-purple text-purple rounded py-1 mb-2">Agustus 2023</span>
+                  <h4 class="mb-1 secondary-font">MOB FT Hari Pertama</h4>
                 </div>
               </div>
             </a>
@@ -211,8 +212,8 @@
                   <span class="avatar bg-blue text-white w-11 h-11 fs-20 me-4">23</span>
                 </div>
                 <div>
-                  <span class="badge bg-pale-blue text-blue rounded py-1 mb-2">Agustus 2022</span>
-                  <h4 class="mb-1">MOB FT Hari Kedua</h4>
+                  <span class="badge bg-pale-blue text-blue rounded py-1 mb-2">Agustus 2023</span>
+                  <h4 class="mb-1 secondary-font">MOB FT Hari Kedua</h4>
                 </div>
               </div>
             </a>
@@ -225,8 +226,8 @@
                   <span class="avatar bg-aqua text-white w-11 h-11 fs-20 me-4">24</span>
                 </div>
                 <div>
-                  <span class="badge bg-pale-aqua text-aqua rounded py-1 mb-2">Agustus 2022</span>
-                  <h4 class="mb-1">MOB FT Hari Ketiga</h4>
+                  <span class="badge bg-pale-aqua text-aqua rounded py-1 mb-2 secondary-font">Agustus 2023</span>
+                  <h4 class="mb-1 secondary-font">MOB FT Hari Ketiga</h4>
                 </div>
               </div>
             </a>
@@ -236,25 +237,25 @@
         <!--/.row -->
     </section>
 
-    {{-- FAQ --}}
+    
     <section id="faq" class="wrapper bg-light">
       <div class="container py-10 py-md-12">
         <div class="row gx-lg-8 gx-xl-12 gy-10">
           <div class="col-lg-12 d-flex justify-content-center">
-            <img class="img-fluid kastil" src="{{ url('./assets/mob-assets/castle.gif')}}" srcset="{{ url('./assets/mob-assets/castle.gif')}}" alt="" />
+            <img class="img-fluid kastil" src="<?php echo e(url('./assets/mob-assets/castle.gif')); ?>" srcset="<?php echo e(url('./assets/mob-assets/castle.gif')); ?>" alt="" />
           </div>
           <!--/column -->
           <div class="col-lg-12">
-            <h2 class="display-4 mb-3 text-center">FAQ</h2>
+            <h2 class="display-4 mb-3 text-center secondary-font">FAQ</h2>
               <div class="accordion accordion-wrapper" id="accordionExample-2">
               <div class="card  accordion-item">
                 <div class="card-header" id="headingOne-2">
-                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2"> Kapan MOB FT 2022 dilaksanakan?</button>
+                  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2"> Kapan MOB FT 2023 dilaksanakan?</button>
                 </div>
                 <!--/.card-header -->
                 <div id="collapseOne-2" class="accordion-collapse collapse show" aria-labelledby="headingOne-2" data-bs-parent="#accordionExample-2">
                   <div class="card-body">
-                    <p>Pra-MOB dilaksanakan pada tanggal 17 Agustus, sementara MOB FT akan dilaksanakan pada 22 hingga 24 Agustus 2022, Rector Cup akan dilaksanakan setiap Sabtu mulai tanggal 27 Agustus hingga 17 September 2022.</p>
+                    <p>Pra-MOB dilaksanakan pada tanggal 17 Agustus, sementara MOB FT akan dilaksanakan pada 22 hingga 24 Agustus 2023, Rector Cup akan dilaksanakan setiap Sabtu mulai tanggal 27 Agustus hingga 17 September 2023.</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -263,12 +264,12 @@
               <!--/.accordion-item -->
               <div class="card  accordion-item">
                 <div class="card-header" id="headingTwo-2">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo-2" aria-expanded="false" aria-controls="collapseTwo-2"> Apakah MOB FT 2022 berlangsung offline sepenuhnya?</button>
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo-2" aria-expanded="false" aria-controls="collapseTwo-2"> Apakah MOB FT 2023 berlangsung offline sepenuhnya?</button>
                 </div>
                 <!--/.card-header -->
                 <div id="collapseTwo-2" class="accordion-collapse collapse" aria-labelledby="headingTwo-2" data-bs-parent="#accordionExample-2">
                   <div class="card-body">
-                    <p>Iya, MOB FT 2022 berlangsung offline sepenuhnya</p>
+                    <p>Iya, MOB FT 2023 berlangsung offline sepenuhnya</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -277,7 +278,7 @@
               <!--/.accordion-item -->
               <div class="card  accordion-item">
                 <div class="card-header" id="headingThree-2">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree-2" aria-expanded="false" aria-controls="collapseThree-2"> Dimanakah lokasi MOB FT 2022 berlangsung? </button>
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree-2" aria-expanded="false" aria-controls="collapseThree-2"> Dimanakah lokasi MOB FT 2023 berlangsung? </button>
                 </div>
                 <!--/.card-header -->
                 <div id="collapseThree-2" class="accordion-collapse collapse" aria-labelledby="headingThree-2" data-bs-parent="#accordionExample-2">
@@ -319,12 +320,12 @@
               <!--/.accordion-item -->
               <div class="card  accordion-item">
                 <div class="card-header" id="headingSix-2">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix-2" aria-expanded="false" aria-controls="collapseSix-2"> Pakaian apa yang harus digunakan saat MOB FT 2022 berlangsung? </button>
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix-2" aria-expanded="false" aria-controls="collapseSix-2"> Pakaian apa yang harus digunakan saat MOB FT 2023 berlangsung? </button>
                 </div>
                 <!--/.card-header -->
                 <div id="collapseSix-2" class="accordion-collapse collapse" aria-labelledby="headingSix-2" data-bs-parent="#accordionExample-2">
                   <div class="card-body">
-                    <p>Baju berkerah dengan bawahan hitam, ketentuan warna baju ada pada modul MOB FT 2022.</p>
+                    <p>Baju berkerah dengan bawahan hitam, ketentuan warna baju ada pada modul MOB FT 2023.</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -333,12 +334,12 @@
               <!--/.accordion-item -->
               <div class="card  accordion-item">
                 <div class="card-header" id="headingSeven-2">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven-2" aria-expanded="false" aria-controls="collapseSeven-2"> Apa saja kriteria kelulusan MOB FT 2022? </button>
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven-2" aria-expanded="false" aria-controls="collapseSeven-2"> Apa saja kriteria kelulusan MOB FT 2023? </button>
                 </div>
                 <!--/.card-header -->
                 <div id="collapseSeven-2" class="accordion-collapse collapse" aria-labelledby="headingSeven-2" data-bs-parent="#accordionExample-2">
                   <div class="card-body">
-                    <p>Kriteria kelulusan dapat dilihat di modul MOB FT 2022 pada bagian Poin Kelulusan</p>
+                    <p>Kriteria kelulusan dapat dilihat di modul MOB FT 2023 pada bagian Poin Kelulusan</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -347,7 +348,7 @@
               <!--/.accordion-item -->
               <div class="card  accordion-item">
                 <div class="card-header" id="headingEight-2">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEight-2" aria-expanded="false" aria-controls="collapseEight-2"> Jika tidak lulus MOB FT 2022, konsekuensi apa yang akan diterima? </button>
+                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseEight-2" aria-expanded="false" aria-controls="collapseEight-2"> Jika tidak lulus MOB FT 2023, konsekuensi apa yang akan diterima? </button>
                 </div>
                 <!--/.card-header -->
                 <div id="collapseEight-2" class="accordion-collapse collapse" aria-labelledby="headingEight-2" data-bs-parent="#accordionExample-2">
@@ -366,7 +367,7 @@
                 <!--/.card-header -->
                 <div id="collapseNine-2" class="accordion-collapse collapse" aria-labelledby="headingNine-2" data-bs-parent="#accordionExample-2">
                   <div class="card-body">
-                    <p>Melalui website MOB FT 2022 dengan login terlebih dahulu</p>
+                    <p>Melalui website MOB FT 2023 dengan login terlebih dahulu</p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -407,15 +408,15 @@
 
   </div>
 
-  {{-- FOOTER --}}
+  
   <footer class="bg-navy text-inverse">
     <div class="container pt-12 pt-lg-6 pb-13 pb-md-15">
       <hr class="mt-3 mb-12" />
       <div class="row gy-6 gy-lg-0">
         <div class="col-md-4 col-lg-3">
           <div class="widget">
-            <img class="mb-4" src="{{ url('./assets/mob-assets/MOB FT 2022-white.svg') }}" srcset="{{ url('./assets/mob-assets/MOB FT 2022-white.svg') }} 2x" alt="" />
-            <p class="mb-4">© Information Technology Department MOB FT 2022. <br class="d-none d-lg-block" />All rights reserved.</p>
+            <img class="mb-4" src="<?php echo e(url('./assets/mob-assets/MOB FT 2022-white.svg')); ?>" srcset="<?php echo e(url('./assets/mob-assets/MOB FT 2022-white.svg')); ?> 2x" alt="" />
+            <p class="mb-4">© Information Technology Department MOB FT 2023. <br class="d-none d-lg-block" />All rights reserved.</p>
             <nav class="nav social social-white">
               <a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
               <a href="https://www.instagram.com/mobftubaya/" target="_blank"><i class="uil uil-instagram"></i></a>
@@ -431,13 +432,13 @@
         <!-- /column -->
         <div class="col-md-4 col-lg-3">
           <figure data-responsive-bg="true">
-            <img  src="{{ url('./img/logoubaya.png')}}" alt="Minimalism" />
+            <img  src="<?php echo e(url('./img/logoubaya.png')); ?>" alt="Minimalism" />
           </figure>
         </div>
         <!-- /column -->
         <div class="col-md-12 col-lg-3 mt-2">
           <figure data-responsive-bg="true">
-            <img  src="{{ url('./img/logobem.png')}}" alt="Minimalism" />
+            <img  src="<?php echo e(url('./img/logobem.png')); ?>" alt="Minimalism" />
           </figure>
         </div>
         <!-- /column -->
@@ -447,7 +448,7 @@
     <!-- /.container -->
   </footer>
 
-  {{-- PROGRESS ARROW --}}
+  
   <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -455,8 +456,9 @@
   </div>
 
 
-  <script src="{{ url('./assets/js/plugins.js') }}"></script>
-  <script src="{{ url('./assets/js/theme.js') }}"></script>
+  <script src="<?php echo e(url('./assets/js/plugins.js')); ?>"></script>
+  <script src="<?php echo e(url('./assets/js/theme.js')); ?>"></script>
 </body>
 </html>
 
+<?php /**PATH C:\Users\nicov\Documents\GitHub\Web-Utama-MOB-FT-2023\resources\views/welcome2022.blade.php ENDPATH**/ ?>

@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
-  <meta name="keywords" content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
+  <meta name="description"
+    content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
+  <meta name="keywords"
+    content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
   <meta name="author" content="elemis">
   <title>MOB FT 2022</title>
   <link rel="shortcut icon" href="{{ url('./img/mob.png') }}">
@@ -17,45 +19,48 @@
 
 <body style="background: url('./assets/mob-assets/background1.jpg'); background-size: cover;">
   <div class="content-wrapper">
-		{{-- TEMPLATE --}}
-		<header class="wrapper bg-light">
-				<nav class="navbar navbar-expand-lg classic transparent navbar-light">
-					<div class="container flex-lg-row flex-nowrap align-items-center">
-						<div class="navbar-brand w-100">
-							<a>
-								<img src="{{ url('./assets/mob-assets/MOB FT 2022.svg') }}" srcset="{{ url('./assets/mob-assets/MOB FT 2022.svg') }} 2x" alt="" />
-							</a>
-						</div>
-						<div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-								<div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-									<ul class="navbar-nav">
-										<li class="nav-item">
-											<a class="nav-link" href="{{route('welcome')}}">Halaman awal</a>
-										</li>
-									</ul>
-									<!-- /.navbar-nav -->
-									<div class="offcanvas-footer d-lg-none">
-										<div>
-                      <a class="link-inverse">© Information Technology Department MOB FT 2022. </a>
-											<nav class="nav social social-white mt-4">
-												<a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
-												<a href="https://www.instagram.com/mobftubaya/" target="_blank"><i class="uil uil-instagram"></i></a>
-												<a href="https://www.youtube.com/channel/UCvXk_6SkGs3TEkvAMdsgzHw" target="_blank"><i class="uil uil-youtube"></i></a>
-											</nav>
-											<!-- /.social -->
-										</div>
-									</div>
-									<!-- /.offcanvas-footer -->
-								</div>
-								<!-- /.offcanvas-body -->
-						</div>
+    {{-- TEMPLATE --}}
+    <header class="wrapper bg-light">
+      <nav class="navbar navbar-expand-lg classic transparent navbar-light">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand w-100">
+            <a>
+              <img src="{{ url('./assets/mob-assets/MOB FT 2022.svg') }}"
+                srcset="{{ url('./assets/mob-assets/MOB FT 2022.svg') }} 2x" alt="" />
+            </a>
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('welcome')}}">Halaman awal</a>
+                </li>
+              </ul>
+              <!-- /.navbar-nav -->
+              <div class="offcanvas-footer d-lg-none">
+                <div>
+                  <a class="link-inverse">© Information Technology Department MOB FT 2022. </a>
+                  <nav class="nav social social-white mt-4">
+                    <a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
+                    <a href="https://www.instagram.com/mobftubaya/" target="_blank"><i
+                        class="uil uil-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCvXk_6SkGs3TEkvAMdsgzHw" target="_blank"><i
+                        class="uil uil-youtube"></i></a>
+                  </nav>
+                  <!-- /.social -->
+                </div>
+              </div>
+              <!-- /.offcanvas-footer -->
+            </div>
+            <!-- /.offcanvas-body -->
+          </div>
 
-						<!-- /.navbar-other -->
-					</div>
-					<!-- /.container -->
-				</nav>
-				<!-- /.navbar -->
-		</header>
+          <!-- /.navbar-other -->
+        </div>
+        <!-- /.container -->
+      </nav>
+      <!-- /.navbar -->
+    </header>
 
     <section class="wrapper">
       <div class="container py-14 py-md-16">
@@ -64,50 +69,56 @@
             <div class="row gy-10 gx-lg-8 gx-xl-12">
               <div class="col-lg-6">
                 <form class="contact-form" method="post" action="{{ route('resetpassword') }}">
-                @csrf
-                <h2 class="ms-2">Wah baru pertama kali login nih, silahkan masukkan password baru</h2>
-                    <!-- /column -->
-                    <div class="col-md-12">
-                      <div class="form-floating mb-4">
-                        <input id="password" type="password" name="password" class="pass-check form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
-                        <label for="password">Password</label>
-                      </div>
+                  @csrf
+                  <h2 class="ms-2">Wah baru pertama kali login nih, silahkan masukkan password baru</h2>
+                  <!-- /column -->
+                  <div class="col-md-12">
+                    <div class="form-floating mb-4">
+                      <input id="password" type="password" name="password"
+                        class="pass-check form-control @error('password') is-invalid @enderror" required
+                        autocomplete="current-password">
+                      <label for="password">Password</label>
                     </div>
+                  </div>
 
-                    <!-- /column -->
-                    <div class="col-md-12">
-                      <div class="form-floating mb-4">
-                        <input id="password2" type="password" name="password2" class="pass-check form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
-                        <label for="password2">Confirm Password</label>
-                      </div>
+                  <!-- /column -->
+                  <div class="col-md-12">
+                    <div class="form-floating mb-4">
+                      <input id="password2" type="password" name="password2"
+                        class="pass-check form-control @error('password') is-invalid @enderror" required
+                        autocomplete="current-password">
+                      <label for="password2">Confirm Password</label>
                     </div>
+                  </div>
 
-                    <!-- /column -->
-                    <div class="col-12">
-                      <div class="mb-4">
-                      <input class="form-check-input" type="checkbox"  onclick="showPassword()" value="" id="invalidCheck">
-                        <label class="form-check-label" for="invalidCheck">
-                          Show password
-                        </label>
-                      </div>
+                  <!-- /column -->
+                  <div class="col-12">
+                    <div class="mb-4">
+                      <input class="form-check-input" type="checkbox" onclick="showPassword()" value=""
+                        id="invalidCheck">
+                      <label class="form-check-label" for="invalidCheck">
+                        Show password
+                      </label>
                     </div>
+                  </div>
 
-                    <div class="col-12">
-                      <div class="mb-4">
-                        <h6 id="hint" style="display:none;" >*Tekan sekali lagi untuk ganti</h6>
-                        @error('password')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                        @enderror
-                      </div>
+                  <div class="col-12">
+                    <div class="mb-4">
+                      <h6 id="hint" style="display:none;">*Tekan sekali lagi untuk ganti</h6>
+                      @error('password')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                      @enderror
                     </div>
+                  </div>
 
-                    <!-- /column -->
-                    <div class="col-12">
-                      <input type="submit" id="gnti_pw" data-href="{{url('/dashboard')}}" class="btn btn-primary rounded-5 btn-send" href="#" value="Konfirmasi" disabled>
-                    </div>
-                    <!-- /column -->
+                  <!-- /column -->
+                  <div class="col-12">
+                    <input type="submit" id="gnti_pw" data-href="{{url('/dashboard')}}"
+                      class="btn btn-primary rounded-5 btn-send" href="#" value="Konfirmasi" disabled>
+                  </div>
+                  <!-- /column -->
                   <!-- </div> -->
                   <!-- /.row -->
 
@@ -133,7 +144,7 @@
                           </button>
                       </div>
                       </div> -->
-                  </form>
+                </form>
                 <!-- /form -->
               </div>
               <!--/column -->
@@ -152,9 +163,9 @@
     </section>
     <!-- /section -->
 
-	</div>
-	<script src="{{ url('./assets/js/plugins.js') }}"></script>
-	<script src="{{ url('./assets/js/theme.js') }}"></script>
+  </div>
+  <script src="{{ url('./assets/js/plugins.js') }}"></script>
+  <script src="{{ url('./assets/js/theme.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
@@ -197,6 +208,7 @@
             pw2.type = "password";
         }
     }
-</script>
+  </script>
 </body>
+
 </html>

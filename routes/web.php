@@ -16,12 +16,10 @@ use Carbon\Carbon;
 |
 */
 
-// Route::get('/welcomemaharu', function () {
-//     return view('welcomemaharu');
-// });
-// Route::get('/noven', function () {
-//     return view('noven');
-// });
+// [Nico] Welcome MOB-FT 2023
+Route::get('/', function () {
+    return view('welcome2023');
+})->name('welcome');
 
 Route::middleware(['auth'])->group(function(){
 
@@ -36,7 +34,7 @@ Route::middleware(['auth'])->group(function(){
         if($reset==1){
             $listrundown = DB::table('rundowns')->where('tanggal','=',$hariIni)->orderBy('tanggal', 'asc')->orderBy('waktu_awal', 'asc')->get();
 
-            return view('home2', compact('listrundown'));
+            return view('dashboardpanitia2023', compact('listrundown'));
         }
         else{
             return redirect('/reset');
@@ -54,22 +52,6 @@ Route::middleware(['auth'])->group(function(){
 
     });
     Route::get('/start', 'HomeController@start')->name('start');
-
-    //Route ED
-    // Route::resource('ed', 'EDController');
-    // Route::get('ed', 'EDController@index')->name('ed');
-    // Route::get('/pengumuman', function () {
-    //     $listp = DB::table('list_pengumuman')->get();
-    //     return view('ed.pengumuman', compact('listp'));
-    // })->name('pengumuman');
-    // Route::get('/pengumuman/buat', function () {
-    //     return view('ed.create');
-    // });
-    // Route::post('ed/tambahrundown', 'EDController@AddRundown')->name('tambahrundown');
-    // Route::post('createPengumuman', 'EDController@AddPengumuman')->name('createPengumuman');
-    // Route::get('ubahrd/{id}', 'EDController@ubahrd')->name('ubahrd');
-    // Route::get('deletePengumuman/{id}', 'EDController@deletePengumuman')->name('deletePengumuman');
-    // Route::post('showrd', 'EDController@showrd')->name('showrd');
 
     //Route ITD
     Route::resource('itd','ITDController')->middleware('can:hanyaitd');
@@ -90,6 +72,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('presensimaharu','MapingController@presensi')->name('presensimaharu');
     Route::post('listpresensi', 'MapingController@listpresensi')->name('listpresensi');
     Route::post('dayrecappresensi', 'MapingController@dayrecappresensi')->name('dayrecappresensi');
+
     //bikinan cath
     Route::post('presensi','MapingController@presensi')->name('presensimaping');
     Route::post('presensialfa','MapingController@presensialfa')->name('presensialfa2');
@@ -109,38 +92,6 @@ Route::middleware(['auth'])->group(function(){
     Route::post('hapus','SFDController@hapus')->name('hapusPelanggaran');
     Route::post('editpelanggaran','SFDController@editpelanggaran')->name('editPelanggaran');
 
-    //upload bukti kendala mahasiswa
-    // Route::get('/kendala','SFDController@formBukti');
-    // Route::post('tambahBukti', 'SFDController@tambahBukti')->name('tambahBukti');
-
-
-    //untuk aktivitas rector cup
-    // Route::get('/rcactivity','ProfileController@rcactivity');
-    // Route::post('tebaksandi', 'ProfileController@tebaksandi')->name('tebaksandi');
-
-    //Route RC Mahasiswa
-    // Route::resource('rectorcup','RectorCupController');
-    // Route::post('showSyarat','RectorCupController@showSyarat')->name('persyaratan');
-    // Route::post('showDaftar','RectorCupController@showDaftar')->name('daftarrc');
-    // Route::post('daftarrc', 'RectorCupController@daftarrc')->name('daftar');
-
-    //Route RC Koorcab
-    // Route::get('/kandidat', 'RectorCupController@PendaftarRC');
-    //Route RC Koorcab
-    // Route::get('/kontingen', 'RectorCupController@Kontingen');
-    // Route::get('/kontingen/{id}', 'RectorCupController@KontingenShowPendaftar');
-
-    // Route::post('showPrestasi','RectorCupController@showPrestasi')->name('prestasi');
-    // Route::post('editDetailRC','RectorCupController@editDetailRC')->name('editDetailRC');
-    // Route::post('terimaRC','RectorCupController@terimaRC')->name('terimaRC');
-    // Route::post('ubahdetail','RectorCupController@ubahdetail')->name('ubahdetail');
-    // Route::post('tambahmedal','RectorCupController@tambahmedal')->name('tambahmedal');
-    // Route::post('showtambahMedal','RectorCupController@showtambahMedal')->name('showtambahMedal');
-    // Route::post('tolakRC','RectorCupController@tolakRC')->name('tolakRC');
-
-    //Route untuk sharing petuah numpang homecontroller
-    // Route::get('/petuah', 'HomeController@Petuah');
-    // Route::post('cekjawabanpetuah', 'HomeController@cekjawabanpetuah')->name('cekjawabanpetuah');
 
     Route::get('/dashboard', 'HomeController@index')->name('home');
     Route::get('/set', 'UserController@setpassword')->name('setpass');
@@ -159,41 +110,6 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/ads/listKelompok','ADController@listKelompok')->name('listKelompokAd');
     Route::get("/ads/tampil",'ADController@tampil')->name('tampilAd');
 
-
-    // [Cath] ED -- unused
-    // Route::post('ed/tambahrundown', 'EDController@AddRundown')->name('tambahrundown');
-
-    // [Jose]
-    // ^ Login
-    // Route::get('/cobalogin', function () {
-    //     return view('auth.login2');
-    // });
-
-    // ^ Reset Password
-    // Route::get('/reset2', function () {
-    //     return view('resetpassword2');
-    // });
-
-    // ^ Profile
-    // Route::get('/profil2', function () {
-    //     return view('profile.index2');
-    // });
-
-    // ^ Rector Cup
-    // Route::get('/rectorcup2', function () {
-    //     return view('rectorcup.indexcoba');
-    // });
-
-    // ^ Petuah
-    // Route::get('/petuah2', function () {
-    //     return view('petuah.index2');
-    // });
-
-    // ^ Coba Header
-    // Route::get('/header', function () {
-    //     return view('header');
-    // });
-
     Route::resource('bph', 'BPHController')->middleware('can:hanyabph');
 
     Route::get('/ormawa', function () {
@@ -201,36 +117,10 @@ Route::middleware(['auth'])->group(function(){
     })->name('ormawa');
 });
 
-Route::get('/', function () {
-    // $perunggu = DB::select(DB::raw("SELECT count(medali) as Jumlah FROM `rc_cabang` where medali='Perunggu'"));
-    // $emas = DB::select(DB::raw("SELECT count(medali) as Jumlah FROM `rc_cabang` where medali='Emas'"));
-    // $perak = DB::select(DB::raw("SELECT count(medali) as Jumlah FROM `rc_cabang` where medali='Perak'"));
-
-    // $now =  Carbon::now();
-    // $hariIni = date('Y-m-d',strtotime($now));
-    // $getMenanghariIni = DB::table('rc_cabang')->whereNotNull('tanggal_juara')->get();
-
-    // return view('welcome',["menangToday"=>$getMenanghariIni,"emas"=>$emas, "perunggu"=>$perunggu, "perak"=>$perak]);
-    return view('welcome2022');
-})->name('welcome');
-
 //route update password
 route::get('/setPassword','ITDController@setPassword')->name('itd.setpassword');
 
 Auth::routes();
-
-//[Rony] Route test
-// Route::get('/resetpassword2022', function () {
-//     return view('resetpassword2022');
-// })->name('resetpassword2022');
-
-// Route::get('/loginnew', function () {
-//     return view('auth.login2022');
-// })->name('loginnew');
-
-// Route::get('/maharunew', function () {
-//     return view('home2022');
-// })->name('maharunew');
 
 Route::get('/ubahprofilnew', function () {
     return view('profile.profile2022');

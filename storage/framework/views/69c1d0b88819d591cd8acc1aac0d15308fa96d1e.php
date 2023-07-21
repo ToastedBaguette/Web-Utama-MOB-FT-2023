@@ -7,18 +7,20 @@
   <meta name="description" content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
   <meta name="keywords" content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
   <meta name="author" content="elemis">
-  <title>MOB FT 2022</title>
-  <link rel="shortcut icon" href="{{ url('./img/mob.png') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/plugins.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/colors/sky.css') }}">
-  <link rel="preload" href="{{ url('./assets/css/fonts/urbanist.css') }}" as="style" onload="this.rel='stylesheet'">
-  @yield('css')
+  <title>MOB FT 2023</title>
+  <link rel="shortcut icon" href="<?php echo e(url('./img/mob.png')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/plugins.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/style.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/colors/sky.css')); ?>">
+  <link rel="preload" href="<?php echo e(url('./assets/css/fonts/urbanist.css')); ?>" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/css/custom.css')); ?>">
+
+  <?php echo $__env->yieldContent('css'); ?>
   	<style>
 		.logout {
 			display: none;
 		}
-		@media only screen and (max-width: 768px) {
+		@media  only screen and (max-width: 768px) {
 			.logout {
 				display: block;
 			}
@@ -28,30 +30,30 @@
 
 <body>
   <div class="content-wrapper">
-		{{-- NAVBAR--}}
+		
 		<header class="wrapper bg-light">
 				<nav class="navbar navbar-expand-lg classic transparent navbar-light">
 					<div class="container flex-lg-row flex-nowrap align-items-center">
 						<div class="navbar-brand w-100">
-							<a href="{{ route('home')}}">
-								<img src="{{ url('./assets/mob-assets/MOB FT 2022.svg')}}" srcset="{{ url('./assets/mob-assets/MOB FT 2022.svg')}} 2x" alt="" />
+							<a class="main-font fs-24" href="<?php echo e(route('home')); ?>">
+								MOB-FT 2023
 							</a>
 						</div>
 						<div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
 								<div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
 									<ul class="navbar-nav">
 										<li class="nav-item">
-											<a class="nav-link" href="{{route('welcome')}}">Beranda</a>
+											<a class="nav-link" href="<?php echo e(route('welcome')); ?>">Beranda</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="{{route('ormawa')}}">Ormawa</a>
+											<a class="nav-link" href="<?php echo e(route('ormawa')); ?>">Ormawa</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="{{route('profile')}}">Ubah Profil</a>
+											<a class="nav-link" href="<?php echo e(route('profile')); ?>">Ubah Profil</a>
 										</li>
 										<li class="logout">
-											<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-danger">{{ __('Logout') }}</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf
+											<a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-danger"><?php echo e(__('Logout')); ?></a>
+                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none"><?php echo csrf_field(); ?>
                         </form>
 										</li>
 									</ul>
@@ -75,8 +77,8 @@
 						<div class="navbar-other ms-lg-4">
 							<ul class="navbar-nav flex-row align-items-center ms-auto">
 								<li class="nav-item d-none d-md-block">
-									<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-sm btn-danger rounded-pill" style="background-color:#e2626B; border-color: #e2626B">{{ __('Logout') }}</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf
+									<a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-sm btn-danger rounded-pill" style="background-color:#e2626B; border-color: #e2626B"><?php echo e(__('Logout')); ?></a>
+                        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none"><?php echo csrf_field(); ?>
                         </form>
 								</li>
 								<li class="nav-item d-lg-none">
@@ -92,7 +94,7 @@
 				<!-- /.navbar -->
 		</header>
 
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
 
     <div class="overflow-hidden">
 			<div class="divider text-navy mx-n2">
@@ -103,14 +105,14 @@
 		</div>
 
 	</div>
-	  {{-- FOOTER --}}
+	  
 	<footer class="bg-navy text-inverse">
 		<div class="container pt-12 pt-lg-6 pb-13 pb-md-15">
 			<hr class="mt-3 mb-12" />
 			<div class="row gy-6 gy-lg-0">
 				<div class="col-md-4 col-lg-3">
 					<div class="widget">
-						<img class="mb-4" src="{{ url('./assets/mob-assets/MOB FT 2022-white.svg') }}" srcset="{{ url('./assets/mob-assets/MOB FT 2022-white.svg') }} 2x" alt="" />
+						<img class="mb-4" src="<?php echo e(url('./assets/mob-assets/MOB FT 2022-white.svg')); ?>" srcset="<?php echo e(url('./assets/mob-assets/MOB FT 2022-white.svg')); ?> 2x" alt="" />
 						<p class="mb-4">© Information Technology Department MOB FT 2022. <br class="d-none d-lg-block" />All rights reserved.</p>
 						<nav class="nav social social-white">
 							<a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
@@ -128,13 +130,13 @@
 				<!-- /column -->
 				<div class="col-md-4 col-lg-3">
           			<figure data-responsive-bg="true">
-						<img  src="{{url('./img/logoubaya.png')}}" alt="Minimalism" />
+						<img  src="<?php echo e(url('./img/logoubaya.png')); ?>" alt="Minimalism" />
 					</figure>
 				</div>
 				<!-- /column -->
 				<div class="col-md-12 col-lg-3">
 					<figure data-responsive-bg="true" class="mt-2">
-						<img  src="{{url('./img/logobem.png')}}" alt="Minimalism" />
+						<img  src="<?php echo e(url('./img/logobem.png')); ?>" alt="Minimalism" />
 					</figure>
 				</div>
 				<!-- /column -->
@@ -144,7 +146,7 @@
 		<!-- /.container -->
 	</footer>
 
-	{{-- PROGRESS ARROW --}}
+	
 	<div class="progress-wrap">
 		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
 			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -152,8 +154,9 @@
 	</div>
 
 
-	<script src="{{ url('./assets/js/plugins.js') }}"></script>
-	<script src="{{ url('./assets/js/theme.js') }}"></script>
-	@yield('script')
+	<script src="<?php echo e(url('./assets/js/plugins.js')); ?>"></script>
+	<script src="<?php echo e(url('./assets/js/theme.js')); ?>"></script>
+	<?php echo $__env->yieldContent('script'); ?>
 </body>
 </html>
+<?php /**PATH C:\Users\nicov\Documents\GitHub\Web-Utama-MOB-FT-2023\resources\views/layouts/maharu2022.blade.php ENDPATH**/ ?>

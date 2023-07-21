@@ -79,7 +79,8 @@
                     <form action="{{route('createPengumuman')}}" method="post">
                         @csrf
                         <textarea name="editor1" required></textarea>
-                        <button type="submit" class="btn btn-success mt-4" style="width:100PX;float:right;">Buat</button>
+                        <button type="submit" class="btn btn-success mt-4"
+                            style="width:100PX;float:right;">Buat</button>
                     </form>
                 </div>
             </div>

@@ -1,14 +1,15 @@
 <html>
-    <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-   	<title>MOB FT 2021</title>
+    <title>MOB FT 2021</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
-	<link rel="stylesheet" href="https://use.typekit.net/dcf1bki.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dcf1bki.css">
     <link rel="shortcut icon" href="./img/mob.png" />
     <!-- <link rel="stylesheet" href="{{ url ('website/assets/css/custom.css') }}" /> -->
     <script src="https://unpkg.com/css-doodle@0.19.1/css-doodle.min.js"></script>
@@ -20,48 +21,74 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
         * {
-            margin:0; 
-            padding:0;
-            background-color :#141419;
+            margin: 0;
+            padding: 0;
+            background-color: #141419;
         }
 
         html {
-            overflow-y: hidden; 
-            overflow-x: hidden; 
-            padding:0;
-            margin:0;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
         }
-        body{
-            overflow-x: hidden; 
-            overflow-y: hidden; 
-            height = 100%;
-            padding:0;
-            margin:0;
+
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            height=100%;
+            padding: 0;
+            margin: 0;
         }
 
         @-webkit-keyframes arrow_anim {
-        from { margin-top: 58px; }
-            to { margin-top: 67px; }
+            from {
+                margin-top: 58px;
+            }
+
+            to {
+                margin-top: 67px;
+            }
         }
 
         @-moz-keyframes arrow_anim {
-        from { margin-top: 58px; }
-            to { margin-top: 67px; }
+            from {
+                margin-top: 58px;
+            }
+
+            to {
+                margin-top: 67px;
+            }
         }
 
         @-ms-keyframes arrow_anim {
-        from { margin-top: 58px; }
-            to { margin-top: 67px; }
+            from {
+                margin-top: 58px;
+            }
+
+            to {
+                margin-top: 67px;
+            }
         }
 
         @-o-keyframes arrow_anim {
-        from { margin-top: 58px; }
-            to { margin-top: 67px; }
+            from {
+                margin-top: 58px;
+            }
+
+            to {
+                margin-top: 67px;
+            }
         }
 
         @keyframes arrow_anim {
-        from { margin-top: 58px; }
-            to { margin-top: 67px; }
+            from {
+                margin-top: 58px;
+            }
+
+            to {
+                margin-top: 67px;
+            }
         }
 
         #arrow {
@@ -74,17 +101,17 @@
             /* border-left: 10px solid rgba(48, 48, 72, .1000);
             border-right: 10px solid rgba(48, 48, 72, .15);
             border-top: 10px solid red; */
-            height: 0; 
+            height: 0;
             /* salah satu aja */
             margin: 80% 0px 0px 44%;
             /* margin: 0px 0px 0px 30px; */
             position: absolute;
-            top:0%;
+            top: 0%;
             left: 0px;
-            width: 0; 
+            width: 0;
             font-family: "Press Start 2P", sans-serif;
             cursor: pointer;
-            color:rgba(101,222,191,1);
+            color: rgba(101, 222, 191, 1);
             -webkit-animation: arrow_anim .3s steps(3) infinite;
             -moz-animation: arrow_anim .3s steps(3) infinite;
             -ms-animation: arrow_anim .3s steps(3) infinite;
@@ -98,9 +125,9 @@
             /* border-radius: 1rem;  */
             border-radius: 20px 20px 0px 0px;
             /* background-color: rgba(255, 255, 255, .15);  */
-            background-color: rgba(48, 48, 72, .100); 
+            background-color: rgba(48, 48, 72, .100);
             /* background-color: #16161B;  */
-            box-shadow:0px 0px 200px #70e8c675; 
+            box-shadow: 0px 0px 200px #70e8c675;
             backdrop-filter: blur(25px);
 
             /* background: #16161B; */
@@ -120,107 +147,150 @@
             margin: auto;
         }
 
-        #dialog{
-            padding-left:15%;
+        #dialog {
+            padding-left: 15%;
         }
- 
+
 
         @-webkit-keyframes spaceboots {
-            0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
-            10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
-            30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
-            40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
-            50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
-            70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
-            80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
-            90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
-            100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+            0% {
+                -webkit-transform: translate(2px, 1px) rotate(0deg);
+            }
+
+            10% {
+                -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            }
+
+            20% {
+                -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            }
+
+            30% {
+                -webkit-transform: translate(0px, 2px) rotate(0deg);
+            }
+
+            40% {
+                -webkit-transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            }
+
+            80% {
+                -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            }
+
+            90% {
+                -webkit-transform: translate(2px, 2px) rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            }
         }
+
         .shake {
             -webkit-animation-name: spaceboots;
             -webkit-animation-duration: 0.8s;
-            -webkit-transform-origin:50% 50%;
+            -webkit-transform-origin: 50% 50%;
             -webkit-animation-iteration-count: infinite;
             -webkit-animation-timing-function: linear;
         }
 
-        #nayla{
-            width:20%;
-            position:absolute;z-index: 1;
-            background-color: transparent; 
-            z-index:1;
-            bottom:0;
-            left:0;
+        #nayla {
+            width: 20%;
+            position: absolute;
+            z-index: 1;
+            background-color: transparent;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
         }
 
-        @media (max-width: 575px){
-            body{
-                overflow: hidden; 
+        @media (max-width: 575px) {
+            body {
+                overflow: hidden;
             }
+
             .dialog {
                 max-width: 90%;
                 min-width: 90%;
-                height:100px;
+                height: 100px;
                 font-size: 14px;
             }
+
             #arrow {
                 /* margin: 100px 0px 0px 200px; */
                 margin: 10% 0px 0px 50%;
                 font-size: 14px;
             }
-            #nayla{
-                width:45%;
-                bottom:0px;
-                left:-5%;
+
+            #nayla {
+                width: 45%;
+                bottom: 0px;
+                left: -5%;
             }
-            body{
-                max-width:100%;
-                max-height:100%;
+
+            body {
+                max-width: 100%;
+                max-height: 100%;
             }
-            #C{
-                max-width:100%;
-                max-height:100%;
+
+            #C {
+                max-width: 100%;
+                max-height: 100%;
             }
-            #dialog{
-                padding-left:35%;
+
+            #dialog {
+                padding-left: 35%;
                 font-size: 14px;
-                
+
             }
-            #arrow{
-                position:absolute;
-                top:30%;
+
+            #arrow {
+                position: absolute;
+                top: 30%;
             }
         }
 
-        a:visited * { color:red !important; }
-        
+        a:visited * {
+            color: red !important;
+        }
     </style>
 
-    </head>
-    <body>
-        <canvas id="C" class="shake" style="position:relative; z-index:0px;">
-        </canvas>
-        <!-- <div>
+</head>
+
+<body>
+    <canvas id="C" class="shake" style="position:relative; z-index:0px;">
+    </canvas>
+    <!-- <div>
         <img style="margin-top:-1500px; width:50%; margin-left:-500px; posisition:relative;z-index: 1;" src="{{ url ('./img//welcome/karakter-01.png') }}">
         </div> -->
-        <img style="" id="nayla" src="{{ url ('./img//welcome/karakter-01.png') }}">
-        <!-- <img style="margin-top:-1500px; width:50%; margin-left:-500px; position:relative;z-index: 1;bottom:156px;left:20px;" src="{{ url ('./img//welcome/karakter-01.png') }}"> -->
+    <img style="" id="nayla" src="{{ url ('./img//welcome/karakter-01.png') }}">
+    <!-- <img style="margin-top:-1500px; width:50%; margin-left:-500px; position:relative;z-index: 1;bottom:156px;left:20px;" src="{{ url ('./img//welcome/karakter-01.png') }}"> -->
 
-        <div class="dialog" style=" position:absolute; 
+    <div class="dialog" style=" position:absolute; 
                 bottom:0;">
-                <div id="dialog" style="background:transparent;">
+        <div id="dialog" style="background:transparent;">
 
-                </div>
-    
-         </div>
+        </div>
 
-        
-  
-        
-        <script>
-            window.onload = function() {
+    </div>
+
+
+
+
+    <script>
+        window.onload = function() {
                 window.requestAnimFrame = (function() {
                 return window.requestAnimationFrame ||window.webkitRequestAnimationFrame ||window.mozRequestAnimationFrame ||
                     function(callback) {
@@ -454,7 +524,8 @@
         createDiag( individual );
 
         
-        </script>
+    </script>
 
-    </body>
+</body>
+
 </html>

@@ -55,7 +55,8 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Heyo anak ITD, {{Auth::user()->name}}</h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Heyo anak ITD,
+                        {{Auth::user()->name}}</h2>
 
                     <!--end::Page Title-->
                 </div>
@@ -76,7 +77,8 @@
             <!-- begin: sweetalert -->
             <div class="">
                 @if (session('status'))
-                <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:4em;">
+                <div class="alert alert-custom alert-light-success fade show mb-5" role="alert"
+                    style="width:100%; Max-height:4em;">
                     <div class="alert-icon"><i class="flaticon2-check-mark icon-lg"></i></div>
                     <div class="alert-text" style="font-size:120%;"><label for="">{{session('status')}}</label></div>
                     <div class="alert-close">
@@ -86,7 +88,8 @@
                     </div>
                 </div>
                 @elseif (session('error'))
-                <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
+                <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert"
+                    style="width:100%; Max-height:5em;">
                     <div class="alert-icon"><i class="flaticon2-warning "></i></div>
                     <div class="alert-text">{{session('error')}}</div>
                     <div class="alert-close">
@@ -109,7 +112,8 @@
                     </div>
                     <div class="card-toolbar">
                         <a href='#modalAdd' data-toggle='modal'>
-                            <button type="button" class="btn btn-success" style="min-width:100px">Tambah Presensi</button>
+                            <button type="button" class="btn btn-success" style="min-width:100px">Tambah
+                                Presensi</button>
                         </a>
                         <!-- <a href="#" class="btn btn-sm btn-success font-weight-bold">
                             <i class="flaticon2-cube"></i>Reports</a> -->
@@ -140,9 +144,11 @@
                             <tr>
                                 <td>
                                     <a href='#modalChange_{{$d->idpresensi}}' data-toggle='modal'>
-                                        <button type="button" class="btn btn-success" style="min-width:50px">{{$d->idpresensi}}</button>
+                                        <button type="button" class="btn btn-success"
+                                            style="min-width:50px">{{$d->idpresensi}}</button>
                                     </a>
-                                    <div class="modal fade" id="modalChange_{{$d->idpresensi}}" tabindex="-1" role="basic" aria-hidden="true">
+                                    <div class="modal fade" id="modalChange_{{$d->idpresensi}}" tabindex="-1"
+                                        role="basic" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">

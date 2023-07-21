@@ -4,21 +4,21 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>MOB FT 2022</title>
+	<title>MOB FT 2023</title>
 	<!-- <meta name="description" content="Pagination options datatables examples" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<!-- <link rel="canonical" href="https://keenthemes.com/metronic" /> -->
 	<!--begin::Fonts-->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 	<link rel="shortcut icon" href="{{ asset('img/mob.png')}}" />
 	<!--end::Fonts-->
 	<!--begin::Page Vendors Styles(used by this page)-->
 	@yield('style')
 	<!--end::Page Vendors Styles-->
 	<!--begin::Global Theme Styles(used by all pages)-->
-	<link href="{{ asset('admin/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('admin/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('admin/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('admin/plugins/global/plugins.bundle.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('admin/plugins/custom/prismjs/prismjs.bundle.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('admin/css/style.bundle.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('admin/css/custom.css')}}">
 	<!--end::Global Theme Styles-->
 	<!--begin::Layout Themes(used by all pages)-->
 	<!--end::Layout Themes-->
@@ -27,15 +27,13 @@
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading">
+<body id="kt_body"
+	class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading">
 	<!--begin::Main-->
 	<!--begin::Header Mobile-->
 	<div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
 		<!--begin::Logo-->
-		<a href="/homeadmin">
-			<img alt="Logo" src="{{ url('././assets/mob-assets/MOB FT 2022-pink.svg') }}" class="logo-sticky max-h-20px pr-5 pl-3" />
-			<!-- <img alt="Logo" src="{{ asset('img/logopink.png')}}" class="logo-default max-h-30px" /> -->
-		</a>
+		<a class="main-font fs-24" href="/homeadmin">MOB FT 2023</a>
 		<!--end::Logo-->
 		<!--begin::Toolbar-->
 		<div class="d-flex align-items-center">
@@ -76,7 +74,6 @@
 								</form>
 							</a>
 						</li>
-
 					</ul>
 					<!--end::Navigation-->
 				</div>
@@ -95,7 +92,8 @@
 				<!--begin::Aside Menu-->
 				<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
 					<!--begin::Menu Container-->
-					<div id="kt_aside_menu" class="aside-menu min-h-lg-800px" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+					<div id="kt_aside_menu" class="aside-menu min-h-lg-800px" data-menu-vertical="1"
+						data-menu-scroll="1" data-menu-dropdown-timeout="500">
 						<!--begin::Menu Nav-->
 						<ul class="menu-nav">
 							@if(Auth::user()->divisi =='MAPING')
@@ -135,26 +133,29 @@
 							<button class="btn btn-icon aside-toggle ml-n3 mr-10" id="kt_aside_desktop_toggle">
 								<span class="svg-icon svg-icon-xxl svg-icon-dark-75">
 									<!--begin::Svg Icon | path:assets/media/svg/icons/Text/Align-left.svg-->
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 											<rect x="0" y="0" width="24" height="24" />
-											<rect fill="#000000" opacity="0.3" x="4" y="5" width="16" height="2" rx="1"></rect>
-											<rect fill="#000000" opacity="0.3" x="4" y="13" width="16" height="2" rx="1"></rect>
-											<path d="M5,9 L13,9 C13.5522847,9 14,9.44771525 14,10 C14,10.5522847 13.5522847,11 13,11 L5,11 C4.44771525,11 4,10.5522847 4,10 C4,9.44771525 4.44771525,9 5,9 Z M5,17 L13,17 C13.5522847,17 14,17.4477153 14,18 C14,18.5522847 13.5522847,19 13,19 L5,19 C4.44771525,19 4,18.5522847 4,18 C4,17.4477153 4.44771525,17 5,17 Z" fill="#000000" />
+											<rect fill="#000000" opacity="0.3" x="4" y="5" width="16" height="2" rx="1">
+											</rect>
+											<rect fill="#000000" opacity="0.3" x="4" y="13" width="16" height="2"
+												rx="1"></rect>
+											<path
+												d="M5,9 L13,9 C13.5522847,9 14,9.44771525 14,10 C14,10.5522847 13.5522847,11 13,11 L5,11 C4.44771525,11 4,10.5522847 4,10 C4,9.44771525 4.44771525,9 5,9 Z M5,17 L13,17 C13.5522847,17 14,17.4477153 14,18 C14,18.5522847 13.5522847,19 13,19 L5,19 C4.44771525,19 4,18.5522847 4,18 C4,17.4477153 4.44771525,17 5,17 Z"
+												fill="#000000" />
 										</g>
 									</svg>
 									<!--end::Svg Icon-->
 								</span>
 							</button>
-
 							<!-- <button class="btn p-0 burger-icon rounded-0 burger-icon aside-toggle ml-n3 mr-10" id="kt_aside_desktop_toggle">
 					<span></span>
 				</button> -->
-
 							<!--end::Aside Toggle-->
 							<!--begin::Logo-->
-							<a href="/homeadmin">
-								<img alt="Logo" src="{{ url('././assets/mob-assets/MOB FT 2022-pink.svg') }}" class="logo-sticky max-h-20px pr-5 pl-3" />
+							<a class="main-font fs-24" href="/homeadmin">
+								MOB FT 2023
 								<!-- <img alt="Logo" src="{{ asset('img/logopink.png')}}" class="logo-sticky max-h-35px" /> -->
 							</a>
 							<!--end::Logo-->
@@ -172,11 +173,17 @@
 									<div class="btn btn-icon btn-clean btn-lg btn-dropdown mr-1">
 										<span class="svg-icon svg-icon-xl">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/General/Search.svg-->
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+											<svg xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+												viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 													<rect x="0" y="0" width="24" height="24" />
-													<path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-													<path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
+													<path
+														d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+														fill="#000000" fill-rule="nonzero" opacity="0.3" />
+													<path
+														d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+														fill="#000000" fill-rule="nonzero" />
 												</g>
 											</svg>
 											<!--end::Svg Icon-->
@@ -200,7 +207,8 @@
 								</div>
 								<!--end::Toggle-->
 								<!--begin::Dropdown-->
-								<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-md">
+								<div
+									class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-md">
 									<!--begin::Navigation-->
 									<ul class="navi navi-hover py-5">
 										<li class="navi-item">
@@ -218,19 +226,18 @@
 													<i class="flaticon-logout"></i>
 												</span>
 												<span class="navi-text">Keluar</span>
-												<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+												<form id="logout-form" action="{{ route('logout') }}" method="POST"
+													class="d-none">
 													@csrf
 												</form>
 											</a>
 										</li>
-
 									</ul>
 									<!--end::Navigation-->
 								</div>
 								<!--end::Dropdown-->
 							</div>
 							<!--end::Nama-->
-
 						</div>
 						<!--end::Topbar-->
 					</div>
@@ -242,22 +249,19 @@
 				<!--end::Content-->
 				<!--begin::Footer-->
 				<div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
-
 					<!-- style="position: absolute;bottom: 0;width: 100%; z-index:100;" -->
-
-
 					<!--begin::Container-->
 					<div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
 						<!--begin::Copyright-->
 						<div class="text-dark order-2 order-md-1">
-							<span class="text-muted font-weight-bold mr-2">2022©</span>
+							<span class="text-muted font-weight-bold mr-2">2023©</span>
 							<span class="text-dark-75 text-hover-primary">Information Technology Department</span>
 							<!-- <a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Information Technology Department</a> -->
 						</div>
 						<!--end::Copyright-->
 						<!--begin::Nav-->
 						<div class="nav nav-dark order-1 order-md-2">
-							<span class="text-dark-75 text-hover-primary">MOB FT 2022</span>
+							<span class="text-dark-75 text-hover-primary">MOB FT 2023</span>
 							<!-- <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link px-3"> </a> -->
 							<!-- <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-3 pr-0"> </a> -->
 						</div>
@@ -272,10 +276,7 @@
 		<!--end::Page-->
 	</div>
 	<!--end::Main-->
-
-
 	</div>
-
 	<script>
 		var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";
 	</script>
