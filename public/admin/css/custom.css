@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/broken-console');
 @import url('https://fonts.cdnfonts.com/css/04b30');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
 
 * {
     color: #40128B;
@@ -22,4 +23,27 @@ body {
 
 .bg-footer{
     background-color: #40128B;
+}
+
+.btn-outline-primary{
+    border-color: #40128B;
+    color: #40128B;
+}
+
+.btn-outline-primary:hover{
+    background-color: #40128B;
+    color: white;
+    border-color: #40128B;
+}
+
+.accordion-wrapper .card-header button{
+    color: #40128B;
+}
+
+.accordion-wrapper .card-header button:hover {
+    color: #40128B;
+}
+
+.accordion-wrapper .card-header button.collapsed {
+    color: #40128B;
 }

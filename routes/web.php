@@ -92,7 +92,6 @@ Route::middleware(['auth'])->group(function(){
     Route::post('hapus','SFDController@hapus')->name('hapusPelanggaran');
     Route::post('editpelanggaran','SFDController@editpelanggaran')->name('editPelanggaran');
 
-
     Route::get('/dashboard', 'HomeController@index')->name('home');
     Route::get('/set', 'UserController@setpassword')->name('setpass');
     Route::post('resetpassword', 'UserController@resetpassword')->name('resetpassword');

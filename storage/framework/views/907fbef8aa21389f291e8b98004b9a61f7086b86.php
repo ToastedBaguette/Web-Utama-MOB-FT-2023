@@ -33,9 +33,7 @@
 	<!--begin::Header Mobile-->
 	<div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
 		<!--begin::Logo-->
-		<a class="main-font fs-24" href="/homeadmin">
-			MOB FT 2023
-		</a>
+		<a class="main-font fs-24" href="/homeadmin">MOB FT 2023</a>
 		<!--end::Logo-->
 		<!--begin::Toolbar-->
 		<div class="d-flex align-items-center">

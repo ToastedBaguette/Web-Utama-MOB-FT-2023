@@ -62,7 +62,7 @@ a:hover,
 .external:hover:after,
 .navbar-expand.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu)>.dropdown-toggle:after,
 .navbar-light .language-select .dropdown-toggle:after {
-  color: #5eb9f0;
+  color: #40128B;
 }
 .link-dark:hover,
 .text-primary,
@@ -103,7 +103,7 @@ a.text-reset:hover,
 .btn-outline-primary:active,
 .navbar.navbar-light.fixed .btn:not(.btn-expand),
 .text-line:before {
-  background-color: #5eb9f0;
+  background-color: #40128B;
 }
 .bg-primary,
 .icon-list.bullet-bg i[class*=bullet-primary] {
@@ -142,7 +142,7 @@ blockquote,
 .lg-outer .lg-item:after,
 .loader,
 .tp-loader.spinner {
-  border-color: #5eb9f0;
+  border-color: #40128B;
 }
 .border-primary {
   border-color: #5eb9f0 !important;

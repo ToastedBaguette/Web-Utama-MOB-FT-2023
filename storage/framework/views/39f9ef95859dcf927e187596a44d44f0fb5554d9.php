@@ -282,7 +282,7 @@
             <div class="card  accordion-item">
               <div class="card-header" id="headingOne-2">
                 <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne-2"
-                  aria-expanded="true" aria-controls="collapseOne-2"> Kapan MOB FT 2023 dilaksanakan?</button>
+                  aria-expanded="true" aria-controls="collapseOne-2">Kapan MOB FT 2023 dilaksanakan?</button>
               </div>
               <!--/.card-header -->
               <div id="collapseOne-2" class="accordion-collapse collapse show" aria-labelledby="headingOne-2"

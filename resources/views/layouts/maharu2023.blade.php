@@ -64,7 +64,7 @@
 							<!-- /.navbar-nav -->
 							<div class="offcanvas-footer d-lg-none">
 								<div>
-									<a class="link-inverse">© Information Technology Department MOB FT 2022. </a>
+									<a class="link-inverse">© Information Technology Department MOB FT 2023. </a>
 									<nav class="nav social social-white mt-4">
 										<a href="https://linktr.ee/MOBFT2022" target="_blank"><i
 												class="uil uil-link-alt"></i></a>
@@ -124,7 +124,7 @@
 				<div class="col-md-4 col-lg-3">
 					<div class="widget">
 						<a class="main-font fs-24">MOB-FT 2023</a>
-						<p class="mb-4" style="color: white">© Information Technology Department MOB FT 2022. <br
+						<p class="mb-4" style="color: white">© Information Technology Department MOB FT 2023. <br
 								class="d-none d-lg-block" />All rights reserved.</p>
 						<nav class="nav social social-white">
 							<a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>

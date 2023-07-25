@@ -1,7 +1,7 @@
-@extends('layouts.maharu2023')
 
-@section('content')
-    {{-- ORMAWA --}}
+
+<?php $__env->startSection('content'); ?>
+    
     <section class="wrapper bg-light">
       <div class="container py-8 py-md-10">
         <div class="row gx-xl-12 gy-10">
@@ -16,7 +16,7 @@
               <div class="swiper-container dots-closer mb-6" data-margin="0" data-dots="true" data-items-md="3" data-items-xs="1">
                 <div class="swiper">
                   <div class="swiper-wrapper">
-                    {{-- DPM FT --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -46,7 +46,7 @@
                       <!-- /.item-inner -->
                     </div>
 
-                    {{-- BEM FT --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -75,7 +75,7 @@
                       <!-- /.item-inner -->
                     </div> 
                     
-                    {{-- KSM IF --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -104,7 +104,7 @@
                       <!-- /.item-inner -->
                     </div> 
                     
-                    {{-- KSM FOTMED --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -134,7 +134,7 @@
                       <!-- /.item-inner -->
                     </div>
                     
-                    {{-- KSM TEKNIK KIMIA --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -163,7 +163,7 @@
                       <!-- /.item-inner -->
                     </div>
                     
-                    {{-- KSM TEKNIK INDUSTRI --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -192,7 +192,7 @@
                       <!-- /.item-inner -->
                     </div>
                     
-                    {{-- KSM TEKNIK MESIN & MANUFAKTUR --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -222,7 +222,7 @@
                       <!-- /.item-inner -->
                     </div>
                     
-                    {{-- KSM TEKNIK ELEKTRO --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -251,7 +251,7 @@
                       <!-- /.item-inner -->
                     </div>
 
-                    {{-- KMM SPORTS --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -280,7 +280,7 @@
                       <!-- /.item-inner -->
                     </div>                    
   
-                    {{-- KMM PPM --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -310,7 +310,7 @@
                       <!-- /.item-inner -->
                     </div>  
                     
-                    {{-- KMM RK --}}
+                    
                     <div class="swiper-slide">
                       <div class="item-inner">
                         <div class="card rounded">
@@ -354,4 +354,5 @@
       </div>
       <!-- /.container -->
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.maharu2023', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\nicov\Documents\GitHub\Web-Utama-MOB-FT-2023\resources\views/profile/ormawa.blade.php ENDPATH**/ ?>

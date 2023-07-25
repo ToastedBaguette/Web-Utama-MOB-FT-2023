@@ -1,4 +1,4 @@
-@extends('layouts.maharu2022')
+@extends('layouts.maharu2023')
 
 @section('content')
 		{{-- UBAH PROFIL --}}
