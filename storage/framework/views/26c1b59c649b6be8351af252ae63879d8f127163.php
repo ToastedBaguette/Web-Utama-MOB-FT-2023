@@ -1,8 +1,8 @@
-@extends('layouts.admin')
-@section('style')
-<link href="{{ asset('admin/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
-@endsection
-@section('navmaping')
+
+<?php $__env->startSection('style'); ?>
+<link href="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.css')); ?>" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navmaping'); ?>
 <li class="menu-item " aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -63,10 +63,10 @@
         <span class="menu-text">Pelanggaran Anakku di Echo</span>
     </a>
 </li>
-@endsection
+<?php $__env->stopSection(); ?>
 
 <!--begin::Content-->
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
     <div class="subheader py-3 py-lg-8 subheader-transparent" id="kt_subheader">
@@ -77,7 +77,7 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai Maping, {{Auth::user()->name}}</h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai Maping, <?php echo e(Auth::user()->name); ?></h2>
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
@@ -102,7 +102,7 @@
                 </div>
                 <div class="card-body">
                     <form action="/dayrecappresensi" method="post">
-                        @csrf
+                        <?php echo csrf_field(); ?>
                         <label for="groupby">Nama Kelompok</label>
                         <select name="groupby" id="groupby" class="form-control" required>
                             <option value="">--Pilih Nama Kelompok --</option>
@@ -118,9 +118,9 @@
                         <label for="tanggal">Tanggal</label>
                         <select name="tanggal" id="pilihtanggal" class="form-control" required>
                             <option value="" selected>--Pilih tanggal--</option>
-                            @foreach($presensi as $p)
-                            <option value="{{$p->tanggal}}">{{ \Carbon\Carbon::parse($p->tanggal)->format('d/m/Y')}}</option>
-                            @endforeach
+                            <?php $__currentLoopData = $presensi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($p->tanggal); ?>"><?php echo e(\Carbon\Carbon::parse($p->tanggal)->format('d/m/Y')); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                         <button id="tampil" type="submit" class="btn btn-success mt-4">Tampil</button>
                     </form>
@@ -128,19 +128,19 @@
                     <!--end: Form-->
 
                     <!--begin: Datatable-->
-                    @if($listData!=null)
+                    <?php if($listData!=null): ?>
                     <br>
                     <hr>
                     <br>
-                    @if ($groupby == 'alpha')
-                    <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Delta {{$kelompok}}</h3>
+                    <?php if($groupby == 'alpha'): ?>
+                    <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Delta <?php echo e($kelompok); ?></h3>
 
-                    @elseif ($groupby == 'beta')
-                    <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Echo {{$kelompok}}</h3>
+                    <?php elseif($groupby == 'beta'): ?>
+                    <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Echo <?php echo e($kelompok); ?></h3>
 
-                    @endif
+                    <?php endif; ?>
 
-                    <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">{{ \Carbon\Carbon::parse($tanggal)->format('d/m/Y')}}</h3>
+                    <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray"><?php echo e(\Carbon\Carbon::parse($tanggal)->format('d/m/Y')); ?></h3>
                     <br>
                     <table class="table table-separate table-head-custom table-checkable" id="kt_datatable" style="margin-top:1em;">
                         <thead style="text-align:center;">
@@ -199,7 +199,7 @@
                             </tr>
                         </tfoot>
                     </table>
-                    @endif
+                    <?php endif; ?>
                     <!--end: Datatable-->
                 </div>
             </div>
@@ -210,19 +210,19 @@
     <!--end::Entry-->
 </div>
 <!--end::Demo Panel-->
-@endsection
+<?php $__env->stopSection(); ?>
 <!--end::Content-->
 
-@section('script')
+<?php $__env->startSection('script'); ?>
 <!--begin::Page Vendors(used by this page)-->
-<script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+<script src="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.js')); ?>"></script>
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
-<script src="{{ asset('admin/js/pages/crud/datatables/basic/paginations3tabel.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/pages/crud/datatables/basic/paginations3tabel.js')); ?>"></script>
 <!--end::Page Scripts-->
 <script>
         $('#groupby').on('change', function(e) {
-        var user = @json($user);
+        var user = <?php echo json_encode($user, 15, 512) ?>;
         var groupby_id = e.target.value;
         if (groupby_id == "alpha") {
             document.getElementById("hidden-kelompok").value = user.alpha; //set value on myInputID
@@ -239,7 +239,7 @@
 
     //     $.ajax({
     //         type: "POST",
-    //         url: "{{ route('dayrecappresensi') }}",
+    //         url: "<?php echo e(route('dayrecappresensi')); ?>",
     //         data: {
     //             '_token': '<?php echo csrf_token() ?>',
     //             'tanggal': tanggal,
@@ -261,4 +261,6 @@
 
     // });
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\UNIVERSITAS\UBAYA\Panitia\MOB FT 2023\WEB 2023\Web-Utama-MOB-FT-2023\resources\views/maping/daypresensi2.blade.php ENDPATH**/ ?>

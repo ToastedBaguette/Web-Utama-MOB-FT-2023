@@ -132,7 +132,7 @@ class MapingController extends Controller
         // return view('maping.daypresensi', ["presensi" => $listWaktu]);
         // [Cath] coba
         // dd($listWaktu);
-        return view('maping.daypresensi2', ["presensi" => $listWaktu, 'listData' =>$listData]);
+        return view('maping.daypresensi2', ["presensi" => $listWaktu, 'listData' =>$listData, 'user'=>Auth::user()]);
     }
     public function dayrecappresensi(Request $request)
     {
@@ -152,10 +152,10 @@ class MapingController extends Controller
         // ->where('presensis.tanggal','=',$tanggal)
         // ->get();
         if($groupby=="alpha"){
-            $listData = DB::select(DB::raw("SELECT w.nrp as nrp, rekap_awal, rekap_akhir, name, tanggal FROM `rekap_presensis` a inner join presensis q ON a.idpresensi=q.idpresensi INNER JOIN users w ON a.nrp=w.nrp WHERE w.alpha=$kelompok and q.tanggal='$tanggal'"));
+            $listData = DB::select(DB::raw("SELECT w.nrp as nrp, rekap_awal, rekap_akhir, name, tanggal FROM `rekap_presensis` a inner join presensis q ON a.idpresensi=q.idpresensi INNER JOIN users w ON a.nrp=w.nrp WHERE w.alpha='$kelompok' and q.tanggal='$tanggal'"));
         }
         else if($groupby=="beta"){
-            $listData = DB::select(DB::raw("SELECT w.nrp as nrp, rekap_awal, rekap_akhir, name, tanggal FROM `rekap_presensis` a inner join presensis q ON a.idpresensi=q.idpresensi INNER JOIN users w ON a.nrp=w.nrp WHERE w.beta=$kelompok and q.tanggal='$tanggal'"));
+            $listData = DB::select(DB::raw("SELECT w.nrp as nrp, rekap_awal, rekap_akhir, name, tanggal FROM `rekap_presensis` a inner join presensis q ON a.idpresensi=q.idpresensi INNER JOIN users w ON a.nrp=w.nrp WHERE w.beta='$kelompok' and q.tanggal='$tanggal'"));
         }
 
          // dd($listData);
