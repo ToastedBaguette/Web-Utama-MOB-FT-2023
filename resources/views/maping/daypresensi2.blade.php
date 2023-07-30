@@ -222,7 +222,7 @@
 <!--end::Page Scripts-->
 <script>
         $('#groupby').on('change', function(e) {
-        var user = @json($user);
+        var user = @json(Auth::user());
         var groupby_id = e.target.value;
         if (groupby_id == "alpha") {
             document.getElementById("hidden-kelompok").value = user.alpha; //set value on myInputID

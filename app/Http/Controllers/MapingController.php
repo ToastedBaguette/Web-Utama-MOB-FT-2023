@@ -132,7 +132,7 @@ class MapingController extends Controller
         // return view('maping.daypresensi', ["presensi" => $listWaktu]);
         // [Cath] coba
         // dd($listWaktu);
-        return view('maping.daypresensi2', ["presensi" => $listWaktu, 'listData' =>$listData, 'user'=>Auth::user()]);
+        return view('maping.daypresensi2', ["presensi" => $listWaktu, 'listData' =>$listData]);
     }
     public function dayrecappresensi(Request $request)
     {
