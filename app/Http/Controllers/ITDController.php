@@ -132,6 +132,27 @@ class ITDController extends Controller
     }
     public function ubahdata(Request $request)
     {
+        $nrp = $request->get('nrp');
+        $nama = $request->get('namalengkap');
+        $noTelepon = $request->get('no_hp');
+        $idLine = $request->get('id_line');
+        $email = $request->get('email');
+        $instagram = $request->get('instagram');
+        $asalSekolah = $request->get('asal_sekolah');
+        $alpha = $request->get('alpha');
+        $beta = $request->get('beta');
+
+        $affected = DB::table('users')
+            ->where('nrp', $nrp)
+            ->update(['name'=> $nama,'email' =>$email,'id_line' => $idLine,'no_hp'=> $noTelepon, 'instagram' => $instagram, 'asal_sekolah' => $asalSekolah,'alpha' => $alpha,'beta'=>$beta]);
+
+        if ($affected) {
+            return redirect('/itd')
+            ->with('status','Data sudah diubah!');
+        }else{
+            return redirect('/itd')
+            ->with('error','Data gagal diubah!');
+        }
 
     }
     public function tambahpresensi(Request $request)
