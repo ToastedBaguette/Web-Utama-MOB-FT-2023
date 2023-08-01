@@ -12,7 +12,7 @@
     </a>
 </li>
 <li class="menu-section">
-    <h4 class="menu-text">Kelompok</h4>
+    <h4 class="menu-text">Jenis Kelompok</h4>
     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 </li>
 <li class="menu-item menu-item-active" aria-haspopup="true">
@@ -20,7 +20,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text">Delta</span>
+        <span class="menu-text">Jurusan</span>
     </a>
 </li>
 <li class="menu-item " aria-haspopup="true">
@@ -28,7 +28,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text">Echo</span>
+        <span class="menu-text">Campuran</span>
     </a>
 </li>
 <li class="menu-section">

@@ -17,12 +17,12 @@
   <style>
     .bg-mob {
       background-size: cover; 
-      background-image: url(<?php echo e(asset('assets/mob-assets/background1.jpg')); ?>);
+      background-image: url(<?php echo e(asset('assets/mob-assets/background-ungu.jpg')); ?>);
     }
 
     @media  only screen and (max-width: 768px) {
     .bg-mob {
-        background-image: url(<?php echo e(asset('./assets/mob-assets/bgmobile2.jpg')); ?>);
+      background-image: url(<?php echo e(asset('assets/mob-assets/backgroundhp.png')); ?>);
       }
     }
   </style>
@@ -131,7 +131,6 @@ unset($__errorArgs, $__bag); ?>" required autocomplete="current-password" placeh
                       <?php endif; ?>
                       </div>
                     </div>
-
 
                     <!-- /column -->
                     <div class="col-12">

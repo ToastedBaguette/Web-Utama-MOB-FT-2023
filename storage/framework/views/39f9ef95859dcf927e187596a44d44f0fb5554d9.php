@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Website utama MOB FT 2022 untuk membantu mahasiswa baru mengetahui beberapa informasi mengenai MOB FT 2022.">
+    content="Website utama MOB FT 2023 untuk membantu mahasiswa baru mengetahui beberapa informasi mengenai MOB FT 2023.">
   <title>MOB FT 2023</title>
   <link rel="shortcut icon" href="<?php echo e(url('./img/mob.png')); ?>">
   <link rel="stylesheet" href="<?php echo e(url('./assets/css/plugins.css')); ?>">
@@ -41,7 +41,6 @@
 
 <body>
   <div class="content-wrapper">
-
     
     <header class="wrapper bg-light">
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
@@ -159,7 +158,6 @@
                 srcset="<?php echo e(url('./assets/mob-assets/mascot floating.png')); ?> 2x" alt="" style="margin-left: 0" />
             </figure>
           </div>
-
           <div class="col-lg-6">
             <h3 class="display-5 mb-5 text-center secondary-font">Storyline</h3>
             <div class="swiper-container dots-closer mb-6" data-margin="0" data-dots="true" data-items-md="1"

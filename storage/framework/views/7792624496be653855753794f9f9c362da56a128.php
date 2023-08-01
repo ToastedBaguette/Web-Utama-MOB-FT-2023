@@ -222,14 +222,15 @@
 <!--end::Page Scripts-->
 <script>
         $('#groupby').on('change', function(e) {
+        var user = <?php echo json_encode(Auth::user(), 15, 512) ?>;
         var groupby_id = e.target.value;
         if (groupby_id == "alpha") {
-            document.getElementById("hidden-kelompok").value = <?php echo e(Auth::user()->alpha); ?>; //set value on myInputID
-            $('#kelompok').html('<option value="' + <?php echo e(Auth::user()->alpha); ?> + '">'+ <?php echo e(Auth::user()->alpha); ?> + '</option>');
+            document.getElementById("hidden-kelompok").value = user.alpha; //set value on myInputID
+            $('#kelompok').html('<option value="' + user.alpha + '">'+ user.alpha + '</option>');
 
         } else {
-            document.getElementById("hidden-kelompok").value = <?php echo e(Auth::user()->beta); ?>; //set value on myInputID
-            $('#kelompok').html('<option value="' + <?php echo e(Auth::user()->beta); ?> + '">' + <?php echo e(Auth::user()->beta); ?> + '</option>');
+            document.getElementById("hidden-kelompok").value = user.beta; //set value on myInputID
+            $('#kelompok').html('<option value="' + user.beta + '">' + user.beta + '</option>');
         }
     });
     // $('#pilihtanggal').on('change', function(e) {

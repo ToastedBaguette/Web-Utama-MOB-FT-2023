@@ -10,7 +10,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>MOB FT 2022</title>
+    <title>MOB FT 2023</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link rel="stylesheet" href="https://use.typekit.net/dcf1bki.css">

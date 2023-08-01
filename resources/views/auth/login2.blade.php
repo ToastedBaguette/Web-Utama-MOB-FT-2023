@@ -1,8 +1,6 @@
 @extends('layouts.appwebsite')
-
 @section('header')
 <header class="main-header main-header-overlay" style='position: fixed; background-color:transparent;'>
-
     <div class="mainbar-wrap">
         <div class="container-fluid mainbar-container">
             <div class="mainbar">

@@ -149,7 +149,7 @@
 							data-fittext-options='{"compressor":0.5,"maxFontSize":"currentFontSize","minFontSize":"35"}'
 							data-split-text="true" data-split-options='{"type":"lines"}'>
 							<span id="titleHome" class="ld-fh-txt text-glow2"> Selamat Datang di <br> <br> MOB FT
-								2022</span>
+								2023</span>
 						</h2>
 						<div class="lqd-column col-md-11 col-xs-12">
 
@@ -264,7 +264,7 @@
 
 				<div class="lqd-column col-md-6 col-md-offset-3 px-md-5 mb-60 mt-50">
 					<header class="fancy-heading text-center">
-						<h2 class="mt-0 font-size-44 text-white text-glow">Jadwal MOB FT 2022</h2>
+						<h2 class="mt-0 font-size-44 text-white text-glow">Jadwal MOB FT 2023</h2>
 						<!-- <p class="font-size-17 lh-175">Jadwal MOB FT 2021:</p> -->
 					</header><!-- /.fancy-heading -->
 				</div><!-- /.lqd-column col-md-6 col-md-offset-3 -->

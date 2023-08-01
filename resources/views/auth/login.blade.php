@@ -17,12 +17,12 @@
   <style>
     .bg-mob {
       background-size: cover; 
-      background-image: url({{asset('assets/mob-assets/background1.jpg')}});
+      background-image: url({{asset('assets/mob-assets/background-ungu.jpg')}});
     }
 
     @media only screen and (max-width: 768px) {
     .bg-mob {
-        background-image: url({{asset('./assets/mob-assets/bgmobile2.jpg')}});
+      background-image: url({{asset('assets/mob-assets/backgroundhp.png')}});
       }
     }
   </style>
@@ -117,7 +117,6 @@
                       @endif
                       </div>
                     </div>
-
 
                     <!-- /column -->
                     <div class="col-12">
