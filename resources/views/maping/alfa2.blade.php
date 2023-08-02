@@ -8,7 +8,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text ">Beranda</span>
+        <span class="menu-text">Beranda</span>
     </a>
 </li>
 <li class="menu-section">
@@ -78,14 +78,12 @@
                 <div class="d-flex align-items-baseline flex-wrap mr-5">
                     <!--begin::Page Title-->
                     <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai Maping, {{Auth::user()->name}}</h2>
-
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
             </div>
             <!--end::Info-->
         </div>
-
     </div>
 
     <!--end::Subheader-->
@@ -94,7 +92,6 @@
         <!--begin::Container-->
         <div class="container">
             <!--begin::Card-->
-
             <!-- begin: sweetalert -->
             <div class="">
                 @if (session('status'))
@@ -118,28 +115,25 @@
                     </div>
                 </div>
                 @endif
-
             </div>
             <!-- end: sweetalert -->
 
             <div class="card card-custom">
                 <div class="card-header">
                     <div class="card-title">
-
                         <h3 class="card-label">Daftar Mahasiswa Kelompok Delta {{Auth::user()->alpha}}</h3>
                     </div>
                 </div>
                 <div class="card-body">
                     <!--begin: Datatable-->
-                    <table class="table table-separate table-head-custom table-checkable" id="kt_datatable" style="text-align:center;">
+                    <table class="table table-separate table-head-custom table-checkable" id="kt_datatable" style="text-align:center; color: #40128B">
                         <thead>
                             <tr>
                                 <th>NRP</th>
                                 <th>Nama Lengkap</th>
-                                <th>Delta</th>
-                                <th>Echo</th>
+                                <th>Jurusan</th>
+                                <th>Nama Kelompok</th>
                                 <th>Asal Sekolah</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -147,7 +141,7 @@
                             <tr>
                                 <td>
                                     <a href='#modalChange_{{$mhr->nrp}}' data-toggle='modal'>
-                                        <button type="button" class="btn btn-success" style="min-width:100px">{{$mhr->nrp}}</button>
+                                        <button type="button" class="btn btn-success" style="min-width:100px; background-color: #40128B">{{$mhr->nrp}}</button>
                                     </a>
                                     <div class="modal fade" id="modalChange_{{$mhr->nrp}}" tabindex="-1" role="basic" aria-hidden="true" style="text-align:LEFT;">
                                         <div class="modal-dialog modal-dialog-centered">
@@ -177,7 +171,6 @@
                                 <td>{{$mhr->alpha}}</td>
                                 <td>{{$mhr->beta}}</td>
                                 <td>{{$mhr->asal_sekolah}}</td>
-
                             </tr>
                             @endforeach
                         </tbody>
@@ -185,8 +178,8 @@
                             <tr>
                                 <th>NRP</th>
                                 <th>Nama Lengkap</th>
-                                <th>Delta</th>
-                                <th>Echo</th>
+                                <th>Jurusan</th>
+                                <th>Nama Kelompok</th>
                                 <th>Asal Sekolah</th>
                             </tr>
                         </tfoot>
@@ -236,12 +229,9 @@
                             <button type="submit" class="btn btn-success mt-4" style="width: 100%;" >Kirim</button>
                         </form>
                     </div>
-
                     <!-- end: Form -->
                 </div>
             @endif
-
-
         </div>
     </div>
     <!--end::Card-->
