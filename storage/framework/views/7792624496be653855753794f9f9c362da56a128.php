@@ -92,7 +92,6 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class="container">
-
             <!--begin::Daftar Nama -->
             <div class="card card-custom shadow-none">
                 <div class="card-header">
@@ -103,14 +102,14 @@
                 <div class="card-body">
                     <form action="/dayrecappresensi" method="post">
                         <?php echo csrf_field(); ?>
-                        <label for="groupby">Nama Kelompok</label>
+                        <label for="groupby">Jenis Kelompok</label>
                         <select name="groupby" id="groupby" class="form-control" required>
-                            <option value="">--Pilih Nama Kelompok --</option>
+                            <option value="">--Pilih Jenis Kelompok --</option>
                             <option value="alpha">Delta</option>
                             <option value="beta">Echo</option>
                         </select><br>
 
-                        <label for="kelompok">Nomor Kelompok</label>
+                        <label for="kelompok">Nama Kelompok</label>
                         <select id="kelompok" disabled class="form-control" required>
 
                         </select><br>

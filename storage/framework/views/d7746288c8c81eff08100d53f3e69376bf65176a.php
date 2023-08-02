@@ -17,7 +17,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text">Delta</span>
+        <span class="menu-text">Jurusan</span>
     </a>
 </li>
 <li class="menu-item" aria-haspopup="true">
@@ -25,7 +25,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text">Echo</span>
+        <span class="menu-text">Campuran</span>
     </a>
 </li>
 <li class="menu-section">
@@ -305,9 +305,9 @@
                                         class="text-muted">Email&nbsp</small><?php echo e(Auth::user()->email); ?></h5>
                                 <?php if(Auth::user()->divisi =='MAPING'): ?>
                                 <h5 class="text-dark font-weight-normal pb-2"><small
-                                        class="text-muted">Kelompok&nbsp</small>Delta <?php echo e(Auth::user()->alpha); ?></h5>
+                                        class="text-muted">Jenis Kelompok&nbsp</small>Delta <?php echo e(Auth::user()->alpha); ?></h5>
                                 <h5 class="text-dark font-weight-normal pb-2"><small
-                                        class="text-muted">Kelompok&nbsp</small>Echo <?php echo e(Auth::user()->beta); ?></h5>
+                                        class="text-muted">Nama Kelompok&nbsp</small>Echo <?php echo e(Auth::user()->beta); ?></h5>
                                 <?php endif; ?>
                             </div>
                             <!--end::User-->
