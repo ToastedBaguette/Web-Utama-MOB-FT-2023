@@ -20,7 +20,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text">Delta</span>
+        <span class="menu-text">Jurusan</span>
     </a>
 </li>
 <li class="menu-item menu-item-active" aria-haspopup="true">
@@ -28,7 +28,7 @@
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
-        <span class="menu-text">Echo</span>
+        <span class="menu-text">Campuran</span>
     </a>
 </li>
 <li class="menu-section">
@@ -77,13 +77,11 @@
                 <div class="d-flex align-items-baseline flex-wrap mr-5">
                     <!--begin::Page Title-->
                     <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai Maping, <?php echo e(Auth::user()->name); ?></span></h2>
-
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
             </div>
             <!--end::Info-->
-
         </div>
     </div>
     <!--end::Subheader-->
@@ -92,7 +90,6 @@
         <!--begin::Container-->
         <div class="container">
             <!--begin::Card-->
-
             <!-- begin: sweetalert -->
             <div class="">
                 <?php if(session('status')): ?>
@@ -116,14 +113,11 @@
                     </div>
                 </div>
                 <?php endif; ?>
-
             </div>
             <!-- end: sweetalert -->
-
             <div class="card card-custom">
                 <div class="card-header">
                     <div class="card-title">
-
                         <h3 class="card-label">Daftar Mahasiswa Kelompok Echo <?php echo e(Auth::user()->beta); ?></h3>
                     </div>
                 </div>
@@ -134,10 +128,9 @@
                             <tr>
                                 <th>NRP</th>
                                 <th>Nama Lengkap</th>
-                                <th>Delta</th>
-                                <th>Echo</th>
+                                <th>Nama Kelompok</th>
+                                <th>Jurusan</th>
                                 <th>Asal Sekolah</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -145,7 +138,7 @@
                             <tr>
                                 <td>
                                     <a href='#modalChange_<?php echo e($mhr->nrp); ?>' data-toggle='modal'>
-                                        <button type="button" class="btn btn-success" style="min-width:100px"><?php echo e($mhr->nrp); ?></button>
+                                        <button type="button" class="btn btn-success" style="min-width:100px; background-color: #40128B"><?php echo e($mhr->nrp); ?></button>
                                     </a>
                                     <div class="modal fade" id="modalChange_<?php echo e($mhr->nrp); ?>" tabindex="-1" role="basic" aria-hidden="true" style="text-align:LEFT;">
                                         <div class="modal-dialog modal-dialog-centered">
@@ -172,10 +165,9 @@
                                     </div>
                                 </td>
                                 <td><?php echo e($mhr->name); ?></td>
-                                <td><?php echo e($mhr->alpha); ?></td>
                                 <td><?php echo e($mhr->beta); ?></td>
+                                <td><?php echo e($mhr->alpha); ?></td>
                                 <td><?php echo e($mhr->asal_sekolah); ?></td>
-
                             </tr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
@@ -183,8 +175,8 @@
                             <tr>
                                 <th>NRP</th>
                                 <th>Nama Lengkap</th>
-                                <th>Delta</th>
-                                <th>Echo</th>
+                                <th>Nama Kelompok</th>
+                                <th>Jurusan</th>
                                 <th>Asal Sekolah</th>
                             </tr>
                         </tfoot>
@@ -198,7 +190,6 @@
                 <div class="card card-custom" style="margin-top:50px;">
                     <div class="card-header">
                         <div class="card-title">
-
                             <h3 class="card-label">Input Presensi Echo</h3>
                             <small>Pastikan melakukan absensi sebelum jam yang tertera</small>
                         </div>

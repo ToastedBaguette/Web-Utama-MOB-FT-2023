@@ -165,20 +165,18 @@
                                         <tr>
                                             <th style="min-width:112px">NRP</th>
                                             <th>Nama Lengkap</th>
-                                            <th>Delta</th>
-                                            <th>Echo</th>
+                                            <th>Jurusan</th>
+                                            <th>Nama Kelompok</th>
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
-
                                             <th>Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($hari1 as $h)
                                         <tr>
-                                            <td style="text-align:center;"><a href="#showRekap" onclick="getRekap({{$h->nrp}})" data-toggle='modal' class="text-success"><button type="button" class="btn btn-success" style="width:100px">{{$h->nrp}}</button></a></td>
+                                            <td style="text-align:center;"><a href="#showRekap" onclick="getRekap({{$h->nrp}})" data-toggle='modal' class="text-success"><button type="button" class="btn btn-success" style="width:100px; background-color: #40128B">{{$h->nrp}}</button></a></td>
                                             <td>{{$h->name}}</td>
                                             <td style="text-align:center;">{{$h->alpha}}</td>
                                             <td style="text-align:center;">{{$h->beta}}</td>
@@ -186,11 +184,8 @@
                                             <td>{{$h->nama_pelanggaran}}</td>
                                             <td>{{$h->keterangan}}</td>
                                             <td style="text-align:center;">
-
                                                 <a href="{{ url('sfd/'.$h->idrekap.'/edit')}}" class="btn btn-warning">Ubah</a>
-
                                             </td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -198,8 +193,8 @@
                                         <tr>
                                             <th>NRP</th>
                                             <th>Nama Lengkap</th>
-                                            <th>Delta</th>
-                                            <th>Echo</th>
+                                            <th>Jurusan</th>
+                                            <th>Nama Kelompok</th>
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
@@ -227,7 +222,6 @@
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
                                             <th>Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -240,9 +234,7 @@
                                             <td style="text-align:center;">{{$h->jenis_pelanggaran}}</td>
                                             <td>{{$h->nama_pelanggaran}}</td>
                                             <td>{{$h->keterangan}}</td>
-
                                             <td style="text-align:center;"><a href="{{ url('sfd/'.$h->idrekap.'/edit')}}" class="btn btn-warning">Ubah</a></td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -255,7 +247,6 @@
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
-
                                             <th>Aksi</th>
                                         </tr>
                                     </tfoot>
@@ -265,9 +256,6 @@
                                 @endif
                                 <!--end: Datatable-->
                             </div>
-
-
-
                             <div class="tab-pane fade" id="kt_tab_pane_3_2" role="tabpanel">
                                 @if(count($hari3) >0)
                                 <table class="table table-separate table-head-custom table-checkable" id="kt_datatable3" style="width: 100%;">
@@ -280,9 +268,7 @@
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
-
                                             <th>Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -295,10 +281,7 @@
                                             <td style="text-align:center;">{{$h->jenis_pelanggaran}}</td>
                                             <td>{{$h->nama_pelanggaran}}</td>
                                             <td>{{$h->keterangan}}</td>
-
-
                                             <td style="text-align:center;"><a href="{{ url('sfd/'.$h->idrekap.'/edit')}}" class="btn btn-warning">Ubah</a></td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -316,7 +299,7 @@
                                     </tfoot>
                                 </table>
                                 @elseif(count($hari3) == 0)
-                                <h4 style="color:#bebebe;text-align: center;margin-top:8%;">Belum ada data</h4>
+                                <h4 style="color:#bebebe; text-align: center;margin-top:8%;">Belum ada data</h4>
                                 @endif
                                 <!--end: Datatable-->
                             </div>
@@ -324,9 +307,7 @@
                     </div>
                     <!--end::Card-->
                     <!--end::Example-->
-
                     <!-- </div> -->
-
                 </div>
                 <!--end::Row-->
             </div>
@@ -342,7 +323,6 @@
                             <img src="{{ asset('img/loading.gif')}}" style="width:50px; height:50px;" />
                         </span>
                     </div>
-
                 </div>
             </div>
         </div>

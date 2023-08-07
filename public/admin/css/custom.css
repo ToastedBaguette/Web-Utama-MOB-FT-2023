@@ -47,3 +47,19 @@ body {
 .accordion-wrapper .card-header button.collapsed {
     color: #40128B;
 }
+
+.img-change{
+    width: 20rem;
+    animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change{
+    0%
+    {
+        content: url("/assets/mob-assets/jeriko1.png");
+    }
+    50%
+    {
+        content: url("/assets/mob-assets/jeriko2.png");
+    }
+}

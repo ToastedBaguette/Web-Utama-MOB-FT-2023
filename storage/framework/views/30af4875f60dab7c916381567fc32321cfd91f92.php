@@ -165,20 +165,18 @@
                                         <tr>
                                             <th style="min-width:112px">NRP</th>
                                             <th>Nama Lengkap</th>
-                                            <th>Delta</th>
-                                            <th>Echo</th>
+                                            <th>Jurusan</th>
+                                            <th>Nama Kelompok</th>
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
-
                                             <th>Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $__currentLoopData = $hari1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                            <td style="text-align:center;"><a href="#showRekap" onclick="getRekap(<?php echo e($h->nrp); ?>)" data-toggle='modal' class="text-success"><button type="button" class="btn btn-success" style="width:100px"><?php echo e($h->nrp); ?></button></a></td>
+                                            <td style="text-align:center;"><a href="#showRekap" onclick="getRekap(<?php echo e($h->nrp); ?>)" data-toggle='modal' class="text-success"><button type="button" class="btn btn-success" style="width:100px; background-color: #40128B"><?php echo e($h->nrp); ?></button></a></td>
                                             <td><?php echo e($h->name); ?></td>
                                             <td style="text-align:center;"><?php echo e($h->alpha); ?></td>
                                             <td style="text-align:center;"><?php echo e($h->beta); ?></td>
@@ -186,11 +184,8 @@
                                             <td><?php echo e($h->nama_pelanggaran); ?></td>
                                             <td><?php echo e($h->keterangan); ?></td>
                                             <td style="text-align:center;">
-
                                                 <a href="<?php echo e(url('sfd/'.$h->idrekap.'/edit')); ?>" class="btn btn-warning">Ubah</a>
-
                                             </td>
-
                                         </tr>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
@@ -198,8 +193,8 @@
                                         <tr>
                                             <th>NRP</th>
                                             <th>Nama Lengkap</th>
-                                            <th>Delta</th>
-                                            <th>Echo</th>
+                                            <th>Jurusan</th>
+                                            <th>Nama Kelompok</th>
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
@@ -227,7 +222,6 @@
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
                                             <th>Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -240,9 +234,7 @@
                                             <td style="text-align:center;"><?php echo e($h->jenis_pelanggaran); ?></td>
                                             <td><?php echo e($h->nama_pelanggaran); ?></td>
                                             <td><?php echo e($h->keterangan); ?></td>
-
                                             <td style="text-align:center;"><a href="<?php echo e(url('sfd/'.$h->idrekap.'/edit')); ?>" class="btn btn-warning">Ubah</a></td>
-
                                         </tr>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
@@ -255,7 +247,6 @@
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
-
                                             <th>Aksi</th>
                                         </tr>
                                     </tfoot>
@@ -265,9 +256,6 @@
                                 <?php endif; ?>
                                 <!--end: Datatable-->
                             </div>
-
-
-
                             <div class="tab-pane fade" id="kt_tab_pane_3_2" role="tabpanel">
                                 <?php if(count($hari3) >0): ?>
                                 <table class="table table-separate table-head-custom table-checkable" id="kt_datatable3" style="width: 100%;">
@@ -280,9 +268,7 @@
                                             <th>Jenis Pelanggaran</th>
                                             <th>Pelanggaran</th>
                                             <th>Keterangan</th>
-
                                             <th>Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -295,10 +281,7 @@
                                             <td style="text-align:center;"><?php echo e($h->jenis_pelanggaran); ?></td>
                                             <td><?php echo e($h->nama_pelanggaran); ?></td>
                                             <td><?php echo e($h->keterangan); ?></td>
-
-
                                             <td style="text-align:center;"><a href="<?php echo e(url('sfd/'.$h->idrekap.'/edit')); ?>" class="btn btn-warning">Ubah</a></td>
-
                                         </tr>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
@@ -316,7 +299,7 @@
                                     </tfoot>
                                 </table>
                                 <?php elseif(count($hari3) == 0): ?>
-                                <h4 style="color:#bebebe;text-align: center;margin-top:8%;">Belum ada data</h4>
+                                <h4 style="color:#bebebe; text-align: center;margin-top:8%;">Belum ada data</h4>
                                 <?php endif; ?>
                                 <!--end: Datatable-->
                             </div>
@@ -324,9 +307,7 @@
                     </div>
                     <!--end::Card-->
                     <!--end::Example-->
-
                     <!-- </div> -->
-
                 </div>
                 <!--end::Row-->
             </div>
@@ -342,7 +323,6 @@
                             <img src="<?php echo e(asset('img/loading.gif')); ?>" style="width:50px; height:50px;" />
                         </span>
                     </div>
-
                 </div>
             </div>
         </div>

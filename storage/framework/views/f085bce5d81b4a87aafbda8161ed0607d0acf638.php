@@ -1,8 +1,8 @@
-@extends('layouts.admin')
-@section('style')
-<link href="{{ asset('admin/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
-@endsection
-@section('navsfd')
+
+<?php $__env->startSection('style'); ?>
+<link href="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.css')); ?>" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navsfd'); ?>
 <li class="menu-item " aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -16,7 +16,7 @@
     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 </li>
 <li class="menu-item" aria-haspopup="true">
-    <a href="{{ url('sfd') }}" class="menu-link">
+    <a href="<?php echo e(url('sfd')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -24,7 +24,7 @@
     </a>
 </li>
 <li class="menu-item " aria-haspopup="true">
-    <a href="{{ url('rekap') }}" class="menu-link">
+    <a href="<?php echo e(url('rekap')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -32,7 +32,7 @@
     </a>
 </li>
 <li class="menu-item menu-item-active" aria-haspopup="true">
-    <a href="{{ url('masterData') }}" class="menu-link">
+    <a href="<?php echo e(url('masterData')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -40,7 +40,7 @@
     </a>
 </li>
 <!-- <li class="menu-item" aria-haspopup="true">
-    <a href="{{-- url('listkendala') --}}" class="menu-link">
+    <a href="" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -48,10 +48,10 @@
     </a>
 </li> -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
     <div class="subheader py-3 py-lg-8 subheader-transparent" id="kt_subheader">
@@ -61,7 +61,7 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai SFD, {{Auth::user()->name}}</span></h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai SFD, <?php echo e(Auth::user()->name); ?></span></h2>
                     <!-- fe tolong pindahin btn ini nanti ke kiri ya-->
                     <!-- <button class='btn btn-success mt-4' data-toggle="modal" data-target="#Mdl-Tambah">Tambah Pelanggaran</button> -->
                 </div>
@@ -78,20 +78,21 @@
         <!--begin::Container-->
         <div class="container">
             <div>
-                @if (session('status'))
+                <?php if(session('status')): ?>
                 <!-- <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
+                    <?php echo e(session('status')); ?>
+
                 </div> -->
                 <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
                     <div class="alert-icon"><i class="flaticon2-check-mark"></i></div>
-                    <div class="alert-text" style="font-size:125%;">{{session('status')}}</div>
+                    <div class="alert-text" style="font-size:125%;"><?php echo e(session('status')); ?></div>
                     <div class="alert-close">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close"></i></span>
                         </button>
                     </div>
                 </div>
-                @endif
+                <?php endif; ?>
             </div>
 
             <!--begin::Card-->
@@ -121,18 +122,20 @@
                             <th style="text-align: center;" colspan="2">Action</th>
                         </tr> -->
                         <tbody>
-                            @foreach($listPelanggaran as $pelanggaran)
+                            <?php $__currentLoopData = $listPelanggaran; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pelanggaran): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                                <td id='nama_{{$pelanggaran->idpelanggaran}}'>{{$pelanggaran->nama_pelanggaran}}
+                                <td id='nama_<?php echo e($pelanggaran->idpelanggaran); ?>'><?php echo e($pelanggaran->nama_pelanggaran); ?>
+
                                 </td>
-                                <td id='jenis_{{$pelanggaran->idpelanggaran}}'>{{$pelanggaran->jenis_pelanggaran}}
+                                <td id='jenis_<?php echo e($pelanggaran->idpelanggaran); ?>'><?php echo e($pelanggaran->jenis_pelanggaran); ?>
+
                                 </td>
                                 <td>
-                                    <button class='btn btn-success mt-4 btn-edit' data-toggle="modal" id-pelanggaran='{{$pelanggaran->idpelanggaran }}' data-target="#Mdl-Edit">Edit</button>
-                                    <button class='btn btn-primary mt-4 btn-hapus' data-toggle="modal" id-pelanggaran='{{$pelanggaran->idpelanggaran }}' data-target="#Mdl-hapus">Hapus</button>
+                                    <button class='btn btn-success mt-4 btn-edit' data-toggle="modal" id-pelanggaran='<?php echo e($pelanggaran->idpelanggaran); ?>' data-target="#Mdl-Edit">Edit</button>
+                                    <button class='btn btn-primary mt-4 btn-hapus' data-toggle="modal" id-pelanggaran='<?php echo e($pelanggaran->idpelanggaran); ?>' data-target="#Mdl-hapus">Hapus</button>
                                 </td>
                             </tr>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
                         <tfoot>
                             <tr>
@@ -161,13 +164,13 @@
 <div class="modal fade" id="Mdl-Tambah" tabindex="-1" role="basic" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <form role="form" method='POST' action="{{ route('tambahPelanggaran') }}">
+            <form role="form" method='POST' action="<?php echo e(route('tambahPelanggaran')); ?>">
                 <div class="modal-header">
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button> -->
                     <h4 class="modal-title">Tambah Pelanggaran Baru</h4>
                 </div>
                 <div class="modal-body ml-3">
-                    @csrf
+                    <?php echo csrf_field(); ?>
                     <div class="form-body">
                         <div class="form-group">
                             <label>Nama Pelanggaran</label>
@@ -206,13 +209,13 @@
 <div class="modal fade" id="Mdl-Edit" tabindex="-1" role="basic" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <form role="form" method='POST' action="{{route('editPelanggaran')}}">
+            <form role="form" method='POST' action="<?php echo e(route('editPelanggaran')); ?>">
                 <div class="modal-header">
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button> -->
                     <h4 class="modal-title">Edit Pelanggaran</h4>
                 </div>
                 <div class="modal-body">
-                    @csrf
+                    <?php echo csrf_field(); ?>
                     <div class="form-body">
                         <div class="form-group">
                             <label>Nama Pelanggaran</label>
@@ -246,14 +249,14 @@
 <div class="modal fade" id="Mdl-hapus" tabindex="-1" role="basic" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <form role="form" method='POST' action="{{ route('hapusPelanggaran') }}">
+            <form role="form" method='POST' action="<?php echo e(route('hapusPelanggaran')); ?>">
                 <div class="modal-header">
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button> -->
                     <h4 class="modal-title">Hapus Pelanggaran</h4>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id='id_hapus' value="" name='id_hapus'>
-                    @csrf
+                    <?php echo csrf_field(); ?>
                     <div class="form-body">
                         <div>Yakin untuk menghapus pelanggaran ini?</div>
                     </div>
@@ -272,8 +275,8 @@
 </div>
 <!--end::Entry-->
 
-@endsection
-@section('script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
 <script type="text/javascript">
     $('.btn-hapus').on('click', function() {
         let id = $(this).attr('id-pelanggaran');
@@ -293,9 +296,10 @@
 </script>
 
 <!--begin::Page Vendors(used by this page)-->
-<script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+<script src="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.js')); ?>"></script>
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
-<script src="{{ asset('admin/js/pages/crud/datatables/basic/paginations.js') }}"></script>
+<script src="<?php echo e(asset('admin/js/pages/crud/datatables/basic/paginations.js')); ?>"></script>
 <!--end::Page Scripts-->
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\nicov\Documents\GitHub\Web-Utama-MOB-FT-2023\resources\views/sfd/datapelanggaran.blade.php ENDPATH**/ ?>

@@ -83,9 +83,7 @@
                 <!--end::Page Heading-->
             </div>
             <!--end::Info-->
-
         </div>
-
     </div>
     <!--end::Subheader-->
     <!--begin::Entry-->
@@ -123,7 +121,6 @@
                         </select>
                         <button id="tampil" type="submit" class="btn btn-success mt-4">Tampil</button>
                     </form>
-
                     <!--end: Form-->
 
                     <!--begin: Datatable-->

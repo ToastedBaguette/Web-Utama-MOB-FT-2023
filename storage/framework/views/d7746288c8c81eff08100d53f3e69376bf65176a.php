@@ -309,6 +309,11 @@
                                 <h5 class="text-dark font-weight-normal pb-2"><small
                                         class="text-muted">Nama Kelompok&nbsp</small>Echo <?php echo e(Auth::user()->beta); ?></h5>
                                 <?php endif; ?>
+                                <?php if(Auth::user()->divisi =='SFD'): ?>
+                                <figure>
+                                    <img class="img-fluid floating img-change" src="<?php echo e(url('./assets/mob-assets/jeriko1.png')); ?>" 2x" alt="" style="margin-left: 0" />
+                                </figure>
+                                <?php endif; ?>
                             </div>
                             <!--end::User-->
                         </div>

@@ -309,6 +309,11 @@
                                 <h5 class="text-dark font-weight-normal pb-2"><small
                                         class="text-muted">Nama Kelompok&nbsp</small>Echo {{Auth::user()->beta}}</h5>
                                 @endif
+                                @if(Auth::user()->divisi =='SFD')
+                                <figure>
+                                    <img class="img-fluid floating img-change" src="{{ url('./assets/mob-assets/jeriko1.png') }}" 2x" alt="" style="margin-left: 0" />
+                                </figure>
+                                @endif
                             </div>
                             <!--end::User-->
                         </div>
