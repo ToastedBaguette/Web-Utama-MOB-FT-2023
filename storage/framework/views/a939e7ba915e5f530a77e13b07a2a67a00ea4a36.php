@@ -8,16 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<!-- <link rel="canonical" href="https://keenthemes.com/metronic" /> -->
 	<!--begin::Fonts-->
-	<link rel="shortcut icon" href="{{ asset('img/mob.png')}}" />
+	<link rel="shortcut icon" href="<?php echo e(asset('img/mob.png')); ?>" />
 	<!--end::Fonts-->
 	<!--begin::Page Vendors Styles(used by this page)-->
-	@yield('style')
+	<?php echo $__env->yieldContent('style'); ?>
 	<!--end::Page Vendors Styles-->
 	<!--begin::Global Theme Styles(used by all pages)-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('admin/plugins/global/plugins.bundle.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('admin/plugins/custom/prismjs/prismjs.bundle.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('admin/css/style.bundle.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('admin/css/custom.css')}}">
+	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/plugins/global/plugins.bundle.css')); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/plugins/custom/prismjs/prismjs.bundle.css')); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/css/style.bundle.css')); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('admin/css/custom.css')); ?>">
 	<!--end::Global Theme Styles-->
 	<!--begin::Layout Themes(used by all pages)-->
 	<!--end::Layout Themes-->
@@ -46,7 +46,7 @@
 					<div class="btn btn-icon btn-light-primary mr-2">
 						<i class="flaticon2-user"></i>
 					</div>
-					<!-- <div class="btn font-weight-bolder btn-sm btn-light-success px-5">{{Auth::user()->name}}</div> -->
+					<!-- <div class="btn font-weight-bolder btn-sm btn-light-success px-5"><?php echo e(Auth::user()->name); ?></div> -->
 				</div>
 				<!--end::Toggle-->
 				<!--begin::Dropdown-->
@@ -54,7 +54,7 @@
 					<!--begin::Navigation-->
 					<ul class="navi navi-hover py-5">
 						<li class="navi-item">
-							<a href="{{ url('/dashboard') }}" class="navi-link">
+							<a href="<?php echo e(url('/dashboard')); ?>" class="navi-link">
 								<span class="navi-icon">
 									<i class="flaticon-users"></i>
 								</span>
@@ -62,14 +62,14 @@
 							</a>
 						</li>
 						<li class="navi-item">
-							<a href="{{ route('logout') }}" class="navi-link" onclick="event.preventDefault();
+							<a href="<?php echo e(route('logout')); ?>" class="navi-link" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
 								<span class="navi-icon">
 									<i class="flaticon-logout"></i>
 								</span>
 								<span class="navi-text">Keluar</span>
-								<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-									@csrf
+								<form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+									<?php echo csrf_field(); ?>
 								</form>
 							</a>
 						</li>
@@ -95,23 +95,23 @@
 						data-menu-scroll="1" data-menu-dropdown-timeout="500">
 						<!--begin::Menu Nav-->
 						<ul class="menu-nav">
-							@if(Auth::user()->divisi =='MAPING')
-							@yield('navmaping')
-							@elseif(Auth::user()->divisi =='SFD')
-							@yield('navsfd')
-							@elseif(Auth::user()->divisi =='AD')
-							@yield('navad')
-							@elseif(Auth::user()->divisi =='ED')
-							@yield('naved')
-							@elseif(Auth::user()->divisi =='KOORCAB')
-							@yield('navkoorcab')
-							@elseif(Auth::user()->divisi =='KONTINGEN')
-							@yield('navkontingen')
-							@elseif(Auth::user()->divisi =='BPH')
-							@yield('navbph')
-							@elseif(Auth::user()->divisi =='ITD')
-							@yield('navitd')
-							@endif
+							<?php if(Auth::user()->divisi =='MAPING'): ?>
+							<?php echo $__env->yieldContent('navmaping'); ?>
+							<?php elseif(Auth::user()->divisi =='SFD'): ?>
+							<?php echo $__env->yieldContent('navsfd'); ?>
+							<?php elseif(Auth::user()->divisi =='AD'): ?>
+							<?php echo $__env->yieldContent('navad'); ?>
+							<?php elseif(Auth::user()->divisi =='ED'): ?>
+							<?php echo $__env->yieldContent('naved'); ?>
+							<?php elseif(Auth::user()->divisi =='KOORCAB'): ?>
+							<?php echo $__env->yieldContent('navkoorcab'); ?>
+							<?php elseif(Auth::user()->divisi =='KONTINGEN'): ?>
+							<?php echo $__env->yieldContent('navkontingen'); ?>
+							<?php elseif(Auth::user()->divisi =='BPH'): ?>
+							<?php echo $__env->yieldContent('navbph'); ?>
+							<?php elseif(Auth::user()->divisi =='ITD'): ?>
+							<?php echo $__env->yieldContent('navitd'); ?>
+							<?php endif; ?>
 						</ul>
 						<!--end::Menu Nav-->
 					</div>
@@ -155,7 +155,7 @@
 							<!--begin::Logo-->
 							<a class="main-font fs-24" href="/homeadmin">
 								MOB FT 2023
-								<!-- <img alt="Logo" src="{{ asset('img/logopink.png')}}" class="logo-sticky max-h-35px" /> -->
+								<!-- <img alt="Logo" src="<?php echo e(asset('img/logopink.png')); ?>" class="logo-sticky max-h-35px" /> -->
 							</a>
 							<!--end::Logo-->
 							<!--begin::Desktop Search-->
@@ -202,7 +202,7 @@
 									<div class="btn btn-icon btn-light-primary mr-2">
 										<i class="flaticon2-user"></i>
 									</div>
-									<!-- <div class="btn font-weight-bolder btn-sm btn-light-success px-5">{{Auth::user()->name}}</div> -->
+									<!-- <div class="btn font-weight-bolder btn-sm btn-light-success px-5"><?php echo e(Auth::user()->name); ?></div> -->
 								</div>
 								<!--end::Toggle-->
 								<!--begin::Dropdown-->
@@ -211,7 +211,7 @@
 									<!--begin::Navigation-->
 									<ul class="navi navi-hover py-5">
 										<li class="navi-item">
-											<a href="{{ url('/dashboard') }}" class="navi-link">
+											<a href="<?php echo e(url('/dashboard')); ?>" class="navi-link">
 												<span class="navi-icon">
 													<i class="flaticon-users"></i>
 												</span>
@@ -219,15 +219,15 @@
 											</a>
 										</li>
 										<li class="navi-item">
-											<a href="{{ route('logout') }}" class="navi-link" onclick="event.preventDefault();
+											<a href="<?php echo e(route('logout')); ?>" class="navi-link" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
 												<span class="navi-icon">
 													<i class="flaticon-logout"></i>
 												</span>
 												<span class="navi-text">Keluar</span>
-												<form id="logout-form" action="{{ route('logout') }}" method="POST"
+												<form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST"
 													class="d-none">
-													@csrf
+													<?php echo csrf_field(); ?>
 												</form>
 											</a>
 										</li>
@@ -244,7 +244,7 @@
 				</div>
 				<!--end::Header-->
 				<!--begin::Content-->
-				@yield('content')
+				<?php echo $__env->yieldContent('content'); ?>
 				<!--end::Content-->
 				<!--begin::Footer-->
 				<div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
@@ -342,12 +342,12 @@
 	</script>
 	<!--end::Global Config-->
 	<!--begin::Global Theme Bundle(used by all pages)-->
-	<script src="{{ asset('admin/plugins/global/plugins.bundle.js') }}"></script>
-	<script src="{{ asset('admin/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
-	<script src="{{ asset('admin/js/scripts.bundle.js') }}"></script>
+	<script src="<?php echo e(asset('admin/plugins/global/plugins.bundle.js')); ?>"></script>
+	<script src="<?php echo e(asset('admin/plugins/custom/prismjs/prismjs.bundle.js')); ?>"></script>
+	<script src="<?php echo e(asset('admin/js/scripts.bundle.js')); ?>"></script>
 	<!--end::Global Theme Bundle-->
-	@yield('script')
+	<?php echo $__env->yieldContent('script'); ?>
 </body>
 <!--end::Body-->
 
-</html>
+</html><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/layouts/admin.blade.php ENDPATH**/ ?>

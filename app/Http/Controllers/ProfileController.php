@@ -19,7 +19,7 @@ class ProfileController extends Controller
         //ambil data pelanggaran
         //$pelanggaran = DB::table('user_pelanggarans')->join('pelanggarans','user_pelanggarans.idpelanggaran','=','pelanggarans.idpelanggaran')->where('users_nrp',$nrp)->get();
         //return view('profile.index',['maharu'=>$data,'absensi'=>$absensi, 'pelanggaran'=>$pelanggaran]);
-        return view('profile.profile2022', compact("data"));
+        return view('profile.profile2023', compact("data"));
     }
 
     //[yobong] untuk ngubah profile peserta

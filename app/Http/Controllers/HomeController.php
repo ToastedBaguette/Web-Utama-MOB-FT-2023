@@ -97,7 +97,7 @@ class HomeController extends Controller
         ->where("user_pelanggarans.users_nrp", "=", $nrp)
         ->get();
         if(Auth::user()->is_reset == 0){
-            return view('resetpassword2022');
+            return view('resetpassword2023');
         }
         if(Auth::user()->status == 'panitia'){
             return redirect('/homeadmin');

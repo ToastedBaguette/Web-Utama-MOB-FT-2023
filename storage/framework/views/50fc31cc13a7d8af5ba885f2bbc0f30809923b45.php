@@ -1,5 +1,5 @@
-@extends('layouts.admin')
-@section('navmaping')
+
+<?php $__env->startSection('navmaping'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -60,9 +60,9 @@
         <span class="menu-text">Pelanggaran Kelompok Campuran</span>
     </a>
 </li>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('navsfd')
+<?php $__env->startSection('navsfd'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -76,7 +76,7 @@
     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 </li>
 <li class="menu-item " aria-haspopup="true">
-    <a href="{{ url('sfd') }}" class="menu-link">
+    <a href="<?php echo e(url('sfd')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -84,7 +84,7 @@
     </a>
 </li>
 <li class="menu-item " aria-haspopup="true">
-    <a href="{{ url('rekap') }}" class="menu-link">
+    <a href="<?php echo e(url('rekap')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -92,7 +92,7 @@
     </a>
 </li>
 <li class="menu-item" aria-haspopup="true">
-    <a href="{{ url('masterData') }}" class="menu-link">
+    <a href="<?php echo e(url('masterData')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -100,7 +100,7 @@
     </a>
 </li>
 <!-- <li class="menu-item " aria-haspopup="true">
-    <a href="{{ url('listkendala') }}" class="menu-link">
+    <a href="<?php echo e(url('listkendala')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -108,9 +108,9 @@
     </a>
 </li> -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('naved')
+<?php $__env->startSection('naved'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -143,8 +143,8 @@
         <span class="menu-text">Daftar Pengumuman</span>
     </a>
 </li>
-@endsection
-@section('navad')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navad'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -166,8 +166,8 @@
     </a>
 </li>
 
-@endsection
-@section('navkoorcab')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navkoorcab'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -188,8 +188,8 @@
         <span class="menu-text">Daftar Kandidat</span>
     </a>
 </li>
-@endsection
-@section('navkontingen')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navkontingen'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -210,8 +210,8 @@
         <span class="menu-text">Daftar Cabang</span>
     </a>
 </li>
-@endsection
-@section('navbph')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navbph'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -232,9 +232,9 @@
         <span class="menu-text">Lihat Informasi</span>
     </a>
 </li>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('navitd')
+<?php $__env->startSection('navitd'); ?>
 <li class="menu-item menu-item-active" aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -257,7 +257,7 @@
     </a>
 </li>
 <li class="menu-item " aria-haspopup="true">
-    <a href="{{url('itdpanitia')}}" class="menu-link">
+    <a href="<?php echo e(url('itdpanitia')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -265,17 +265,17 @@
     </a>
 </li>
 <li class="menu-item " aria-haspopup="true">
-    <a href="{{url('itdpresensi')}}" class="menu-link">
+    <a href="<?php echo e(url('itdpresensi')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
         <span class="menu-text">Presensi</span>
     </a>
 </li>
-@endsection
+<?php $__env->stopSection(); ?>
 
 <!--begin::Content-->
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <div class="d-flex flex-column-fluid mt-5">
         <!--begin::Container-->
@@ -291,29 +291,29 @@
                             <!--begin::User-->
                             <div class="d-flex align-items-center mb-5">
                                 <h2 class="d-flex align-items-center text-dark font-weight-bold secondary-font">
-                                    Hai,&nbsp<span class="text-primary secondary-font">{{Auth::user()->divisi}}</span>
+                                    Hai,&nbsp<span class="text-primary secondary-font"><?php echo e(Auth::user()->divisi); ?></span>
                                 </h2>
                             </div>
                             <div class="d-flex align-items-center mb-6">
                                 <h1 class="font-weight-bolder text-primary display-3 secondary-font">
-                                    {{Auth::user()->name}}</h1>
+                                    <?php echo e(Auth::user()->name); ?></h1>
                             </div>
                             <div>
                                 <h5 class="text-dark font-weight-normal pb-2"><small
-                                        class="text-muted">NRP&nbsp</small>{{Auth::user()->nrp}}</h5>
+                                        class="text-muted">NRP&nbsp</small><?php echo e(Auth::user()->nrp); ?></h5>
                                 <h5 class="text-dark font-weight-normal pb-2"><small
-                                        class="text-muted">Email&nbsp</small>{{Auth::user()->email}}</h5>
-                                @if(Auth::user()->divisi =='MAPING')
+                                        class="text-muted">Email&nbsp</small><?php echo e(Auth::user()->email); ?></h5>
+                                <?php if(Auth::user()->divisi =='MAPING'): ?>
                                 <h5 class="text-dark font-weight-normal pb-2"><small
-                                        class="text-muted">Kelompok Jurusan&nbsp</small> {{Auth::user()->alpha}}</h5>
+                                        class="text-muted">Kelompok Jurusan&nbsp</small> <?php echo e(Auth::user()->alpha); ?></h5>
                                 <h5 class="text-dark font-weight-normal pb-2"><small
-                                        class="text-muted">Kelompok Campuran&nbsp</small> {{Auth::user()->beta}}</h5>
-                                @endif
-                                @if(Auth::user()->divisi =='SFD')
+                                        class="text-muted">Kelompok Campuran&nbsp</small> <?php echo e(Auth::user()->beta); ?></h5>
+                                <?php endif; ?>
+                                <?php if(Auth::user()->divisi =='SFD'): ?>
                                 <figure>
-                                    <img class="img-fluid floating img-change" src="{{ url('./assets/mob-assets/jeriko1.png') }}" 2x" alt="" style="margin-left: 0" />
+                                    <img class="img-fluid floating img-change" src="<?php echo e(url('./assets/mob-assets/jeriko1.png')); ?>" 2x" alt="" style="margin-left: 0" />
                                 </figure>
-                                @endif
+                                <?php endif; ?>
                             </div>
                             <!--end::User-->
                         </div>
@@ -324,13 +324,13 @@
                 <!-- <div class="card card-custom bg-danger card-stretch gutter-b"> -->
                 <!--begin::Header-->
                 <!-- <div class="card-body border-0 py-5">
-                        <h1 class="font-weight-bolder text-white" style="margin-bottom: 0.5vw;">{{Auth::user()->name}}</h1>
-                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;">{{Auth::user()->nrp}}</h2>
-                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;">{{Auth::user()->email}}</h2>
-                        @if(Auth::user()->divisi =='MAPING')
-                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;">Kelompok Delta : {{Auth::user()->alpha}}</h2>
-                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;">Kelompok Echo : {{Auth::user()->beta}}</h2>
-                        @endif
+                        <h1 class="font-weight-bolder text-white" style="margin-bottom: 0.5vw;"><?php echo e(Auth::user()->name); ?></h1>
+                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;"><?php echo e(Auth::user()->nrp); ?></h2>
+                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;"><?php echo e(Auth::user()->email); ?></h2>
+                        <?php if(Auth::user()->divisi =='MAPING'): ?>
+                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;">Kelompok Delta : <?php echo e(Auth::user()->alpha); ?></h2>
+                        <h2 class="text-white" style="font-weight: normal; font-size: 100%;">Kelompok Echo : <?php echo e(Auth::user()->beta); ?></h2>
+                        <?php endif; ?>
                     </div>
                 </div> -->
                 <!--end::Mixed Widget 1-->
@@ -343,10 +343,10 @@
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="font-weight-bolder text-dark">Rundown</span>
 
-                                @if(count($listrundown)>0)
+                                <?php if(count($listrundown)>0): ?>
                                 <span class="text-muted mt-3 font-weight-bold font-size-sm">  <?php //echo date('d F, Y', strtotime($listrundown[0]->tanggal)); 
                                                                                                 ?></span>
-                                @endif
+                                <?php endif; ?>
                             </h3>
                         </div> -->
                 <!--end::Header-->
@@ -355,7 +355,7 @@
                             <div class="timeline timeline-5">
 
                                 <div class="timeline-items">
-                                    @foreach($listrundown as $r)
+                                    <?php $__currentLoopData = $listrundown; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $r): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <?php //$rd_awal = date('H:i', strtotime($r->waktu_awal));
                                     //$rd_akhir = date('H:i', strtotime($r->waktu_akhir));
                                     //if (date("H:i") > $rd_akhir) { ?> -->
@@ -380,7 +380,8 @@
                 <!-- <div class="timeline-desc timeline-desc-light-success">
                                                 <span class="font-weight-bolder text-success"><?php //echo $rd_awal . "-" . $rd_akhir . " WIB"; ?></span>
                                                 <p class="font-weight-normal text-dark-50 pt-1 pb-2">
-                                                    {{$r->kegiatan}}
+                                                    <?php echo e($r->kegiatan); ?>
+
                                                 </p>
                                             </div> -->
                 <!--end::Info-->
@@ -408,14 +409,15 @@
                 <!-- <div class="timeline-desc timeline-desc-light-primary">
                                                 <span class="font-weight-bolder text-primary"><?php //echo $rd_awal . "-" . $rd_akhir . " WIB"; ?></span>
                                                 <p class="font-weight-normal text-dark-50 pb-2">
-                                                    {{$r->kegiatan}}
+                                                    <?php echo e($r->kegiatan); ?>
+
                                                 </p>
                                             </div> -->
                 <!--end::Info-->
                 <!-- </div> -->
                 <!--end::Item-->
                 <?php //} ?>
-                <!-- @endforeach
+                <!-- <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </div>
                             </div>
                         </div> -->
@@ -432,5 +434,6 @@
     </div>
     <!--end::Entry-->
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 <!--end::Content-->
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/dashboardpanitia2023.blade.php ENDPATH**/ ?>

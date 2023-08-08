@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('style')
+<link rel="stylesheet" href="{{asset('admin/css/custom.css')}}">
 <link href="{{ asset('admin/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('navmaping')
@@ -77,7 +78,7 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai Maping, {{Auth::user()->name}}</h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3 secondary-font">Hai Maping, {{Auth::user()->name}}</h2>
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
@@ -121,7 +122,7 @@
             <div class="card card-custom">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3 class="card-label">Daftar Mahasiswa Kelompok Delta {{Auth::user()->alpha}}</h3>
+                        <h3 class="card-label">Daftar Mahasiswa Kelompok {{Auth::user()->alpha}}</h3>
                     </div>
                 </div>
                 <div class="card-body">
@@ -147,20 +148,20 @@
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4 class="modal-title">{{$mhr->name}}</h4>
+                                                    <h4 class="modal-title secondary-font">{{$mhr->name}}</h4>
                                                 </div>
                                                 <div class="modal-body ml-3">
-                                                    <label for="" class="text-primary">Nama Lengkap</label><br>
+                                                    <label for="" class="secondary-font">Nama Lengkap</label><br>
                                                     <label for="">{{$mhr->name}}</label><br><br>
-                                                    <label for="" class="text-primary">No Telp.</label><br>
+                                                    <label for="" class="secondary-font">No Telp.</label><br>
                                                     <label for="">{{$mhr->no_hp}}</label><br><br>
-                                                    <label for="" class="text-primary">ID Line</label><br>
+                                                    <label for="" class="secondary-font">ID Line</label><br>
                                                     <label for="">{{$mhr->id_line}}</label><br><br>
-                                                    <label for="" class="text-primary">Email</label><br>
+                                                    <label for="" class="secondary-font">Email</label><br>
                                                     <label for="">{{$mhr->email}}</label><br><br>
-                                                    <label for="" class="text-primary">Instagram</label><br>
+                                                    <label for="" class="secondary-font">Instagram</label><br>
                                                     <label for="">{{$mhr->instagram}}</label><br><br>
-                                                    <label for="" class="text-primary">Asal Sekolah</label><br>
+                                                    <label for="" class="secondary-font">Asal Sekolah</label><br>
                                                     <label for="">{{$mhr->asal_sekolah}}</label>
                                                 </div>
                                             </div>
@@ -174,15 +175,6 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>NRP</th>
-                                <th>Nama Lengkap</th>
-                                <th>Jurusan</th>
-                                <th>Nama Kelompok</th>
-                                <th>Asal Sekolah</th>
-                            </tr>
-                        </tfoot>
                     </table>
                     <!--end: Datatable-->
                 </div>

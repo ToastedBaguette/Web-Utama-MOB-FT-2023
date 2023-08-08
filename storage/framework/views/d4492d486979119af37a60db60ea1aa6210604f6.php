@@ -10,30 +10,30 @@
     content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
   <meta name="author" content="elemis">
   <title>MOB FT 2022</title>
-  <link rel="shortcut icon" href="{{ url('./img/mob.png') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/plugins.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/colors/sky.css') }}">
-  <link rel="preload" href="{{ url('./assets/css/fonts/urbanist.css') }}" as="style" onload="this.rel='stylesheet'">
+  <link rel="shortcut icon" href="<?php echo e(url('./img/mob.png')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/plugins.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/style.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/colors/sky.css')); ?>">
+  <link rel="preload" href="<?php echo e(url('./assets/css/fonts/urbanist.css')); ?>" as="style" onload="this.rel='stylesheet'">
 </head>
 
 <body style="background: url('./assets/mob-assets/background1.jpg'); background-size: cover;">
   <div class="content-wrapper">
-    {{-- TEMPLATE --}}
+    
     <header class="wrapper bg-light">
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
             <a>
-              <img src="{{ url('./assets/mob-assets/MOB FT 2022.svg') }}"
-                srcset="{{ url('./assets/mob-assets/MOB FT 2022.svg') }} 2x" alt="" />
+              <img src="<?php echo e(url('./assets/mob-assets/MOB FT 2022.svg')); ?>"
+                srcset="<?php echo e(url('./assets/mob-assets/MOB FT 2022.svg')); ?> 2x" alt="" />
             </a>
           </div>
           <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{route('welcome')}}">Halaman awal</a>
+                  <a class="nav-link" href="<?php echo e(route('welcome')); ?>">Halaman awal</a>
                 </li>
               </ul>
               <!-- /.navbar-nav -->
@@ -68,14 +68,21 @@
           <div class="col-xl-10 mx-auto">
             <div class="row gy-10 gx-lg-8 gx-xl-12">
               <div class="col-lg-6">
-                <form class="contact-form" method="post" action="{{ route('resetpassword') }}">
-                  @csrf
+                <form class="contact-form" method="post" action="<?php echo e(route('resetpassword')); ?>">
+                  <?php echo csrf_field(); ?>
                   <h2 class="ms-2">Wah baru pertama kali login nih, silahkan masukkan password baru</h2>
                   <!-- /column -->
                   <div class="col-md-12">
                     <div class="form-floating mb-4">
                       <input id="password" type="password" name="password"
-                        class="pass-check form-control @error('password') is-invalid @enderror" required
+                        class="pass-check form-control <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" required
                         autocomplete="current-password">
                       <label for="password">Password</label>
                     </div>
@@ -85,7 +92,14 @@
                   <div class="col-md-12">
                     <div class="form-floating mb-4">
                       <input id="password2" type="password" name="password2"
-                        class="pass-check form-control @error('password') is-invalid @enderror" required
+                        class="pass-check form-control <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" required
                         autocomplete="current-password">
                       <label for="password2">Confirm Password</label>
                     </div>
@@ -105,17 +119,24 @@
                   <div class="col-12">
                     <div class="mb-4">
                       <h6 id="hint" style="display:none;">*Tekan sekali lagi untuk ganti</h6>
-                      @error('password')
+                      <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
                       <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
+                        <strong><?php echo e($message); ?></strong>
                       </span>
-                      @enderror
+                      <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                     </div>
                   </div>
 
                   <!-- /column -->
                   <div class="col-12">
-                    <input type="submit" id="gnti_pw" data-href="{{url('/dashboard')}}"
+                    <input type="submit" id="gnti_pw" data-href="<?php echo e(url('/dashboard')); ?>"
                       class="btn btn-primary rounded-5 btn-send" href="#" value="Konfirmasi" disabled>
                   </div>
                   <!-- /column -->
@@ -125,20 +146,34 @@
                   <!-- <div class="form-group row">
 
                       <div class="col-md-6">
-                          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror font-size-24" name="password" required autocomplete="current-password">
+                          <input id="password" type="password" class="form-control <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> font-size-24" name="password" required autocomplete="current-password">
                           <input type="checkbox" onclick="showPassword()"> Tampilkan Kata Sandi
                           <h6 id="hint" class="text-glow2" style="display:none;" >*Tekan sekali lagi untuk ganti</h6>
-                          @error('password')
+                          <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
                               <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
+                                  <strong><?php echo e($message); ?></strong>
                               </span>
-                          @enderror
+                          <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                       </div>
                   </div>
 
                       <div class="form-group row mb-0">
                       <div class="col-md-8 offset-md-4">
-                          <button id="gnti_pw" data-href="{{url('/dashboard')}}" type="submit" class="btn btn-sm circle btn-solid font-size-14 ltr-sp-025 px-2 lh-15 mt-5 font-weight-semibold">
+                          <button id="gnti_pw" data-href="<?php echo e(url('/dashboard')); ?>" type="submit" class="btn btn-sm circle btn-solid font-size-14 ltr-sp-025 px-2 lh-15 mt-5 font-weight-semibold">
                               <span class="btn-gradient-bg"></span>
                               <span class="btn-txt">Konfirmasi</span>
                           </button>
@@ -149,7 +184,7 @@
               </div>
               <!--/column -->
               <div class="col-lg-6">
-                {{-- Untuk Konten di kanan --}}
+                
               </div>
               <!--/column -->
             </div>
@@ -164,8 +199,8 @@
     <!-- /section -->
 
   </div>
-  <script src="{{ url('./assets/js/plugins.js') }}"></script>
-  <script src="{{ url('./assets/js/theme.js') }}"></script>
+  <script src="<?php echo e(url('./assets/js/plugins.js')); ?>"></script>
+  <script src="<?php echo e(url('./assets/js/theme.js')); ?>"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
@@ -211,4 +246,4 @@
   </script>
 </body>
 
-</html>
+</html><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/resetpassword2022.blade.php ENDPATH**/ ?>

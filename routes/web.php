@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function(){
             return redirect()->route('start');
         }
         else{
-            return view('resetpassword2022');
+            return view('resetpassword2023');
         }
 
     });
@@ -122,7 +122,7 @@ route::get('/setPassword','ITDController@setPassword')->name('itd.setpassword');
 Auth::routes();
 
 Route::get('/ubahprofilnew', function () {
-    return view('profile.profile2022');
+    return view('profile.profile2023');
 })->name('ubahprofilnew');
 
 // Route::get('/ormawa', function () {
