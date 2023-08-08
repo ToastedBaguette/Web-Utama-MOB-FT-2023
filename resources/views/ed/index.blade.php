@@ -12,30 +12,30 @@
         <span class="menu-text ">Beranda</span>
     </a>
 </li>
-<li class="menu-section ">
-    <h4 class="menu-text">Acara</h4>
-    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
-</li>
-<li class="menu-item  menu-item-active" aria-haspopup="true">
-    <a href="/ed" class="menu-link">
-        <i class="menu-bullet menu-bullet-dot">
-            <span></span>
-        </i>
-        <span class="menu-text">Rundown</span>
-    </a>
-</li>
-<li class="menu-section ">
-    <h4 class="menu-text">Pengumuman</h4>
-    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
-</li>
-<li class="menu-item" aria-haspopup="true">
-    <a href="/pengumuman" class="menu-link">
-        <i class="menu-bullet menu-bullet-dot">
-            <span></span>
-        </i>
-        <span class="menu-text">Daftar Pengumuman</span>
-    </a>
-</li>
+    {{-- <li class="menu-section ">
+        <h4 class="menu-text">Acara</h4>
+        <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+    </li>
+    <li class="menu-item  menu-item-active" aria-haspopup="true">
+        <a href="/ed" class="menu-link">
+            <i class="menu-bullet menu-bullet-dot">
+                <span></span>
+            </i>
+            <span class="menu-text">Rundown</span>
+        </a>
+    </li>
+    <li class="menu-section ">
+        <h4 class="menu-text">Pengumuman</h4>
+        <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+    </li>
+    <li class="menu-item" aria-haspopup="true">
+        <a href="/pengumuman" class="menu-link">
+            <i class="menu-bullet menu-bullet-dot">
+                <span></span>
+            </i>
+            <span class="menu-text">Daftar Pengumuman</span>
+        </a>
+    </li> --}}
 @endsection
 
 

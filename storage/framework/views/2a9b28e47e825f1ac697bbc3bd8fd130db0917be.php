@@ -1,9 +1,9 @@
 <!-- sudah ber template ini -->
-@extends('layouts.admin')
-@section('style')
 
-@endsection
-@section('navsfd')
+<?php $__env->startSection('style'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navsfd'); ?>
 <li class="menu-item " aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -17,7 +17,7 @@
     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 </li>
 <li class="menu-item menu-item-active" aria-haspopup="true">
-    <a href="{{ url('sfd') }}" class="menu-link">
+    <a href="<?php echo e(url('sfd')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -25,7 +25,7 @@
     </a>
 </li>
 <li class="menu-item " aria-haspopup="true">
-    <a href="{{ url('rekap') }}" class="menu-link">
+    <a href="<?php echo e(url('rekap')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -33,7 +33,7 @@
     </a>
 </li>
 <li class="menu-item" aria-haspopup="true">
-    <a href="{{ url('masterData') }}" class="menu-link">
+    <a href="<?php echo e(url('masterData')); ?>" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
             <span></span>
         </i>
@@ -42,10 +42,10 @@
 </li>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
     <div class="subheader py-3 py-lg-8 subheader-transparent" id="kt_subheader">
@@ -55,7 +55,7 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3 secondary-font">Hai SFD, {{Auth::user()->name}}</span></h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3 secondary-font">Hai SFD, <?php echo e(Auth::user()->name); ?></span></h2>
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
@@ -69,30 +69,31 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class="container">
-            @if (session('status'))
+            <?php if(session('status')): ?>
             <!-- <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
+                    <?php echo e(session('status')); ?>
+
                 </div> -->
             <div class="alert alert-custom alert-light-success fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
                 <div class="alert-icon"><i class="flaticon2-check-mark"></i></div>
-                <div class="alert-text" style="font-size:125%;">{{session('status')}}</div>
+                <div class="alert-text" style="font-size:125%;"><?php echo e(session('status')); ?></div>
                 <div class="alert-close">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true"><i class="ki ki-close"></i></span>
                     </button>
                 </div>
             </div>
-            @elseif (session('error'))
+            <?php elseif(session('error')): ?>
             <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert" style="width:100%; Max-height:5em;">
                 <div class="alert-icon"><i class="flaticon2-warning "></i></div>
-                <div class="alert-text" style="font-size:125%;">{{session('error')}}</div>
+                <div class="alert-text" style="font-size:125%;"><?php echo e(session('error')); ?></div>
                 <div class="alert-close">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true"><i class="ki ki-close"></i></span>
                     </button>
                 </div>
             </div>
-            @endif
+            <?php endif; ?>
             <!--begin::Card-->
             <div class="card card-custom shadow-none">
                 <div class="card-header">
@@ -101,8 +102,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('sfd.store')}}" method="post">
-                        @csrf
+                    <form action="<?php echo e(route('sfd.store')); ?>" method="post">
+                        <?php echo csrf_field(); ?>
                         <!-- <div class="form-group">
                     <label>Pilih Pengelompokkan</label>
                     <select class="form-control" id='groupby' name='groupby'>
@@ -160,33 +161,33 @@
                     <label>Pilih Pelanggaran</label>
                     <select class="form-control" id='pelanggaran' name='pelanggaran' required>
                         <option value="">--Pilih Pelanggaran--</option>
-                        @foreach($ringan as $p)
-                        <option value="{{$p->idpelanggaran}}">{{$p->jenis_pelanggaran}} - {{$p->nama_pelanggaran}}</option>
-                        @endforeach
-                        @foreach($sedang as $p)
-                        <option value="{{$p->idpelanggaran}}">{{$p->jenis_pelanggaran}} - {{$p->nama_pelanggaran}}</option>
-                        @endforeach
-                        @foreach($berat as $p)
-                        <option value="{{$p->idpelanggaran}}">{{$p->jenis_pelanggaran}} - {{$p->nama_pelanggaran}}</option>
-                        @endforeach
-                        @if(Auth::user()->nrp == "160219045" ||Auth::user()->nrp == "160219003" ){
+                        <?php $__currentLoopData = $ringan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($p->idpelanggaran); ?>"><?php echo e($p->jenis_pelanggaran); ?> - <?php echo e($p->nama_pelanggaran); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php $__currentLoopData = $sedang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($p->idpelanggaran); ?>"><?php echo e($p->jenis_pelanggaran); ?> - <?php echo e($p->nama_pelanggaran); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php $__currentLoopData = $berat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($p->idpelanggaran); ?>"><?php echo e($p->jenis_pelanggaran); ?> - <?php echo e($p->nama_pelanggaran); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php if(Auth::user()->nrp == "160219045" ||Auth::user()->nrp == "160219003" ): ?>{
                         <option value="pelanggaranbaru">--Tambah Pelanggaran--</option>
-                        @endif
+                        <?php endif; ?>
                     </select>
                 </div> -->
 
                         <label for="">Pelanggaran</label>
                         <select class="form-control" id='pelanggaran' name='pelanggaran' required>
                             <option value="">--Pilih Pelanggaran--</option>
-                            @foreach($ringan as $p)
-                            <option value="{{$p->idpelanggaran}}">{{$p->jenis_pelanggaran}} - {{$p->nama_pelanggaran}}</option>
-                            @endforeach
-                            @foreach($sedang as $p)
-                            <option value="{{$p->idpelanggaran}}">{{$p->jenis_pelanggaran}} - {{$p->nama_pelanggaran}}</option>
-                            @endforeach
-                            @foreach($berat as $p)
-                            <option value="{{$p->idpelanggaran}}">{{$p->jenis_pelanggaran}} - {{$p->nama_pelanggaran}}</option>
-                            @endforeach
+                            <?php $__currentLoopData = $ringan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($p->idpelanggaran); ?>"><?php echo e($p->jenis_pelanggaran); ?> - <?php echo e($p->nama_pelanggaran); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $sedang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($p->idpelanggaran); ?>"><?php echo e($p->jenis_pelanggaran); ?> - <?php echo e($p->nama_pelanggaran); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $berat; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($p->idpelanggaran); ?>"><?php echo e($p->jenis_pelanggaran); ?> - <?php echo e($p->nama_pelanggaran); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             <!-- <option value="pelanggaranbaru">--Tambah Pelanggaran Baru--</option> -->
                         </select>
 
@@ -223,13 +224,13 @@
     <div class="modal fade" id="myModal" tabindex="-1" role="basic" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <form role="form" method='POST' action="{{ route('tambahPelanggaran') }}">
+                <form role="form" method='POST' action="<?php echo e(route('tambahPelanggaran')); ?>">
                     <div class="modal-header">
                         <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button> -->
                         <h4 class="modal-title">Tambah Pelanggaran Baru</h4>
                     </div>
                     <div class="modal-body">
-                        @csrf
+                        <?php echo csrf_field(); ?>
                         <div class="form-body">
                             <div class="form-group">
                                 <label>Nama Pelanggaran</label>
@@ -270,13 +271,13 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="basic" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form role="form" method='POST' action="{{ route('tambahPelanggaran') }}">
+            <form role="form" method='POST' action="<?php echo e(route('tambahPelanggaran')); ?>">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                     <h4 class="modal-title">Tambah Pelanggaran Baru</h4>
                 </div>
                 <div class="modal-body">
-                    @csrf
+                    <?php echo csrf_field(); ?>
                     <div class="form-body">
                         <div class="form-group">
                             <label>Deskripsi Pelanggaran</label>
@@ -307,14 +308,14 @@
 </div>
 <!--end::Entry-->
 
-@endsection
-@section('script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
 <script type="text/javascript">
     $('#groupby').on('change', function(e) {
         var groupby_id = e.target.value;
         $.ajax({
             type: "POST",
-            url: "{{ route('kelompok') }}",
+            url: "<?php echo e(route('kelompok')); ?>",
             data: {
                 '_token': '<?php echo csrf_token() ?>',
                 'groupby_id': groupby_id
@@ -340,7 +341,7 @@
         // window.alert(group);
         $.ajax({
             type: "POST",
-            url: "{{ route('mahasiswa') }}",
+            url: "<?php echo e(route('mahasiswa')); ?>",
             data: {
                 '_token': '<?php echo csrf_token() ?>',
                 'kelompok': kelompok,
@@ -424,4 +425,6 @@
 </script>
 
 <!--end::Page Scripts-->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/sfd/index.blade.php ENDPATH**/ ?>

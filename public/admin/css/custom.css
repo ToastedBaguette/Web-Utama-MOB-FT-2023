@@ -48,12 +48,22 @@ body {
     color: #40128B;
 }
 
-.img-change{
+.img-change-sfd{
     width: 20rem;
-    animation: change 10s infinite ease-in-out;
+    animation: change-sfd 10s infinite ease-in-out;
 }
 
-@keyframes change{
+.img-change-ad{
+    width: 20rem;
+    animation: change-ad 10s infinite ease-in-out;
+}
+
+.img-change-bph{
+    width: 20rem;
+    animation: change-bph 10s infinite ease-in-out;
+}
+
+@keyframes change-sfd{
     0%
     {
         content: url("/assets/mob-assets/jeriko1.png");
@@ -61,5 +71,27 @@ body {
     50%
     {
         content: url("/assets/mob-assets/jeriko2.png");
+    }
+}
+
+@keyframes change-ad{
+    0%
+    {
+        content: url("/assets/mob-assets/fenny.png");
+    }
+    50%
+    {
+        content: url("/assets/mob-assets/christin.png");
+    }
+}
+
+@keyframes change-bph{
+    0%
+    {
+        content: url("/assets/mob-assets/dodot.png");
+    }
+    50%
+    {
+        content: url("/assets/mob-assets/ariel.jpg");
     }
 }

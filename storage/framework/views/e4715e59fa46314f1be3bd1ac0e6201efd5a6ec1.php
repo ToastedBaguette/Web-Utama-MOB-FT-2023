@@ -1,8 +1,8 @@
-@extends('layouts.admin')
-@section('style')
-<link href="{{ asset('admin/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
-@endsection
-@section('navad')
+
+<?php $__env->startSection('style'); ?>
+<link href="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.css')); ?>" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navad'); ?>
 <li class="menu-item " aria-haspopup="true">
     <a href="/homeadmin" class="menu-link">
         <i class="menu-bullet menu-bullet-dot">
@@ -24,10 +24,10 @@
     </a>
 </li>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
     <div class="subheader py-3 py-lg-8 subheader-transparent" id="kt_subheader">
@@ -37,7 +37,7 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                     <!--begin::Page Title-->
-                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai AD, {{Auth::user()->name}}</h2>
+                    <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Hai AD, <?php echo e(Auth::user()->name); ?></h2>
                     <!--end::Page Title-->
                 </div>
                 <!--end::Page Heading-->
@@ -64,7 +64,7 @@
                         <!--end::Header-->
                         <!--begin::Body-->
                         <div class="card-body pt-4">
-                            <h1 id="hasil1" class="text-white">{{$allawalyes[0]->jumAllAwal}} / {{$allmaharu[0]->jumAll}}</h1>
+                            <h1 id="hasil1" class="text-white"><?php echo e($allawalyes[0]->jumAllAwal); ?> / <?php echo e($allmaharu[0]->jumAll); ?></h1>
                         </div>
                         <!--end: Card Body-->
                     </div>
@@ -86,7 +86,7 @@
                         <!--end::Header-->
                         <!--begin::Body-->
                         <div class="card-body pt-4">
-                            <h1 id="hasil1" class="text-white">{{$allakhiryes[0]->jumAllAkhir}} / {{$allmaharu[0]->jumAll}}</h1>
+                            <h1 id="hasil1" class="text-white"><?php echo e($allakhiryes[0]->jumAllAkhir); ?> / <?php echo e($allmaharu[0]->jumAll); ?></h1>
                         </div>
                         <!--end: Card Body-->
                     </div>
@@ -133,17 +133,17 @@
                         <br>
                         <hr>
                         <br>
-                        @if($list!=null)
-                        @if ($group == 'alpha')
-                        <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Jurusan {{$nomer}}</h3>
-                        @elseif ($group == 'beta')
-                        <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Teta {{$nomer}}</h3>
+                        <?php if($list!=null): ?>
+                        <?php if($group == 'alpha'): ?>
+                        <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Jurusan <?php echo e($nomer); ?></h3>
+                        <?php elseif($group == 'beta'): ?>
+                        <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi Teta <?php echo e($nomer); ?></h3>
                         
-                        @endif
+                        <?php endif; ?>
 
                         <h3 style="margin: auto;width: 100%;padding: 10px;" class="gray">Presensi tanggal <?php echo date('d F Y', strtotime($list[0]->tanggal)) ?> </h3>
                         <br>
-                        @if(count($list) > 0)
+                        <?php if(count($list) > 0): ?>
                         <table class="table table-separate table-head-custom table-checkable" id="kt_datatable" style="margin-top:1em;">
                             <thead style="text-align:center;">
                                 <tr>
@@ -199,10 +199,10 @@
                                 </tr>
                             </tfoot>
                         </table>
-                        @elseif(count($list) === 0)
+                        <?php elseif(count($list) === 0): ?>
                         <h4 style="color:#bebebe;text-align: center;margin-top:5%;">Belum ada data</h4>
-                        @endif
-                        @endif
+                        <?php endif; ?>
+                        <?php endif; ?>
                         <!-- end: Table -->
                     </div>
                 </div>
@@ -215,20 +215,20 @@
     <!--end::Entry-->
 
 
-    @endsection
-    @section('script')
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('script'); ?>
     <!--begin::Page Vendors(used by this page)-->
-    <script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script src="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.js')); ?>"></script>
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
-    <script src="{{ asset('admin/js/pages/crud/datatables/basic/paginations3tabel.js') }}"></script>
+    <script src="<?php echo e(asset('admin/js/pages/crud/datatables/basic/paginations3tabel.js')); ?>"></script>
     <!--end::Page Scripts-->
     <script>
         $('#groupby').on('change', function(e) {
             var groupby_id = e.target.value;
             $.ajax({
                 type: "POST",
-                url: "{{ route('kelompok') }}",
+                url: "<?php echo e(route('kelompok')); ?>",
                 data: {
                     '_token': '<?php echo csrf_token() ?>',
                     'groupby_id': groupby_id
@@ -250,4 +250,6 @@
     </script>
 
     </script>
-    @endsection
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/ad/index2.blade.php ENDPATH**/ ?>

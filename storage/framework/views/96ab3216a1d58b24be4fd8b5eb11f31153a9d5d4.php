@@ -1,9 +1,9 @@
-@extends('layouts.admin')
-@section('style')
-    <link rel="stylesheet" href="{{ asset('admin/css/custom.css') }}">
-    <link href="{{ asset('admin/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
-@endsection
-@section('navsfd')
+
+<?php $__env->startSection('style'); ?>
+    <link rel="stylesheet" href="<?php echo e(asset('admin/css/custom.css')); ?>">
+    <link href="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.css')); ?>" rel="stylesheet" type="text/css" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('navsfd'); ?>
     <li class="menu-item " aria-haspopup="true">
         <a href="/homeadmin" class="menu-link">
             <i class="menu-bullet menu-bullet-dot">
@@ -17,7 +17,7 @@
         <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
     </li>
     <li class="menu-item " aria-haspopup="true">
-        <a href="{{ url('sfd') }}" class="menu-link">
+        <a href="<?php echo e(url('sfd')); ?>" class="menu-link">
             <i class="menu-bullet menu-bullet-dot">
                 <span></span>
             </i>
@@ -25,7 +25,7 @@
         </a>
     </li>
     <li class="menu-item menu-item-active" aria-haspopup="true">
-        <a href="{{ url('rekap') }}" class="menu-link">
+        <a href="<?php echo e(url('rekap')); ?>" class="menu-link">
             <i class="menu-bullet menu-bullet-dot">
                 <span></span>
             </i>
@@ -33,7 +33,7 @@
         </a>
     </li>
     <li class="menu-item" aria-haspopup="true">
-        <a href="{{ url('masterData') }}" class="menu-link">
+        <a href="<?php echo e(url('masterData')); ?>" class="menu-link">
             <i class="menu-bullet menu-bullet-dot">
                 <span></span>
             </i>
@@ -41,17 +41,17 @@
         </a>
     </li>
     <!-- <li class="menu-item " aria-haspopup="true">
-                                <a href="{{-- url('listkendala') --}}" class="menu-link">
+                                <a href="" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">Bukti Kendala</span>
                                 </a>
                             </li> -->
-@endsection
+<?php $__env->stopSection(); ?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <!--begin::Subheader-->
         <div class="subheader py-3 py-lg-8 subheader-transparent" id="kt_subheader">
@@ -63,7 +63,7 @@
                     <div class="d-flex align-items-baseline flex-wrap mr-5 ml-3">
                         <!--begin::Page Title-->
                         <h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3 secondary-font">Hai SFD,
-                            {{ Auth::user()->name }}</h2>
+                            <?php echo e(Auth::user()->name); ?></h2>
                         <!--end::Page Title-->
                     </div>
                     <!--end::Page Heading-->
@@ -89,7 +89,7 @@
                         <!--end::Header-->
                         <!--begin::Body-->
                         <div class="card-body pt-4">
-                            <h1 id="hasil1" class="text-white">{{ $pelanggaran[0]->jumlahPelanggaran }}</h1>
+                            <h1 id="hasil1" class="text-white"><?php echo e($pelanggaran[0]->jumlahPelanggaran); ?></h1>
                         </div>
                         <!--end: Card Body-->
                     </div>
@@ -113,30 +113,30 @@
                     <!-- begin: sweetalert -->
 
                     <div class="">
-                        @if (session('status'))
+                        <?php if(session('status')): ?>
                             <div class="alert alert-custom alert-light-success fade show mb-5" role="alert"
                                 style="width:100%; Max-height:5em;">
                                 <div class="alert-icon"><i class="flaticon2-check-mark icon-lg"></i></div>
                                 <div class="alert-text" style="font-size:125%;"><label
-                                        for="">{{ session('status') }}</label></div>
+                                        for=""><?php echo e(session('status')); ?></label></div>
                                 <div class="alert-close">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true"><i class="ki ki-close"></i></span>
                                     </button>
                                 </div>
                             </div>
-                        @elseif (session('error'))
+                        <?php elseif(session('error')): ?>
                             <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert"
                                 style="width:100%; Max-height:5em;">
                                 <div class="alert-icon"><i class="flaticon2-warning "></i></div>
-                                <div class="alert-text" style="font-size:125%;">{{ session('error') }}</div>
+                                <div class="alert-text" style="font-size:125%;"><?php echo e(session('error')); ?></div>
                                 <div class="alert-close">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true"><i class="ki ki-close"></i></span>
                                     </button>
                                 </div>
                             </div>
-                        @endif
+                        <?php endif; ?>
                     </div>
                     <!-- end: sweetalert -->
 
@@ -164,7 +164,7 @@
                         <div class="card-body" style="min-width:100%;min-height:250px;">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="kt_tab_pane_1_2" role="tabpanel">
-                                    @if (count($hari1) > 0)
+                                    <?php if(count($hari1) > 0): ?>
                                         <table class="table table-separate table-head-custom table-checkable"
                                             id="kt_datatable" style="width: 100%;" style="text-align:center;">
                                             <thead style="text-align:center;">
@@ -180,26 +180,26 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($hari1 as $h)
+                                                <?php $__currentLoopData = $hari1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <tr>
                                                         <td style="text-align:center;"><a href="#showRekap"
-                                                                onclick="getRekap({{ $h->nrp }})"
+                                                                onclick="getRekap(<?php echo e($h->nrp); ?>)"
                                                                 data-toggle='modal' class="text-success"><button
                                                                     type="button" class="btn btn-success"
-                                                                    style="width:100px; background-color: #40128B">{{ $h->nrp }}</button></a>
+                                                                    style="width:100px; background-color: #40128B"><?php echo e($h->nrp); ?></button></a>
                                                         </td>
-                                                        <td>{{ $h->name }}</td>
-                                                        <td style="text-align:center;">{{ $h->alpha }}</td>
-                                                        <td style="text-align:center;">{{ $h->beta }}</td>
-                                                        <td style="text-align:center;">{{ $h->jenis_pelanggaran }}</td>
-                                                        <td>{{ $h->nama_pelanggaran }}</td>
-                                                        <td>{{ $h->keterangan }}</td>
+                                                        <td><?php echo e($h->name); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->alpha); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->beta); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->jenis_pelanggaran); ?></td>
+                                                        <td><?php echo e($h->nama_pelanggaran); ?></td>
+                                                        <td><?php echo e($h->keterangan); ?></td>
                                                         <td style="text-align:center;">
-                                                            <a href="{{ url('sfd/' . $h->idrekap . '/edit') }}"
+                                                            <a href="<?php echo e(url('sfd/' . $h->idrekap . '/edit')); ?>"
                                                                 class="btn btn-warning">Ubah</a>
                                                         </td>
                                                     </tr>
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </tbody>
                                             <tfoot style="text-align:center;">
                                                 <tr>
@@ -215,15 +215,15 @@
                                             </tfoot>
                                         </table>
                                         <!--end: Datatable-->
-                                    @else
+                                    <?php else: ?>
                                         <h4 class="secondary-font" style="text-align: center;margin-top:8%;">Belum ada
                                             data</h4>
-                                    @endif
+                                    <?php endif; ?>
                                 </div>
 
 
                                 <div class="tab-pane fade" id="kt_tab_pane_2_2" role="tabpanel">
-                                    @if (count($hari2) > 0)
+                                    <?php if(count($hari2) > 0): ?>
                                         <table class="table table-separate table-head-custom table-checkable"
                                             id="kt_datatable2" style="  width: 100%;">
                                             <thead style="text-align:center;">
@@ -239,25 +239,25 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($hari2 as $h)
+                                                <?php $__currentLoopData = $hari2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <tr>
                                                         <td style="text-align:center;"><a href="#showRekap"
-                                                                onclick="getRekap({{ $h->nrp }})"
+                                                                onclick="getRekap(<?php echo e($h->nrp); ?>)"
                                                                 data-toggle='modal' class="text-success"><button
                                                                     type="button" class="btn btn-success"
-                                                                    style="width:100px; background-color: #40128B">{{ $h->nrp }}</button></a>
+                                                                    style="width:100px; background-color: #40128B"><?php echo e($h->nrp); ?></button></a>
                                                         </td>
-                                                        <td>{{ $h->name }}</td>
-                                                        <td style="text-align:center;">{{ $h->alpha }}</td>
-                                                        <td style="text-align:center;">{{ $h->beta }}</td>
-                                                        <td style="text-align:center;">{{ $h->jenis_pelanggaran }}</td>
-                                                        <td>{{ $h->nama_pelanggaran }}</td>
-                                                        <td>{{ $h->keterangan }}</td>
+                                                        <td><?php echo e($h->name); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->alpha); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->beta); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->jenis_pelanggaran); ?></td>
+                                                        <td><?php echo e($h->nama_pelanggaran); ?></td>
+                                                        <td><?php echo e($h->keterangan); ?></td>
                                                         <td style="text-align:center;"><a
-                                                                href="{{ url('sfd/' . $h->idrekap . '/edit') }}"
+                                                                href="<?php echo e(url('sfd/' . $h->idrekap . '/edit')); ?>"
                                                                 class="btn btn-warning">Ubah</a></td>
                                                     </tr>
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </tbody>
                                             <tfoot style="text-align:center;">
                                                 <tr>
@@ -272,14 +272,14 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
-                                    @else
+                                    <?php else: ?>
                                         <h4 class="secondary-font" style="text-align: center;margin-top:8%;">Belum ada
                                             data</h4>
-                                    @endif
+                                    <?php endif; ?>
                                     <!--end: Datatable-->
                                 </div>
                                 <div class="tab-pane fade" id="kt_tab_pane_3_2" role="tabpanel">
-                                    @if (count($hari3) > 0)
+                                    <?php if(count($hari3) > 0): ?>
                                         <table class="table table-separate table-head-custom table-checkable"
                                             id="kt_datatable3" style="width: 100%;">
                                             <thead style="text-align:center;">
@@ -295,25 +295,25 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($hari3 as $h)
+                                                <?php $__currentLoopData = $hari3; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $h): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <tr>
                                                         <td style="text-align:center;"><a href="#showRekap"
-                                                                onclick="getRekap({{ $h->nrp }})"
+                                                                onclick="getRekap(<?php echo e($h->nrp); ?>)"
                                                                 data-toggle='modal' class="text-success"><button
                                                                     type="button" class="btn btn-success"
-                                                                    style="width:100px; background-color: #40128B">{{ $h->nrp }}</button></a>
+                                                                    style="width:100px; background-color: #40128B"><?php echo e($h->nrp); ?></button></a>
                                                         </td>
-                                                        <td>{{ $h->name }}</td>
-                                                        <td style="text-align:center;">{{ $h->alpha }}</td>
-                                                        <td style="text-align:center;">{{ $h->beta }}</td>
-                                                        <td style="text-align:center;">{{ $h->jenis_pelanggaran }}</td>
-                                                        <td>{{ $h->nama_pelanggaran }}</td>
-                                                        <td>{{ $h->keterangan }}</td>
+                                                        <td><?php echo e($h->name); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->alpha); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->beta); ?></td>
+                                                        <td style="text-align:center;"><?php echo e($h->jenis_pelanggaran); ?></td>
+                                                        <td><?php echo e($h->nama_pelanggaran); ?></td>
+                                                        <td><?php echo e($h->keterangan); ?></td>
                                                         <td style="text-align:center;"><a
-                                                                href="{{ url('sfd/' . $h->idrekap . '/edit') }}"
+                                                                href="<?php echo e(url('sfd/' . $h->idrekap . '/edit')); ?>"
                                                                 class="btn btn-warning">Ubah</a></td>
                                                     </tr>
-                                                @endforeach
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             </tbody>
                                             <tfoot style="text-align:center;">
                                                 <tr>
@@ -328,10 +328,10 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
-                                    @else
+                                    <?php else: ?>
                                         <h4 class="secondary-font" style="text-align: center;margin-top:8%;">Belum ada
                                             data</h4>
-                                    @endif
+                                    <?php endif; ?>
                                     <!--end: Datatable-->
                                 </div>
                             </div>
@@ -351,7 +351,7 @@
                     <div class="modal-content" id="modalContent" style="min-height:250px;" style="text-align:left;">
                         <div class="iconbox-icon-wrap text-center" style="margin:auto;">
                             <span class="iconbox-icon-container mb-45">
-                                <img src="{{ asset('img/loading.gif') }}" style="width:50px; height:50px;" />
+                                <img src="<?php echo e(asset('img/loading.gif')); ?>" style="width:50px; height:50px;" />
                             </span>
                         </div>
                     </div>
@@ -360,20 +360,20 @@
             <!-- end of modal -->
         </div>
     </div>
-@endsection
-@section('script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
     <!--begin::Page Vendors(used by this page)-->
-    <script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script src="<?php echo e(asset('admin/plugins/custom/datatables/datatables.bundle.js')); ?>"></script>
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
-    <script src="{{ asset('admin/js/pages/crud/datatables/basic/paginations.js') }}"></script>
+    <script src="<?php echo e(asset('admin/js/pages/crud/datatables/basic/paginations.js')); ?>"></script>
     <!--end::Page Scripts-->
 
     <script>
         function getRekap(nrp) {
             $.ajax({
                 type: 'POST',
-                url: '{{ route('showRekap') }}',
+                url: '<?php echo e(route('showRekap')); ?>',
                 data: {
                     '_token': '<?php echo csrf_token(); ?>',
                     'nrp': nrp
@@ -384,4 +384,6 @@
             });
         }
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/sfd/rekap2.blade.php ENDPATH**/ ?>
