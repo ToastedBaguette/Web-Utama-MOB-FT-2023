@@ -328,7 +328,14 @@
                                             src="{{ url('./assets/mob-assets/dodot.png') }}" 2x" alt=""
                                             style="margin-left: 0" />
                                     </figure>
-                                @endif
+                                    @endif
+                                    @if (Auth::user()->divisi == 'ITD')
+                                    <figure>
+                                        <img class="img-fluid floating img-change-itd"
+                                            src="{{ url('./assets/mob-assets/roni1.jpg') }}" 2x" alt=""
+                                            style="margin-left: 0" />
+                                    </figure>
+                                    @endif
                                 </div>
                                 <!--end::User-->
                             </div>
