@@ -286,9 +286,9 @@
               <div id="collapseOne-2" class="accordion-collapse collapse show" aria-labelledby="headingOne-2"
                 data-bs-parent="#accordionExample-2">
                 <div class="card-body">
-                  <p>Pra-MOB dilaksanakan pada tanggal 17 Agustus, sementara MOB FT akan dilaksanakan pada 22 hingga 24
-                    Agustus 2023, Rector Cup akan dilaksanakan setiap Sabtu mulai tanggal 27 Agustus hingga 17 September
-                    2023.</p>
+                  <p>Pra-MOB dilaksanakan pada tanggal 17 Agustus, sementara MOB FT akan dilaksanakan pada 22 hingga 
+                    24 Agustus 2023, Rector Cup akan dilaksanakan setiap Sabtu mulai tanggal 27 Agustus hingga 17 
+                    September 2023</p>
                 </div>
                 <!--/.card-body -->
               </div>
@@ -354,8 +354,9 @@
               <div id="collapseFive-2" class="accordion-collapse collapse" aria-labelledby="headingFive-2"
                 data-bs-parent="#accordionExample-2">
                 <div class="card-body">
-                  <p>Kertas berukuran A4, dijilid menggunakan lakban hitam dan mika bening dengan urutan
-                    mika-modul-mika, boleh hitam putih atau berwarna, dan boleh bolak-balik.</p>
+                  <p>Kertas berukuran A4, dijilid menggunakan lakban hitam dan mika bening dengan urutan mika-modul-mika, 
+                    boleh hitam putih atau berwarna, dan boleh bolak-balik (kecuali pada halaman tertentu, 
+                    tidak boleh bolak-balik)</p>
                 </div>
                 <!--/.card-body -->
               </div>
