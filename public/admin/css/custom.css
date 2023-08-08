@@ -63,11 +63,6 @@ body {
     animation: change-bph 10s infinite ease-in-out;
 }
 
-.img-change-itd{
-    width: 20rem;
-    animation: change-itd 10s infinite ease-in-out;
-}
-
 @keyframes change-sfd{
     0%
     {
@@ -98,16 +93,5 @@ body {
     50%
     {
         content: url("/assets/mob-assets/ariel.jpg");
-    }
-}
-
-@keyframes change-itd{
-    0%
-    {
-        content: url("/assets/mob-assets/roni1.jpg");
-    }
-    50%
-    {
-        content: url("/assets/mob-assets/roni2.png");
     }
 }
