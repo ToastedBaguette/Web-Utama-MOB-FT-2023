@@ -7,12 +7,12 @@
   <meta name="description"
     content="Website utama MOB FT 2023 untuk membantu mahasiswa baru mengetahui beberapa informasi mengenai MOB FT 2023.">
   <title>MOB FT 2023</title>
-  <link rel="shortcut icon" href="{{ url('./img/mob.png') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/plugins.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('./assets/css/colors/sky.css') }}">
-  <link rel="preload" href="{{ url('./assets/css/fonts/urbanist.css') }}" as="style" onload="this.rel='stylesheet'">
-  <link rel="stylesheet" href="{{asset('admin/css/custom.css')}}">
+  <link rel="shortcut icon" href="<?php echo e(url('./img/mob.png')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/plugins.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/style.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(url('./assets/css/colors/sky.css')); ?>">
+  <link rel="preload" href="<?php echo e(url('./assets/css/fonts/urbanist.css')); ?>" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="<?php echo e(asset('admin/css/custom.css')); ?>">
   
   <style>
     .bg-mob {
@@ -26,7 +26,7 @@
       width: 50%;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media  only screen and (max-width: 768px) {
       .bg-mob {
         background-image: url({{asset('./assets/mob-assets/bgmobile2.jpg')
       }
@@ -46,7 +46,7 @@
 
 <body>
   <div class="content-wrapper">
-    {{-- NAVBAR --}}
+    
     <header class="wrapper bg-light">
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
@@ -76,7 +76,7 @@
                 </li>
               </ul>
 
-              {{-- OFFCANVAS (FOR MOBILE SCREEN) --}}
+              
               <div class="offcanvas-footer d-lg-none">
                 <div>
                   <a class="link-inverse">© Information Technology Department MOB FT 2023. </a>
@@ -97,12 +97,12 @@
           <div class="navbar-other ms-lg-4">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-md-block">
-                @if(!$login)
-                <a href="{{route('login')}}" class="btn btn-sm btn-success rounded-pill"
+                <?php if(!$login): ?>
+                <a href="<?php echo e(route('login')); ?>" class="btn btn-sm btn-success rounded-pill"
                   style="background-color: #45C4A0; border-color: #45C4A0">Login</a>
-                @else
+                <?php else: ?>
                 <a href="/dashboard" class="btn btn-sm btn-primary rounded-pill">Home</a>
-                @endif
+                <?php endif; ?>
               </li>
               <li class="nav-item d-lg-none">
                 <button class="hamburger offcanvas-nav-btn"></button>
@@ -117,19 +117,19 @@
       <!-- /.navbar -->
     </header>
 
-    {{-- SELAMAT DATANG DI MOB FT 2023 --}}
+    
     <section id="beranda" class="wrapper bg-light bg-mob">
       <div class="container pt-10 pt-md-14 pb-md-16 text-center">
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-xl-0 mb-14 align-items-center">
           <div class="col-lg-7 order-lg-2">
-            <figure><img class="img-auto" src="{{ url('./img/logo.png') }}"
-                srcset="{{ url('./assets/mob-assets/logo.png') }} 2x" alt=""
+            <figure><img class="img-auto" src="<?php echo e(url('./img/logo.png')); ?>"
+                srcset="<?php echo e(url('./assets/mob-assets/logo.png')); ?> 2x" alt=""
                 style="max-height: 70vh; max-width: 70vh;" /></figure>
-            @if(!$login)
-            <a href="{{route('login')}}" class="mt-8 btn btn-lg btn-success rounded-pill d-lg-none">Login</a>
-            @else
+            <?php if(!$login): ?>
+            <a href="<?php echo e(route('login')); ?>" class="mt-8 btn btn-lg btn-success rounded-pill d-lg-none">Login</a>
+            <?php else: ?>
             <a href="/dashboard" class="mt-8 btn btn-lg btn-primary rounded-pill d-lg-none">Home</a>
-            @endif
+            <?php endif; ?>
           </div>
           <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start">
             <h1 class="display-1 fs-54 mb-5 mx-md-n5 mx-lg-0 mt-7 main-font">Selamat Datang di <br
@@ -138,7 +138,7 @@
               <h2 class="fs-30 secondary-font">Virtus Adaptionis Magna Est</h2>
               <p class="lead fs-lg mb-7 fst-italic secondary-font">"The Power Of Adaptation is Extraordinary"</p>
             </div>
-            {{-- BUTTON UNDUH MODUL --}}
+            
             <a href="https://drive.google.com/drive/folders/17mJxXajLYIMQSxfWazQveW6gbvDTy-I0" target="_blank"
               class="btn btn-lg btn-outline-primary rounded-pill">Unduh Modul</a>
           </div>
@@ -152,15 +152,15 @@
       </div>
     </section>
 
-    {{-- STORYLINE --}}
+    
     <section id="storyline" class="wrapper bg-gradient-primary">
       <div class="container pt-14 py-md-16">
 
         <div class="row gx-lg-8 gx-xl-12 gy-12 align-items-center">
           <div class="col-lg-6 position-relative">
             <figure>
-              <img class="img-fluid floating" src="{{ url('./assets/mob-assets/mascot floating.png') }}"
-                srcset="{{ url('./assets/mob-assets/mascot floating.png') }} 2x" alt="" style="margin-left: 0" />
+              <img class="img-fluid floating" src="<?php echo e(url('./assets/mob-assets/mascot floating.png')); ?>"
+                srcset="<?php echo e(url('./assets/mob-assets/mascot floating.png')); ?> 2x" alt="" style="margin-left: 0" />
             </figure>
           </div>
           <div class="col-lg-6 mb-4">
@@ -214,7 +214,7 @@
   <!-- /.container -->
   </section>
 
-  {{-- JADWAL --}}
+  
   <section id="jadwal" class="wrapper bg-light">
     <div class="container pt-14 py-md-16">
       <div class="row text-center">
@@ -271,12 +271,12 @@
       <!--/.row -->
   </section>
 
-  {{-- FAQ --}}
+  
   <section id="faq" class="wrapper bg-light">
     <div class="container py-10 py-md-12">
       <div class="row gx-lg-8 gx-xl-12 gy-10">
         <div class="col-lg-12 d-flex justify-content-center">
-          <img class="img-fluid arcade_machine" src="{{ url('./assets/mob-assets/ArcadeMachine.gif')}}" alt="" />
+          <img class="img-fluid arcade_machine" src="<?php echo e(url('./assets/mob-assets/ArcadeMachine.gif')); ?>" alt="" />
         </div>
         <!--/column -->
         <div class="col-lg-12">
@@ -473,7 +473,7 @@
 
   </div>
 
-  {{-- FOOTER --}}
+  
   <footer class="bg-footer bg-footer text-inverse">
     <div class="container pt-12 pt-lg-6 pb-13 pb-md-15">
       <hr class="mt-3 mb-12" />
@@ -499,13 +499,13 @@
         <!-- /column -->
         <div class="col-md-4 col-lg-3">
           <figure data-responsive-bg="true">
-            <img src="{{ url('./img/logoubaya.png')}}" alt="Minimalism" />
+            <img src="<?php echo e(url('./img/logoubaya.png')); ?>" alt="Minimalism" />
           </figure>
         </div>
         <!-- /column -->
         <div class="col-md-12 col-lg-3 mt-2">
           <figure data-responsive-bg="true">
-            <img src="{{ url('./img/logobem.png')}}" alt="Minimalism" />
+            <img src="<?php echo e(url('./img/logobem.png')); ?>" alt="Minimalism" />
           </figure>
         </div>
         <!-- /column -->
@@ -515,7 +515,7 @@
     <!-- /.container -->
   </footer>
 
-  {{-- PROGRESS ARROW --}}
+  
   <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -523,8 +523,8 @@
   </div>
 
 
-  <script src="{{ url('./assets/js/plugins.js') }}"></script>
-  <script src="{{ url('./assets/js/theme.js') }}"></script>
+  <script src="<?php echo e(url('./assets/js/plugins.js')); ?>"></script>
+  <script src="<?php echo e(url('./assets/js/theme.js')); ?>"></script>
 </body>
 
-</html>
+</html><?php /**PATH C:\Github Repository\Web-Utama-MOB-FT-2023\resources\views/welcome2023.blade.php ENDPATH**/ ?>
