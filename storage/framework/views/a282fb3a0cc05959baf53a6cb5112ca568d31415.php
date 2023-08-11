@@ -81,7 +81,7 @@
                 <div>
                   <a class="link-inverse">© Information Technology Department MOB FT 2023. </a>
                   <nav class="nav social social-white mt-4">
-                    <a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
+                    
                     <a href="https://www.instagram.com/mobftubaya/" target="_blank"><i
                         class="uil uil-instagram"></i></a>
                     <a href="https://www.youtube.com/channel/UCvXk_6SkGs3TEkvAMdsgzHw" target="_blank"><i
@@ -98,8 +98,7 @@
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-md-block">
                 <?php if(!$login): ?>
-                <a href="<?php echo e(route('login')); ?>" class="btn btn-sm btn-success rounded-pill"
-                  style="background-color: #45C4A0; border-color: #45C4A0">Login</a>
+                <a href="<?php echo e(route('login')); ?>" class="btn btn-sm btn-primary rounded secondary-font text-white pt-2">Login</a>
                 <?php else: ?>
                 <a href="/dashboard" class="btn btn-sm btn-primary rounded-pill">Home</a>
                 <?php endif; ?>
@@ -119,14 +118,14 @@
 
     
     <section id="beranda" class="wrapper bg-light bg-mob">
-      <div class="container pt-10 pt-md-14 pb-md-16 text-center">
+      <div class="container pt-10 pt-md-14 pb-md-12 text-center">
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-xl-0 mb-14 align-items-center">
           <div class="col-lg-7 order-lg-2">
             <figure><img class="img-auto" src="<?php echo e(url('./img/logo.png')); ?>"
                 srcset="<?php echo e(url('./assets/mob-assets/logo.png')); ?> 2x" alt=""
                 style="max-height: 70vh; max-width: 70vh;" /></figure>
             <?php if(!$login): ?>
-            <a href="<?php echo e(route('login')); ?>" class="mt-8 btn btn-lg btn-success rounded-pill d-lg-none">Login</a>
+            <a href="<?php echo e(route('login')); ?>" class="mt-8 btn btn-lg btn-primary rounded-pill d-lg-none">Login</a>
             <?php else: ?>
             <a href="/dashboard" class="mt-8 btn btn-lg btn-primary rounded-pill d-lg-none">Home</a>
             <?php endif; ?>
@@ -139,8 +138,7 @@
               <p class="lead fs-lg mb-7 fst-italic secondary-font">"The Power Of Adaptation is Extraordinary"</p>
             </div>
             
-            <a href="https://drive.google.com/drive/folders/17mJxXajLYIMQSxfWazQveW6gbvDTy-I0" target="_blank"
-              class="btn btn-lg btn-outline-primary rounded-pill">Unduh Modul</a>
+            
           </div>
         </div>
       </div>
@@ -171,34 +169,12 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="item-inner">
-                      <p class="mb-4 text-justify">Di suatu Benua bernama Apollo terdapat suatu kerajaan yang bernama Kerajaan
-                        Xavier. Kerajaan Xavier merupakan kerajaan yang indah pada awal masa kejayaannya, namun karena
-                        kerajaan Xavier dipimpin oleh seorang raja yang sangat tamak dan haus kekuasaan, maka Kerajaan
-                        Xavier kondisinya semakin memprihatinkan. Seiring dengan berjalannya waktu, kondisi kerajaan
-                        Xavier mulai menurun hingga menuju ke masa kehancurannya. Caden, yang merupakan pangeran
-                        kerajaan Xavier sekaligus anak dari raja yang berkuasa di Kerajaan Xavier berinisiatif untuk
-                        memulihkan Xavier dengan mencari suatu berkat yang merupakan legenda mitos dari kerajaan
-                        tersebut.</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="item-inner">
-                      <p class="mb-4 text-justify">Legenda itu mengatakan bahwa ada suatu berkat bernama Solasta yang dapat
-                        memulihkan keadaan Xavier seperti pada masa kejayaannya. Konon katanya, jika Solasta berhasil
-                        ditemukan, maka keinginan terbesar dari penemunya akan terwujud. Namun untuk mendapatkan Solasta
-                        tersebut, Caden harus melewati berbagai tantangan yang ada di depannya.</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="item-inner">
-                      <p class="mb-4 text-justify">Dalam segala situasi, Caden selalu membawa hewan peliharaan kesayangannya yang ia
-                        beri nama Luxor. Saat Kerajaan Xavier masih indah seperti sedia kala, Luxor memiliki tugas untuk
-                        mengamati para warga. Bersama dengan Luxor yang merupakan elang kesayangan Caden, mereka
-                        berpetualang mencari Solasta. Warga kerajaan Xavier yang mendapatkan gelar Survivor memiliki
-                        tugas untuk ikut serta bersama Pangeran Caden dalam tujuan menyelamatkan rumah mereka yaitu
-                        Xavier seperti sedia kala. Selama perjalanan yang mereka lalui, mereka akan bertemu dengan para
-                        Observer yang akan berusaha untuk menguji apakah mereka tulus dan semangat untuk menjadikan
-                        Kerajaan Xavier menjadi baik seperti sedia kala.</p>
+                      <p class="mb-4 text-justify">Sekelompok Player masuk ke sebuah dunia video game yang bernama Game Land.
+                        Game Land berisikan permainan-permainan unik dan menantang dengan NeerB sebagai penjaga pulau. 
+                        NeerB adalah robot berwarna coklat dengan tesseract di dadanya yang diisi oleh 5 inticore. 
+                        Selama berada di Game Land, NeerB merasa kesepian dan akhirnya menarik Aleetha, Zayden, 
+                        serta para Player ke dalam Game Land untuk berkelana dan menikmati sebuah aksi baru di sana. 
+                        Nantikan petualangan hebatmu bersama NeerB, Aleetha, dan Zayden di Game Land!</p>
                     </div>
                   </div>
                 </div>
@@ -462,7 +438,7 @@
     <!-- /.container -->
 
     <div class="overflow-hidden">
-      <div class="divider text-navy mx-n2">
+      <div class="divider text-primary mx-n2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
           <path fill="currentColor"
             d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z" />
@@ -484,7 +460,7 @@
             <p class="mb-4" style="color: white">© Information Technology Department MOB FT 2023. <br
                 class="d-none d-lg-block" />All rights reserved.</p>
             <nav class="nav social social-white">
-              <a href="https://linktr.ee/MOBFT2022" target="_blank"><i class="uil uil-link-alt"></i></a>
+              
               <a href="https://www.instagram.com/mobftubaya/" target="_blank"><i class="uil uil-instagram"></i></a>
               <a href="https://www.youtube.com/channel/UCvXk_6SkGs3TEkvAMdsgzHw" target="_blank"><i
                   class="uil uil-youtube"></i></a>

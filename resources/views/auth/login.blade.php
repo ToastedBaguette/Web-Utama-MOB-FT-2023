@@ -120,7 +120,7 @@
 
                     <!-- /column -->
                     <div class="col-12">
-                      <input type="submit" class="btn btn-primary rounded-5 btn-send" href="#" value="Login">
+                      <input type="submit" class="btn btn-primary rounded secondary-font pt-3 text-white" href="#" value="Login">
                     </div>
                     <!-- /column -->
                   </div>
