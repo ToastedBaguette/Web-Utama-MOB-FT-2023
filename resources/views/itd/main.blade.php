@@ -40,9 +40,7 @@
         <span class="menu-text">Presensi</span>
     </a>
 </li>
-
 @endsection
-
 
 @section('content')
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -64,7 +62,6 @@
             </div>
             <!--end::Info-->
         </div>
-
     </div>
 
     <!--end::Subheader-->
@@ -99,7 +96,6 @@
                     </div>
                 </div>
                 @endif
-
             </div>
             <!-- end: sweetalert -->
 
@@ -117,8 +113,8 @@
                             <tr>
                                 <th>NRP</th>
                                 <th>Nama Lengkap</th>
-                                <th>Delta</th>
-                                <th>Echo</th>
+                                <th>Jurusan</th>
+                                <th>Teta</th>
                                 <th>Sudah Reset?</th>
                                 <th>Action</th>
 
@@ -160,10 +156,10 @@
                                                     <label for="" class="text-primary">Asal Sekolah</label><br>
                                                     <input type="text" class="form-control"
                                                         value="{{$mhr->asal_sekolah}}" name="asal_sekolah"><br>
-                                                    <label for="" class="text-primary">Delta</label><br>
+                                                    <label for="" class="text-primary">Jurusan</label><br>
                                                     <input type="text" class="form-control" value="{{$mhr->alpha}}"
                                                         name="alpha"><br>
-                                                    <label for="" class="text-primary">Echo</label><br>
+                                                    <label for="" class="text-primary">Teta</label><br>
                                                     <input type="text" class="form-control" value="{{$mhr->beta}}"
                                                         name="beta"><br>
                                                     <input type="hidden" name = "nrp" value ="{{$mhr->nrp}}">
@@ -193,7 +189,6 @@
                                         <button type="submit" class="btn btn-danger mt-2 mb-2">Reset</button>
                                     </a>
                                 </td>
-
                             </tr>
                             @endforeach
                         </tbody>
@@ -201,8 +196,8 @@
                             <tr>
                                 <th>NRP</th>
                                 <th>Nama Lengkap</th>
-                                <th>Delta</th>
-                                <th>Echo</th>
+                                <th>Jurusan</th>
+                                <th>Teta</th>
                                 <th>Sudah Reset?</th>
                                 <th>Action</th>
                             </tr>
@@ -212,12 +207,9 @@
                 </div>
             </div>
             <!--end::Card-->
-
-
         </div>
     </div>
     <!--end::Card-->
-
     <!--end::Container-->
 </div>
 <!--end::Entry-->

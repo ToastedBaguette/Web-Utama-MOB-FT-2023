@@ -64,7 +64,6 @@
             </div>
             <!--end::Info-->
         </div>
-
     </div>
 
     <!--end::Subheader-->
@@ -73,7 +72,6 @@
         <!--begin::Container-->
         <div class="container">
             <!--begin::Card-->
-
             <!-- begin: sweetalert -->
             <div class="">
                 @if (session('status'))
@@ -99,7 +97,6 @@
                     </div>
                 </div>
                 @endif
-
             </div>
             <!-- end: sweetalert -->
             <!-- <a href='#modalAdd' data-toggle='modal'>
@@ -119,7 +116,6 @@
                             <i class="flaticon2-cube"></i>Reports</a> -->
                     </div>
                 </div>
-
                 <!-- <div class="card-header">
                     <div class="card-title">
 
@@ -167,8 +163,6 @@
                                 <td>{{$d->waktu_tutup_awal}}</td>
                                 <td>{{$d->waktu_buka_akhir}}</td>
                                 <td>{{$d->waktu_tutup_akhir}}</td>
-
-
                             </tr>
                             @endforeach
                         </tbody>
@@ -187,12 +181,9 @@
                 </div>
             </div>
             <!--end::Card-->
-
-
         </div>
     </div>
     <!--end::Card-->
-
     <!--end::Container-->
 </div>
 <!--end::Entry-->
@@ -215,7 +206,6 @@
                     <input type="time" class="form-control" name="waktu_akhir_buka" required><br>
                     <label for="" class="text-primary">Waktu Awal Tutup</label><br>
                     <input type="time" class="form-control" name="waktu_akhir_tutup" required><br>
-
                     <button type="submit" class="btn btn-success mt-4">Tambah</button>
                 </form>
             </div>
