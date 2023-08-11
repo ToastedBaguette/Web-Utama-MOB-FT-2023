@@ -354,9 +354,9 @@ class MapingController extends Controller
     {
         $this->authorize('hanyamaping');
         $alfa = Auth::user()->alpha;
-        $hari1 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap, r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal ='2022-08-22' and u.alpha='$alfa' "));
-        $hari2 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2022-08-23' and u.alpha='$alfa' "));
-        $hari3 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2022-08-24' and u.alpha='$alfa' "));
+        $hari1 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap, r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal ='2023-08-11' and u.alpha='$alfa' "));
+        $hari2 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2023-08-12' and u.alpha='$alfa' "));
+        $hari3 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2023-08-13' and u.alpha='$alfa' "));
 
         return view('maping.rekap_pelanggaran', compact('hari1','hari2','hari3'));
     }
