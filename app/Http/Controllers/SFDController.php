@@ -236,9 +236,9 @@ class SFDController extends Controller
     public function rekap()
     {
         $this->authorize('hanyapanitia');
-        $hari1 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap, r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal ='2022-08-22'"));
-        $hari2 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2022-08-23'"));
-        $hari3 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2022-08-24'"));
+        $hari1 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap, r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal ='2023-08-11'"));
+        $hari2 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2023-08-12'"));
+        $hari3 = DB::select(DB::raw("SELECT u.nrp, u.name, u.alpha, u.beta, p.nama_pelanggaran,p.idpelanggaran, p.jenis_pelanggaran, r.idrekap,r.tanggal, r.keterangan from users u INNER JOIN user_pelanggarans r on u.nrp = r.users_nrp inner join pelanggarans p on p.idpelanggaran = r.idpelanggaran where tanggal = '2023-08-13'"));
         
         $now = Carbon::now();
         $hariIni = date('Y-m-d',strtotime($now));

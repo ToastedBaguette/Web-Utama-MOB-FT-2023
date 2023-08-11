@@ -110,8 +110,7 @@
                                                             href="https://www.instagram.com/ksm_informatika/"
                                                             target="_blank">@ksm_informatika</a> <br>
                                                         <small>Kelompok Studi Mahasiswa Informatika merupakan organisasi
-                                                            dari
-                                                            Jurusan Teknik Informatika. KSM Informatika memiliki berbagai
+                                                            dari Jurusan Teknik Informatika. KSM Informatika memiliki berbagai
                                                             kegiatan yang berkaitan dengan Jurusan Teknik
                                                             Informatika.</small>
                                                     </div>
