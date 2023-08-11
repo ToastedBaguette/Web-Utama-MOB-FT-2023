@@ -138,8 +138,8 @@
               <p class="lead fs-lg mb-7 fst-italic secondary-font">"The Power Of Adaptation is Extraordinary"</p>
             </div>
             {{-- BUTTON UNDUH MODUL --}}
-            {{-- <a href="https://drive.google.com/drive/folders/17mJxXajLYIMQSxfWazQveW6gbvDTy-I0" target="_blank"
-              class="btn btn-lg btn-outline-primary rounded-pill">Unduh Modul</a> --}}
+            <a href="https://tinyurl.com/ModulMOBFT23" target="_blank"
+              class="btn btn-lg btn-outline-primary rounded-pill">Unduh Modul</a>
           </div>
         </div>
       </div>
